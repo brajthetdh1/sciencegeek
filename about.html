@@ -18,58 +18,27 @@
     }
   </style>
 
-  <style>
-    .perspective-800 {
-      perspective: 800px;
+   <style>
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
-    .book {
-      position: relative;
-      width: 160px;
-      height: 128px;
-      transform-style: preserve-3d;
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .cover {
-      z-index: 10;
+    /* Vertical timeline line */
+    .timeline-line {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #2563eb; /* Tailwind blue-600 */
-      border-radius: 0.5rem;
-      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.5), 0 4px 6px -2px rgba(37, 99, 235, 0.3);
-    }
-    .page, .page-back {
-      backface-visibility: hidden;
+      left: 1.5rem;
       top: 0;
-      left: 0;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      border-radius: 0.5rem;
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
-      transform-origin: left center;
-    }
-    .page {
-      animation: flipPage 4s ease-in-out infinite;
-      z-index: 5;
-      transform: rotateY(0deg);
-    }
-    .page-back {
-      transform: rotateY(180deg);
-      z-index: 1;
-    }
-    @keyframes flipPage {
-      0%, 100% {
-        transform: rotateY(0deg);
-        box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
-      }
-      50% {
-        transform: rotateY(-180deg);
-        box-shadow: inset 5px 0 20px rgba(0,0,0,0.2);
-      }
+      bottom: 0;
+      width: 4px;
+      background: #2563eb; /* Tailwind blue-600 */
+      border-radius: 2px;
     }
   </style>
-
 
   
 </head>
@@ -107,58 +76,51 @@
 
 
   <!-- About Content -->
-  <main class="container mx-auto px-6 py-16 max-w-5xl bg-white rounded-xl shadow-lg fade-in">
-    <h1 class="text-4xl font-extrabold text-blue-800 mb-12 text-center">About ScienceGeek</h1>
+ <main class="container max-w-4xl mx-auto px-6 py-16 relative">
+    <!-- Timeline vertical line -->
+    <div class="timeline-line hidden md:block"></div>
 
-    <div class="md:flex md:space-x-10">
-      <!-- Left: Text Story -->
-      <section class="md:flex-1 space-y-6 text-gray-700 text-lg leading-relaxed">
-        <p>
-          My journey began at one of the premier institutes in India, where I earned my M.Tech from IIT. 
-          The rigorous academic environment shaped my understanding and deepened my passion for science and mathematics.
+    <section class="space-y-12">
+      <div class="fade-in-section relative pl-12 md:pl-20">
+        <div class="absolute left-0 top-2 md:top-3 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">1</div>
+        <h2 class="text-xl font-semibold text-blue-700 mb-2">Graduated M.Tech from IIT</h2>
+        <p class="text-gray-700">
+          My journey began at one of India's premier institutes, where I earned my M.Tech degree, igniting a passion for science and technology.
         </p>
+      </div>
 
-        <p>
-          After graduating, I spent several years as a software engineer, honing problem-solving skills and 
-          learning how to think logically and creatively to solve complex challenges.
+      <div class="fade-in-section relative pl-12 md:pl-20">
+        <div class="absolute left-0 top-2 md:top-3 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">2</div>
+        <h2 class="text-xl font-semibold text-green-700 mb-2">Software Engineer Experience</h2>
+        <p class="text-gray-700">
+          Several years in the tech industry sharpened my problem-solving skills and taught me to approach challenges creatively and logically.
         </p>
+      </div>
 
-        <p>
-          Alongside my professional career, I discovered a love for teaching — especially guiding students 
-          preparing for competitive exams like JEE. Over the past 5 years, I’ve taught numerous batches, 
-          focusing on conceptual clarity, problem solving, and building confidence.
+      <div class="fade-in-section relative pl-12 md:pl-20">
+        <div class="absolute left-0 top-2 md:top-3 w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">3</div>
+        <h2 class="text-xl font-semibold text-yellow-600 mb-2">Teaching JEE Students</h2>
+        <p class="text-gray-700">
+          Teaching competitive exam aspirants fueled my desire to make complex concepts accessible and build learners’ confidence.
         </p>
+      </div>
 
-        <p>
-          This passion inspired me to create <span class="font-semibold text-blue-600">ScienceGeek</span> — a 
-          platform where learners can explore science and math topics in a friendly, approachable way, with 
-          engaging tutorials, quizzes, and exercises designed to make complex topics simple.
+      <div class="fade-in-section relative pl-12 md:pl-20">
+        <div class="absolute left-0 top-2 md:top-3 w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white font-bold">4</div>
+        <h2 class="text-xl font-semibold text-red-600 mb-2">Founded ScienceGeek</h2>
+        <p class="text-gray-700">
+          I created ScienceGeek to provide a friendly platform with tutorials, quizzes, and exercises that simplify science and math topics for all learners.
         </p>
+      </div>
 
-        <p>
-          Whether you’re here to crack exams, enhance your understanding, or just satisfy your curiosity, I’m 
-          committed to helping you unlock your full potential.
+      <div class="fade-in-section relative pl-12 md:pl-20">
+        <div class="absolute left-0 top-2 md:top-3 w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold">5</div>
+        <h2 class="text-xl font-semibold text-purple-700 mb-2">Committed to Your Success</h2>
+        <p class="text-gray-700">
+          Whether you're preparing for exams or exploring for fun, I'm dedicated to helping you unlock your full potential.
         </p>
-      </section>
-
-      <!-- Right: Illustration -->
-     <aside class="hidden md:flex md:flex-1 justify-center items-center">
-  <div class="perspective-800">
-    <div class="book">
-      <div class="cover"></div>
-      <div class="page"></div>
-      <div class="page-back"></div>
-    </div>
-  </div>
-</aside>
-
-    </div>
-
-    <div class="text-center mt-12">
-      <a href="index.html" class="inline-block bg-blue-600 text-white px-10 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-        Explore Tutorials
-      </a>
-    </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -167,6 +129,26 @@
       <p>&copy; 2025 ScienceGeek. All rights reserved.</p>
     </div>
   </footer>
+
+   <script>
+    // Scroll-trigger fade-in effect
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    function checkVisibility() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+
+        if (top < triggerBottom) {
+          section.classList.add('is-visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+  </script>
 
   <!-- Script for Mobile Menu -->
   <script>
