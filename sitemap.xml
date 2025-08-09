@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://<your-github-username>.github.io/</loc>
+    <loc>https://sciencegeek.in/index.html</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://<your-github-username>.github.io/tutorial.html</loc>
+    <loc>https://sciencegeek.in/about.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://<your-github-username>.github.io/about.html</loc>
+    <loc>https://sciencegeek.in/contact.html</loc>
     <priority>0.80</priority>
   </url>
 </urlset>
