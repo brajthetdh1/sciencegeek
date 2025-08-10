@@ -42,38 +42,64 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
    <header class="bg-gradient-to-r from-blue-700 to-green-600 shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center space-x-3">
-        <div class="p-2 rounded-full bg-gradient-to-br from-green-400 to-blue-500 shadow-md">
-          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M7 2c6 6 4 14 10 20M17 2c-6 6-4 14-10 20"></path>
-          </svg>
-        </div>
-        <span class="text-3xl font-bold text-white tracking-wide">ScienceGeek</span>
-      </a>
+  <div class="container mx-auto px-6 py-4 flex items-center">
+    <!-- Logo (left) -->
+    <a href="index.html" class="flex items-center space-x-3 mr-4">
+      <div class="p-2 rounded-full bg-gradient-to-br from-green-400 to-blue-500 shadow-md">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M7 2c6 6 4 14 10 20M17 2c-6 6-4 14-10 20"></path>
+        </svg>
+      </div>
+      <span class="text-3xl font-bold text-white tracking-wide">ScienceGeek</span>
+    </a>
 
-      <!-- Menu Button (Mobile) -->
-      <button id="menuBtn" class="md:hidden focus:outline-none text-white">
+    <!-- Center menu (desktop only) -->
+    <div class="hidden md:flex flex-1 justify-center">
+      <div class="flex space-x-8">
+        <a href="math.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Math</a>
+        <a href="physics.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Physics</a>
+        <a href="exam.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Exam</a>
+        <a href="blogs.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Blogs</a>
+      </div>
+    </div>
+
+    <!-- Right-side: desktop small menu + mobile button -->
+    <div class="flex items-center space-x-4">
+      <!-- Right menu (desktop) -->
+      <nav class="hidden md:flex md:items-center md:space-x-6">
+        <a href="index.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Home</a>
+        <a href="about.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">About</a>
+        <a href="contact.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Contact</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden focus:outline-none text-white p-2" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-
-      <!-- Navigation -->
-     <nav id="navLinks" 
-  class="hidden flex-col space-y-2 absolute top-full left-0 w-full 
-         bg-gray-800 text-white p-4 shadow-lg
-         md:static md:flex md:flex-row md:space-y-0 md:space-x-8 md:bg-transparent md:w-auto md:p-0 md:shadow-none">
-  
-  <a href="index.html" class="block hover:text-yellow-300 transition">Home</a>
-  <a href="about.html" class="block hover:text-yellow-300 transition">About</a>
-  <a href="contact.html" class="block hover:text-yellow-300 transition">Contact</a>
-</nav>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Menu (stacks all links) -->
+  <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-gray-800 text-white p-4 shadow-lg z-40">
+    <!-- Center items first (as requested) -->
+    <a href="math.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Math</a>
+    <a href="physics.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Physics</a>
+    <a href="exam.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Exam</a>
+    <a href="blogs.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Blogs</a>
+
+    <hr class="my-3 border-gray-700" />
+
+    <!-- Right items after divider -->
+    <a href="index.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Home</a>
+    <a href="about.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">About</a>
+    <a href="contact.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Contact</a>
+  </div>
+</header>
+
 
   <main class="container mx-auto p-6">
     <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
@@ -130,12 +156,25 @@
 
   <!-- Script for Mobile Menu -->
   <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("hidden");
-    });
-  </script>
+  menuBtn.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    // update aria-expanded for accessibility
+    menuBtn.setAttribute('aria-expanded', (!isHidden).toString());
+  });
+
+  // Optional: close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!mobileMenu.contains(target) && !menuBtn.contains(target)) {
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+</script>
 </body>
 </html>
