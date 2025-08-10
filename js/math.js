@@ -62,3 +62,23 @@ if (window.MathJax) {
   MathJax.typesetPromise();
 }
 
+
+document.querySelectorAll('#algebra button[aria-controls]').forEach(button => {
+  button.addEventListener('click', () => {
+    const solutionId = button.getAttribute('aria-controls');
+    const solutionDiv = document.getElementById(solutionId);
+
+    if (!solutionDiv) return; // safety check
+
+    const isHidden = solutionDiv.classList.contains('hidden');
+
+    // Toggle solution display
+    if (isHidden) {
+      solutionDiv.classList.remove('hidden');
+      button.setAttribute('aria-expanded', 'true');
+    } else {
+      solutionDiv.classList.add('hidden');
+      button.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
