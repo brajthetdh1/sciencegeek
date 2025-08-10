@@ -33,6 +33,9 @@
     ]
   }
   </script>
+   <!-- MathJax -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -100,6 +103,123 @@
         🚧 Website under development 🚧
     </div>
 
+<!-- Main Content -->
+ <!-- Main Content -->
+  <main class="container mx-auto flex flex-1 gap-8 px-6 py-10">
+
+    <!-- Left vertical bar: Hot Questions -->
+    <aside class="w-72 bg-white rounded-lg shadow-md p-6 sticky top-28 h-[calc(100vh-6rem)] overflow-y-auto">
+      <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">🔥 Hot Physics Questions</h2>
+      <ul class="space-y-3 text-gray-800">
+        <li>
+          <button onclick="showSolution(1)" class="w-full text-left hover:text-blue-600 transition focus:outline-none">
+            What is Newton's Second Law?
+          </button>
+        </li>
+        <li>
+          <button onclick="showSolution(2)" class="w-full text-left hover:text-blue-600 transition focus:outline-none">
+            Explain Conservation of Energy.
+          </button>
+        </li>
+        <li>
+          <button onclick="showSolution(3)" class="w-full text-left hover:text-blue-600 transition focus:outline-none">
+            Formula for Kinetic Energy?
+          </button>
+        </li>
+        <li>
+          <button onclick="showSolution(4)" class="w-full text-left hover:text-blue-600 transition focus:outline-none">
+            What is the Photoelectric Effect?
+          </button>
+        </li>
+        <li>
+          <button onclick="showSolution(5)" class="w-full text-left hover:text-blue-600 transition focus:outline-none">
+            State Snell's Law of Refraction.
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Right side: Tabs and content -->
+    <section class="flex-1 flex flex-col">
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-300 overflow-x-auto">
+        <button class="tab-button px-4 py-2 text-blue-600 font-semibold border-b-2 border-blue-600 whitespace-nowrap" data-tab="mechanics">Mechanics</button>
+        <button class="tab-button px-4 py-2 whitespace-nowrap" data-tab="optics">Optics</button>
+        <button class="tab-button px-4 py-2 whitespace-nowrap" data-tab="thermodynamics">Thermodynamics</button>
+        <button class="tab-button px-4 py-2 whitespace-nowrap" data-tab="emagnetism">Electromagnetism</button>
+        <button class="tab-button px-4 py-2 whitespace-nowrap" data-tab="modernphysics">Modern Physics</button>
+        <button class="tab-button px-4 py-2 whitespace-nowrap" data-tab="hot-questions">Hot questions solutions</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div id="mechanics" class="tab-content mt-6">
+        <h2 class="text-2xl font-bold mb-4">Mechanics</h2>
+        <p>Study of motion, forces, energy, and momentum. Topics include kinematics, Newton's laws, work-energy, rotational motion, and gravitation.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1">
+          <li>Kinematics & Equations of Motion</li>
+          <li>Newton's Laws of Motion</li>
+          <li>Work, Energy and Power</li>
+          <li>Rotational Dynamics</li>
+          <li>Gravitation</li>
+        </ul>
+      </div>
+
+      <div id="optics" class="tab-content mt-6 hidden">
+        <h2 class="text-2xl font-bold mb-4">Optics</h2>
+        <p>Study of light and its properties. Topics include reflection, refraction, lenses, interference, and diffraction.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1">
+          <li>Reflection & Refraction</li>
+          <li>Lenses and Mirrors</li>
+          <li>Wave Optics: Interference & Diffraction</li>
+          <li>Polarization</li>
+        </ul>
+      </div>
+
+      <div id="thermodynamics" class="tab-content mt-6 hidden">
+        <h2 class="text-2xl font-bold mb-4">Thermodynamics</h2>
+        <p>Study of heat, work, and energy transfer. Topics include laws of thermodynamics, heat engines, and entropy.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1">
+          <li>Laws of Thermodynamics</li>
+          <li>Heat Transfer Methods</li>
+          <li>Heat Engines & Refrigerators</li>
+          <li>Entropy & Disorder</li>
+        </ul>
+      </div>
+
+      <div id="emagnetism" class="tab-content mt-6 hidden">
+        <h2 class="text-2xl font-bold mb-4">Electromagnetism</h2>
+        <p>Study of electric and magnetic fields and their interactions. Topics include Coulomb's law, circuits, magnetism, and electromagnetic waves.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1">
+          <li>Electrostatics & Coulomb’s Law</li>
+          <li>Current Electricity & Circuits</li>
+          <li>Magnetism & Magnetic Effects of Current</li>
+          <li>Electromagnetic Induction & Waves</li>
+        </ul>
+      </div>
+
+      <div id="modernphysics" class="tab-content mt-6 hidden">
+        <h2 class="text-2xl font-bold mb-4">Modern Physics</h2>
+        <p>Study of atomic, nuclear and quantum physics. Topics include photoelectric effect, atomic models, radioactivity, and particle physics.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1">
+          <li>Photoelectric Effect</li>
+          <li>Atomic Models</li>
+          <li>Radioactivity</li>
+          <li>Quantum Mechanics Basics</li>
+        </ul>
+      </div>
+      
+      <!-- Hot Questions Solutions tab -->
+      <div id="hot-questions" class="tab-content mt-4 hidden flex flex-col flex-1 overflow-auto">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">Hot Question Solutions</h2>
+        <div id="solution-content" class="prose max-w-none overflow-auto flex-1 border rounded border-gray-300 p-4 bg-gray-50 min-h-[150px]">
+          Select a hot question from left to see its solution here.
+        </div>
+      </div>
+     
+    </section>
+
+  </main>
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6 mt-10">
     <div class="container mx-auto text-center">
@@ -129,6 +249,7 @@
     }
   });
 </script>
+<script src="js/physics.js"></script>
 
 </body>
 </html>
