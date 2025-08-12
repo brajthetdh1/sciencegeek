@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScienceGeek - Tutorials & Resources for Science & Math Enthusiasts</title>
+
+   <title>ScienceGeek - Tutorials & Resources for Science & Math Enthusiasts</title>
   <meta name="description" content="ScienceGeek offers in-depth tutorials, quizzes, and resources for Physics, Mathematics, Chemistry, and JEE exam preparation." />
   <meta name="keywords" content="Science tutorials, Math tutorials, Physics lessons, Chemistry lessons, JEE preparation, Online science classes, Science quizzes" />
   <meta name="author" content="Braj Bhushan Kumar" />
@@ -22,18 +25,21 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "ScienceGeek",
-   "url": "https://www.sciencegeek.in",
+    "url": "https://www.sciencegeek.in",
     "description": "ScienceGeek offers tutorials and resources for science and math students preparing for exams like JEE.",
     "sameAs": [
-      "https://www.facebook.com/sciencegeek",
-      "https://twitter.com/sciencegeek"
+      "https://www.facebook.com/sciencegeek"
     ]
   }
   </script>
-  
+   <!-- MathJax -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 </head>
-<body class="bg-gray-50 text-gray-900">
-   <header class="bg-gradient-to-r from-blue-700 to-green-600 shadow-lg sticky top-0 z-50">
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-700 to-green-600 shadow-lg sticky top-0 z-50">
   <div class="container mx-auto px-6 py-4 flex items-center">
     <!-- Logo (left) -->
     <a href="index.html" class="flex items-center space-x-3 mr-4">
@@ -93,55 +99,6 @@
   </div>
 </header>
 
-<div class="bg-yellow-400 text-center py-2 font-semibold text-black shadow-md">
-        🚧 contact us for any query 🚧
-    </div>
-  <main class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-    <form action="https://formspree.io/f/xqalwkrw" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6">
-     <div>
-    <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-    <input type="text" id="name" name="name" required
-           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-  </div>
-
-  <div>
-    <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-    <input type="email" id="email" name="_replyto" required
-           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-  </div>
-
-  <div>
-    <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone (optional)</label>
-    <input type="tel" id="phone" name="phone"
-           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-  </div>
-
-  <div>
-    <label for="interest" class="block text-gray-700 font-semibold mb-2">Interest</label>
-    <select id="interest" name="interest" required
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <option value="" disabled selected>Select your interest</option>
-      <option value="General Inquiry">General Inquiry</option>
-      <option value="Collaboration">Collaboration</option>
-      <option value="Feedback">Feedback</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="feedback" class="block text-gray-700 font-semibold mb-2">Message</label>
-    <textarea id="feedback" name="feedback" rows="5" required
-              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-  </div>
-
-  <button type="submit"
-          class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold py-2 rounded-lg hover:from-green-600 hover:to-blue-600 transition">
-    Send Message
-  </button>
-    </form>
-  </main>
-
 
 
   <!-- Script for Mobile Menu -->
@@ -166,5 +123,7 @@
     }
   });
 </script>
+<script src="js/physics.js"></script>
+
 </body>
 </html>

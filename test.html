@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>ScienceGeek - Tutorials & Resources for Science & Math Enthusiasts</title>
+  <meta name="description" content="ScienceGeek offers in-depth tutorials, quizzes, and resources for Physics, Mathematics, Chemistry, and JEE exam preparation." />
+  <meta name="keywords" content="Science tutorials, Math tutorials, Physics lessons, Chemistry lessons, JEE preparation, Online science classes, Science quizzes" />
+  <meta name="author" content="Braj Bhushan Kumar" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="ScienceGeek - Science & Math Tutorials" />
+  <meta property="og:description" content="Explore tutorials and resources for Physics, Math, Chemistry and competitive exams preparation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sciencegeek.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "ScienceGeek",
+    "url": "https://www.sciencegeek.in",
+    "description": "ScienceGeek offers tutorials and resources for science and math students preparing for exams like JEE.",
+    "sameAs": [
+      "https://www.facebook.com/sciencegeek"
+    ]
+  }
+  </script>
+
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-700 to-green-600 shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex items-center">
+    <!-- Logo (left) -->
+    <a href="index.html" class="flex items-center space-x-3 mr-4">
+      <div class="p-2 rounded-full bg-gradient-to-br from-green-400 to-blue-500 shadow-md">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M7 2c6 6 4 14 10 20M17 2c-6 6-4 14-10 20"></path>
+        </svg>
+      </div>
+      <span class="text-3xl font-bold text-white tracking-wide">ScienceGeek</span>
+    </a>
+
+    <!-- Center menu (desktop only) -->
+    <div class="hidden md:flex flex-1 justify-center">
+      <div class="flex space-x-8">
+        <a href="math.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Math</a>
+        <a href="physics.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Physics</a>
+        <a href="exam.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Exam</a>
+        <a href="blogs.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Blogs</a>
+      </div>
+    </div>
+
+    <!-- Right-side: desktop small menu + mobile button -->
+    <div class="flex items-center space-x-4">
+      <!-- Right menu (desktop) -->
+      <nav class="hidden md:flex md:items-center md:space-x-6">
+        <a href="index.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Home</a>
+        <a href="about.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">About</a>
+        <a href="contact.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Contact</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden focus:outline-none text-white p-2" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (stacks all links) -->
+  <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-gray-800 text-white p-4 shadow-lg z-40">
+    <!-- Center items first (as requested) -->
+    <a href="math.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Math</a>
+    <a href="physics.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Physics</a>
+    <a href="exam.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Exam</a>
+    <a href="blogs.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Blogs</a>
+
+    <hr class="my-3 border-gray-700" />
+
+    <!-- Right items after divider -->
+    <a href="index.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Home</a>
+    <a href="about.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">About</a>
+    <a href="contact.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Contact</a>
+  </div>
+</header>
+
+ <div class="bg-yellow-400 text-center py-2 font-semibold text-black shadow-md">
+        🚧 Website under development   contact us for any query 🚧
+    </div>
+
+<div class="flex min-h-screen">
+    
+    <!-- Left Vertical Hot Questions -->
+    <aside class="w-80 bg-white shadow-lg p-4 border-r border-gray-200">
+      <h2 class="text-lg font-bold mb-4">🔥 Hot Questions</h2>
+      <ul id="hot-questions" class="space-y-2 text-blue-600">
+        <!-- Filled by JS -->
+      </ul>
+    </aside>
+   <main class="p-4">
+  <div class="flex border-b border-gray-300 overflow-x-auto">
+    <button class="tab-button px-4 py-2 text-blue-600 font-semibold border-b-2 border-blue-600" data-tab="all">All</button>
+    <button class="tab-button px-4 py-2" data-tab="algebra">Algebra</button>
+    <button class="tab-button px-4 py-2" data-tab="trigonometry">Trigonometry</button>
+    <button class="tab-button px-4 py-2" data-tab="calculus">Calculus</button>
+    <button class="tab-button px-4 py-2" data-tab="geometry">Geometry</button>
+    <button class="tab-button px-4 py-2" data-tab="vectors">Vectors & 3D</button>
+    <button class="tab-button px-4 py-2" data-tab="probability">Probability</button>
+    <button class="tab-button px-4 py-2" data-tab="matrices">Matrices & Determinants</button>
+  </div>
+
+  <!-- All -->
+ 
+    
+<div id="all" class="tab-content mt-6">
+  <h2 class="text-2xl font-bold mb-4">Our Math Classes & Offers</h2>
+
+  <section class="mb-6">
+    <h3 class="text-xl font-semibold mb-2">Courses Offered</h3>
+    <ul class="list-disc list-inside space-y-1 text-gray-800">
+      <li>JEE Main & Advanced Maths</li>
+      <li>NEET Physics Preparation</li>
+      <li>Class 11 & 12 CBSE Maths</li>
+      <li>Crash Course for Competitive Exams</li>
+    </ul>
+  </section>
+
+  
+
+  <section class="mb-6">
+    <P class="text-gray-700">
+        We provide online classes with interactive live sessions, create custom assignments, quizzes,
+         and offer personalized feedback to help you excel in Physics.
+    </P>
+  </section>
+
+  <section class="mb-6">
+    <h3 class="text-xl font-semibold mb-2 text-red-600">New Batch Announcement</h3>
+    <p class="text-red-600 font-semibold">New batch starting soon! Enroll now to reserve your seat.</p>
+  </section>
+
+  <section>
+        <h3 class="text-xl font-semibold mb-2">How to Join</h3>
+        <p class="text-gray-700">To enquire, find demo classes, enroll or get more info, <a href="contact.html" class="text-blue-600 underline">contact us</a> .</p>
+      </section>
+</div>
+
+
+  <!-- Algebra -->
+  <div id="algebra" class="tab-content mt-4 hidden">
+    <h2 class="text-xl font-bold mb-2">Algebra</h2>
+    
+  </div>
+
+  <!-- Trigonometry -->
+  <div id="trigonometry" class="tab-content mt-4 hidden">
+    <h2 class="text-xl font-bold mb-2">Trigonometry</h2>
+    <ul class="list-disc ml-6">
+      <li>Trigonometric Ratios & Identities</li>
+      <li>Trigonometric Equations</li>
+      <li>Properties of Triangles</li>
+      <li>Inverse Trigonometric Functions</li>
+    </ul>
+  </div>
+
+  <!-- Calculus -->
+  <div id="calculus" class="tab-content mt-4 hidden">
+    <h2 class="text-xl font-bold mb-2">Calculus</h2>
+    <ul class="list-disc ml-6">
+      <li>Limits & Continuity</li>
+      <li>Differentiation</li>
+      <li>Applications of Derivatives</li>
+      <li>Definite & Indefinite Integrals</li>
+      <li>Differential Equations</li>
+    </ul>
+  </div>
+
+  <!-- Geometry -->
+  <div id="geometry" class="tab-content mt-4 hidden">
+    <h2 class="text-xl font-bold mb-2">Geometry</h2>
+    <ul class="list-disc ml-6">
+      <li>Straight Lines</li>
+      <li>Circles</li>
+      <li>Parabola, Ellipse, Hyperbola</li>
+      <li>Conic Sections</li>
+    </ul>
+  </div>
+
+  <!-- Vectors -->
+  <div id="vectors" class="tab-content mt-4 hidden">
+    <h2 class="text-xl font-bold mb-2">Vectors & 3D</h2>
+    <ul class="list-disc ml-6">
+      <li>Vector Algebra</li>
+      <li>Scalar & Vector Products</li>
+      <li>3D Geometry</li>
+    </ul>
+  </div>
+
+  <!-- Probability -->
+  <div id="probability" class="tab-content mt-4 hidden">
+    <h2 class="text-xl font-bold mb-2">Probability & Statistics</h2>
+    <ul class="list-disc ml-6">
+      <li>Probability Rules & Theorems</li>
+      <li>Permutation & Combination</li>
+      <li>Binomial & Normal Distribution</li>
+      <li>Measures of Central Tendency</li>
+    </ul>
+  </div>
+
+  <!-- Matrices -->
+  <div id="matrices" class="tab-content mt-4 hidden">
+    <h2 class="text-xl font-bold mb-2">Matrices & Determinants</h2>
+    <ul class="list-disc ml-6">
+      <li>Types of Matrices</li>
+      <li>Matrix Operations</li>
+      <li>Determinants & Properties</li>
+      <li>Inverse of a Matrix</li>
+      <li>Applications in Solving Equations</li>
+    </ul>
+  </div>
+</main>
+
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 mt-10">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 ScienceGeek. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    // update aria-expanded for accessibility
+    menuBtn.setAttribute('aria-expanded', (!isHidden).toString());
+  });
+
+  // Optional: close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!mobileMenu.contains(target) && !menuBtn.contains(target)) {
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+</script>
+<script src="js/math.js"></script>
+</body>
+</html>
