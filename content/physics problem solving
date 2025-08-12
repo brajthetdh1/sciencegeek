@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Physics Problem Solving - ScienceGeek</title>
+  <meta name="description" content="Step-by-step guides to mastering physics topics like motion, waves, and electromagnetism for competitive exams." />
+  <meta name="keywords" content="physics problem solving, motion physics, waves, electromagnetism, JEE physics, competitive exams" />
+  <meta name="author" content="ScienceGeek" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <header class="bg-blue-800 text-white py-6 shadow">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Physics Problem Solving</h1>
+      <p class="mt-2 text-blue-100">Step-by-step guides to mastering motion, waves, and electromagnetism</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+
+    <!-- Article 1 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Mastering Motion in One Dimension</h2>
+      <p class="text-gray-600 mb-4">Learn concepts and formulas to solve kinematics problems quickly and accurately.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Kinematics describes the motion of objects without considering the causes. Use equations of motion like v = u + at and s = ut + ½at² to solve problems efficiently.</p>
+        <p class="mt-2">Example: Calculate the distance covered by an object accelerating at 2 m/s² after 5 seconds starting from rest.</p>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Understanding Wave Properties</h2>
+      <p class="text-gray-600 mb-4">Explore wave types, properties, and formulas essential for JEE and competitive exams.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Waves transfer energy without transferring matter. Understand wavelength, frequency, amplitude, and wave speed relationships to solve diverse problems.</p>
+        <p class="mt-2">Example: Find the frequency of a wave traveling at 340 m/s with a wavelength of 2 m.</p>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Electromagnetism Basics</h2>
+      <p class="text-gray-600 mb-4">Simplify electromagnetism topics including electric fields, magnetic fields, and circuits.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Understand Coulomb’s law, magnetic force, and circuit laws like Ohm's law. Knowing vector nature of fields and right-hand rules helps in problem solving.</p>
+        <p class="mt-2">Example: Calculate the electric field at a point due to two charges placed at given distances.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <script>
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      content.classList.toggle('hidden');
+      button.textContent = content.classList.contains('hidden') ? "Read More →" : "Read Less ↑";
+    }
+  </script>
+
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; 2025 ScienceGeek. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

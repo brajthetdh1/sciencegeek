@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exam Preparation Tips - ScienceGeek</title>
+  <meta name="description" content="Proven strategies for effective JEE, NEET, and competitive exam preparation to help you succeed." />
+  <meta name="keywords" content="exam preparation tips, JEE preparation, NEET tips, competitive exams, study strategies" />
+  <meta name="author" content="ScienceGeek" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <header class="bg-blue-800 text-white py-6 shadow">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Exam Preparation Tips</h1>
+      <p class="mt-2 text-blue-100">Proven strategies for effective JEE, NEET, and competitive exam preparation</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+
+    <!-- Article 1 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Creating a Realistic Study Schedule</h2>
+      <p class="text-gray-600 mb-4">Learn how to design a balanced and practical study timetable tailored to your strengths and weaknesses.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Organize your day by dividing time between subjects based on difficulty and importance. Include breaks and revision slots to keep your mind fresh and retain knowledge effectively.</p>
+        <p class="mt-2">Tip: Use digital planners or apps to track your progress and adjust your schedule as needed.</p>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Effective Revision Techniques</h2>
+      <p class="text-gray-600 mb-4">Discover methods like active recall, spaced repetition, and mind mapping to reinforce learning.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Revisit topics regularly instead of cramming. Practice with flashcards, summarizing notes, and teaching concepts to peers to deepen understanding.</p>
+        <p class="mt-2">Example: Schedule quick daily reviews of key formulas and concepts.</p>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Managing Exam Stress and Time</h2>
+      <p class="text-gray-600 mb-4">Techniques to stay calm, focused, and manage time efficiently during preparation and exams.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Incorporate mindfulness exercises, maintain a healthy lifestyle, and practice solving previous years’ question papers under timed conditions to boost confidence.</p>
+        <p class="mt-2">Tip: Break long study hours into focused intervals with short breaks using the Pomodoro technique.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <script>
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      content.classList.toggle('hidden');
+      button.textContent = content.classList.contains('hidden') ? "Read More →" : "Read Less ↑";
+    }
+  </script>
+
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; 2025 ScienceGeek. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

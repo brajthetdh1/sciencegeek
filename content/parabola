@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coordinate & 3D Geometry Tricks - ScienceGeek</title>
+  <meta name="description" content="Explore coordinate geometry and 3D geometry tricks for competitive exams. Learn lines, planes, circles, and solids with shortcuts." />
+  <meta name="keywords" content="coordinate geometry, 3D geometry, lines, planes, circles, JEE math" />
+  <meta name="author" content="ScienceGeek" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <header class="bg-blue-800 text-white py-6 shadow">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Coordinate & 3D Geometry Tricks</h1>
+      <p class="mt-2 text-blue-100">Master geometry concepts with practical shortcuts and examples</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+
+    <!-- Article 1 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Quick Formula for Straight Lines</h2>
+      <p class="text-gray-600 mb-4">Learn the quickest ways to find the equation of straight lines and intercepts.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>The equation of a straight line can be expressed in many forms: slope-intercept, point-slope, and two-point form. Knowing which formula to use speeds up problem-solving.</p>
+        <p class="mt-2">Example: Given points (2,3) and (4,7), slope m = (7-3)/(4-2) = 2, so equation is y - 3 = 2(x - 2).</p>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Planes and Lines in 3D Geometry</h2>
+      <p class="text-gray-600 mb-4">Understand how to write equations of planes and lines in three-dimensional space.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>The general form of a plane is Ax + By + Cz + D = 0. Parametric and symmetric forms help find intersections and angles between planes and lines.</p>
+        <p class="mt-2">Tip: Use vector cross and dot products to solve 3D geometry problems efficiently.</p>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Circles and Conics</h2>
+      <p class="text-gray-600 mb-4">Key properties and shortcuts for circles, ellipses, parabolas, and hyperbolas.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Understanding the standard forms and focal properties of conics helps solve problems quickly. For instance, the circle equation (x - h)² + (y - k)² = r² is the base for many proofs.</p>
+        <p cla

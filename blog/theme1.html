@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Algebra Tricks - ScienceGeek</title>
+  <meta name="description" content="Master advanced algebra techniques for competitive exams. Learn shortcuts, problem-solving strategies, and formula applications." />
+  <meta name="keywords" content="algebra tricks, competitive exam math, JEE algebra, problem solving" />
+  <meta name="author" content="ScienceGeek" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <header class="bg-blue-800 text-white py-6 shadow">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Advanced Algebra Tricks</h1>
+      <p class="mt-2 text-blue-100">A collection of blog articles to boost your algebra skills</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+
+    <!-- Article 1 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Quick Method for Quadratic Equations</h2>
+      <p class="text-gray-600 mb-4">Learn how to solve quadratic equations faster using the special formula approach.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Quadratic equations can be solved quickly using formulas like the Vieta method or by completing the square in fewer steps. For example, if ax²+bx+c=0, instead of solving traditionally, try breaking b into two parts that multiply to ac and sum to b. This saves time in competitive exams.</p>
+        <p class="mt-2">Example: Solve 6x²+17x+12=0 → Split 17x into 8x+9x → Factorize → (3x+4)(2x+3)=0 → x=-4/3 or x=-3/2.</p>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Factorization Shortcuts</h2>
+      <p class="text-gray-600 mb-4">Master the art of breaking down algebraic expressions quickly for competitive exams.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Factorization is essential for simplifying algebra problems. Recognize patterns like a² - b² = (a-b)(a+b) and a³ ± b³ = (a±b)(a² ∓ ab + b²). For quadratics, factorizing quickly helps avoid long division steps.</p>
+        <p class="mt-2">Example: 4x² - 25 = (2x - 5)(2x + 5) instantly using the difference of squares.</p>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Common Mistakes in Algebra</h2>
+      <p class="text-gray-600 mb-4">Avoid these frequent errors and boost your problem-solving accuracy.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Many students forget to apply distributive property correctly or make sign errors when moving terms across the equation. Also, mixing up formulas for (a+b)² and (a-b)² is common.</p>
+        <p class="mt-2">Tip: Always double-check signs and simplify step-by-step instead of skipping intermediate steps.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <script>
+    function toggleContent(btn) {
+      const content = btn.nextElementSibling;
+      content.classList.toggle('hidden');
+      btn.textContent = content.classList.contains('hidden') ? "Read More →" : "Read Less ↑";
+    }
+  </script>
+
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; 2025 ScienceGeek. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

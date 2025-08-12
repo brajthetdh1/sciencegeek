@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chemistry Fundamentals - ScienceGeek</title>
+  <meta name="description" content="Understand atomic structure, bonding, and chemical reactions to excel in competitive exams like JEE and NEET." />
+  <meta name="keywords" content="chemistry fundamentals, atomic structure, chemical bonding, reactions, JEE chemistry, NEET chemistry" />
+  <meta name="author" content="ScienceGeek" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <header class="bg-blue-800 text-white py-6 shadow">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Chemistry Fundamentals</h1>
+      <p class="mt-2 text-blue-100">Understand atomic structure, bonding, and reactions for competitive exams</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+
+    <!-- Article 1 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Atomic Structure Basics</h2>
+      <p class="text-gray-600 mb-4">Explore the fundamentals of atoms, electrons, protons, and neutrons and their arrangement.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Understand the nucleus, electron shells, and quantum numbers that define atomic behavior and periodic properties.</p>
+        <p class="mt-2">Example: Learn how electron configuration affects chemical reactivity.</p>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Chemical Bonding</h2>
+      <p class="text-gray-600 mb-4">Learn about ionic, covalent, and metallic bonds along with bond polarity and molecular geometry.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Study Lewis structures, VSEPR theory, and hybridization to understand how atoms bond and molecules form.</p>
+        <p class="mt-2">Example: Predict the shape of molecules like water and methane.</p>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Chemical Reactions and Equations</h2>
+      <p class="text-gray-600 mb-4">Master balancing equations, types of reactions, and reaction mechanisms.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Understand exothermic and endothermic reactions, redox processes, and catalysis in competitive exam contexts.</p>
+        <p class="mt-2">Example: Balance complex chemical equations efficiently.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <script>
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      content.classList.toggle('hidden');
+      button.textContent = content.classList.contains('hidden') ? "Read More →" : "Read Less ↑";
+    }
+  </script>
+
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; 2025 ScienceGeek. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

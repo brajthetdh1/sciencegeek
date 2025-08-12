@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mastering Calculus Concepts - ScienceGeek</title>
+  <meta name="description" content="Concept explanations with solved examples for integrals, derivatives, and limits to help you excel in calculus for competitive exams." />
+  <meta name="keywords" content="calculus, integrals, derivatives, limits, solved examples, JEE calculus, competitive exams" />
+  <meta name="author" content="ScienceGeek" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <header class="bg-blue-800 text-white py-6 shadow">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Mastering Calculus Concepts</h1>
+      <p class="mt-2 text-blue-100">Concept explanations with solved examples for integrals, derivatives, and limits</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+
+    <!-- Article 1 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Understanding Limits</h2>
+      <p class="text-gray-600 mb-4">Explore the fundamental concepts of limits and their application in calculus.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Limits describe the value that a function approaches as the input approaches some point. Understanding limits is key to defining derivatives and integrals.</p>
+        <p class="mt-2">Example: Evaluate limₓ→2 (x² - 4) / (x - 2) = 4.</p>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Derivatives Made Simple</h2>
+      <p class="text-gray-600 mb-4">Learn the rules of differentiation and how to apply them to solve problems efficiently.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Derivatives represent the rate of change of a function. Master the power, product, quotient, and chain rules to handle any differentiation problem.</p>
+        <p class="mt-2">Example: Differentiate y = (3x² + 5x)² using the chain rule.</p>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Integral Techniques and Applications</h2>
+      <p class="text-gray-600 mb-4">Understand definite and indefinite integrals, substitution, and integration by parts with examples.</p>
+      <button onclick="toggleContent(this)" class="text-blue-600 hover:underline">Read More →</button>
+      <div class="hidden mt-4 text-gray-700 leading-relaxed">
+        <p>Integrals help calculate areas under curves and accumulate quantities. Learn substitution and integration by parts for solving complex integrals.</p>
+        <p class="mt-2">Example: Evaluate ∫ x e^x dx using integration by parts.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <script>
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      content.classList.toggle('hidden');
+      button.textContent = content.classList.contains('hidden') ? "Read More →" : "Read Less ↑";
+    }
+  </script>
+
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; 2025 ScienceGeek. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
