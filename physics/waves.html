@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Waves Complete Guide – Formulas, Concepts & Examples</title>
+  <meta name="description" content="Comprehensive JEE Physics Waves guide covering types of waves, wave equations, superposition, standing waves, Doppler effect, sound waves, and important formulas for JEE preparation." />
+  <meta name="keywords" content="JEE Physics Waves, Wave Equation, Types of Waves, Standing Waves, Doppler Effect, Sound Waves, Wave Formulas, JEE Wave Problems" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Waves Complete Guide</h1>
+
+    <p>
+      Waves form a crucial part of JEE Physics syllabus. A deep understanding of wave types, wave equations, superposition, standing waves, sound waves, and the Doppler effect is essential to crack JEE Physics questions with confidence and speed. This complete guide is tailored for JEE aspirants to master waves in detail, with important formulas, concepts, and solved examples.
+    </p>
+
+    <h2>1. Introduction to Waves</h2>
+    <p>
+      A wave is a disturbance that travels through a medium transferring energy without transporting matter. Waves can be mechanical or electromagnetic. In JEE Physics, mechanical waves like sound waves and waves on strings are of primary focus.
+    </p>
+
+    <h3>1.1 Types of Waves</h3>
+    <ul>
+      <li><strong>Transverse Waves:</strong> The particles of the medium vibrate perpendicular to the direction of wave propagation (e.g., waves on a string, electromagnetic waves).</li>
+      <li><strong>Longitudinal Waves:</strong> Particles vibrate parallel to the wave propagation direction (e.g., sound waves in air).</li>
+    </ul>
+
+    <h3>1.2 Wave Parameters</h3>
+    <p>Key parameters defining a wave are:</p>
+    <ul>
+      <li><strong>Wavelength (\( \lambda \)):</strong> Distance between two successive crests or troughs.</li>
+      <li><strong>Frequency (\( f \)):</strong> Number of oscillations per second, measured in Hertz (Hz).</li>
+      <li><strong>Period (\( T \)):</strong> Time for one complete oscillation, \( T = \frac{1}{f} \).</li>
+      <li><strong>Amplitude (\( A \)):</strong> Maximum displacement from the mean position.</li>
+      <li><strong>Wave speed (\( v \)):</strong> Speed at which the wave propagates through the medium.</li>
+    </ul>
+
+    <div class="formula">
+      \( \displaystyle v = f \lambda = \frac{\lambda}{T} \)
+    </div>
+
+    <h2>2. Wave Equation</h2>
+    <p>
+      A wave traveling in the positive \( x \)-direction with speed \( v \) can be described by the displacement function:
+    </p>
+    <div class="formula">
+      \( \displaystyle y(x,t) = A \sin (kx - \omega t + \phi) \)
+    </div>
+    <p>Where:</p>
+    <ul>
+      <li>\( A \) = amplitude</li>
+      <li>\( k = \frac{2\pi}{\lambda} \) = wave number</li>
+      <li>\( \omega = 2 \pi f = \frac{2 \pi}{T} \) = angular frequency</li>
+      <li>\( \phi \) = phase constant</li>
+    </ul>
+
+    <h3>2.1 Differential Wave Equation</h3>
+    <p>
+      The wave function satisfies the one-dimensional wave equation:
+    </p>
+    <div class="formula">
+      \( \displaystyle \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} \)
+    </div>
+    <p>This partial differential equation governs the behavior of waves.</p>
+
+    <h2>3. Principle of Superposition</h2>
+    <p>
+      When two or more waves travel through the same medium simultaneously, the resultant displacement at any point is the algebraic sum of the displacements due to individual waves. This principle leads to important phenomena like interference and standing waves.
+    </p>
+
+    <h2>4. Interference of Waves</h2>
+    <p>
+      Interference occurs when two waves of the same frequency and amplitude superimpose. Depending on their relative phase, constructive or destructive interference happens.
+    </p>
+    <ul>
+      <li><strong>Constructive interference:</strong> When two waves are in phase, amplitudes add up.</li>
+      <li><strong>Destructive interference:</strong> When two waves are out of phase by \( \pi \), amplitudes subtract.</li>
+    </ul>
+
+    <h2>5. Standing Waves and Normal Modes</h2>
+    <p>
+      Standing waves are formed by the superposition of two waves traveling in opposite directions with the same frequency and amplitude. Unlike traveling waves, standing waves have fixed nodes (points of zero displacement) and antinodes (points of maximum displacement).
+    </p>
+
+    <div class="formula">
+      \( \displaystyle y(x,t) = 2 A \sin(kx) \cos(\omega t) \)
+    </div>
+
+    <h3>5.1 Nodes and Antinodes</h3>
+    <ul>
+      <li><strong>Nodes:</strong> Points where \( \sin(kx) = 0 \), displacement is always zero.</li>
+      <li><strong>Antinodes:</strong> Points where \( \sin(kx) = \pm 1 \), displacement oscillates maximally.</li>
+    </ul>
+
+    <h3>5.2 Standing Waves on a String Fixed at Both Ends</h3>
+    <p>
+      For a string of length \( L \) fixed at both ends, the allowed wavelengths are:
+    </p>
+    <div class="formula">
+      \( \displaystyle \lambda_n = \frac{2L}{n}, \quad n = 1, 2, 3, \ldots \)
+    </div>
+    <p>
+      Corresponding frequencies (normal modes):
+    </p>
+    <div class="formula">
+      \( \displaystyle f_n = \frac{n v}{2L} \)
+    </div>
+    <p>
+      where \( v \) is the speed of the wave on the string.
+    </p>
+
+    <h3>5.3 Energy in Standing Waves</h3>
+    <p>
+      Energy oscillates between kinetic and potential forms but does not propagate along the medium.
+    </p>
+
+    <h2>6. Sound Waves</h2>
+    <p>
+      Sound waves are longitudinal mechanical waves that propagate through a medium (air, water, solids). They consist of compressions and rarefactions.
+    </p>
+
+    <h3>6.1 Speed of Sound in Air</h3>
+    <p>
+      At temperature \( T \) (in °C), speed of sound in air is approximately:
+    </p>
+    <div class="formula">
+      \( \displaystyle v = 331 + 0.6 T \, \text{m/s} \)
+    </div>
+
+    <h3>6.2 Intensity and Loudness</h3>
+    <p>
+      Intensity \( I \) is power per unit area carried by the wave:
+    </p>
+    <div class="formula">
+      \( \displaystyle I = \frac{P}{A} \)
+    </div>
+    <p>
+      Loudness is related to intensity but depends on human perception.
+    </p>
+
+    <h3>6.3 Decibel Scale</h3>
+    <p>
+      Sound intensity level \( \beta \) in decibels (dB) is:
+    </p>
+    <div class="formula">
+      \( \displaystyle \beta = 10 \log_{10} \frac{I}{I_0} \)
+    </div>
+    <p>
+      where \( I_0 = 10^{-12} \, \text{W/m}^2 \) is the threshold of hearing.
+    </p>
+
+    <h2>7. Doppler Effect</h2>
+    <p>
+      The Doppler effect describes the change in frequency (and wavelength) of a wave due to relative motion between source and observer.
+    </p>
+
+    <h3>7.1 Formula for Sound Waves</h3>
+    <div class="formula">
+      \( \displaystyle f' = f \times \frac{v \pm v_o}{v \mp v_s} \)
+    </div>
+    <p>
+      where:
+    </p>
+    <ul>
+      <li>\( f \) = source frequency</li>
+      <li>\( f' \) = observed frequency</li>
+      <li>\( v \) = speed of sound in medium</li>
+      <li>\( v_o \) = speed of observer (positive if moving towards source)</li>
+      <li>\( v_s \) = speed of source (positive if moving towards observer)</li>
+    </ul>
+
+    <h3>7.2 Sign Conventions</h3>
+    <ul>
+      <li>Use upper signs if observer/source move towards each other.</li>
+      <li>Use lower signs if observer/source move away from each other.</li>
+    </ul>
+
+    <h2>8. Beats</h2>
+    <p>
+      Beats arise due to interference of two sound waves of slightly different frequencies.
+    </p>
+    <div class="formula">
+      \( \displaystyle f_{\text{beats}} = |f_1 - f_2| \)
+    </div>
+    <p>
+      Beats are perceived as fluctuations in loudness.
+    </p>
+
+    <h2>9. Wave Energy and Power</h2>
+    <p>
+      The energy transported by a wave depends on its amplitude and frequency.
+    </p>
+    <div class="formula">
+      \( \displaystyle E \propto A^2 \)
+    </div>
+    <p>
+      Power transmitted per unit area is related to the square of amplitude and square of angular frequency.
+    </p>
+
+    <h2>10. Important Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wave Speed</td>
+          <td>\( v = f \lambda \)</td>
+          <td>Relation between speed, frequency, and wavelength</td>
+        </tr>
+        <tr>
+          <td>Wave Function</td>
+          <td>\( y = A \sin(kx - \omega t + \phi) \)</td>
+          <td>Displacement of wave at position \( x \) and time \( t \)</td>
+        </tr>
+        <tr>
+          <td>Wave Number</td>
+          <td>\( k = \frac{2\pi}{\lambda} \)</td>
+          <td>Number of radians per unit length</td>
+        </tr>
+        <tr>
+          <td>Angular Frequency</td>
+          <td>\( \omega = 2\pi f \)</td>
+          <td>Angular speed of oscillation</td>
+        </tr>
+        <tr>
+          <td>Standing Wave Frequencies</td>
+          <td>\( f_n = \frac{n v}{2L} \)</td>
+          <td>For string fixed at both ends</td>
+        </tr>
+        <tr>
+          <td>Doppler Effect</td>
+          <td>\( f' = f \frac{v \pm v_o}{v \mp v_s} \)</td>
+          <td>Observed frequency with relative motion</td>
+        </tr>
+        <tr>
+          <td>Beat Frequency</td>
+          <td>\( f_{\text{beats}} = |f_1 - f_2| \)</td>
+          <td>Frequency of beats formed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>11. Sample Problems with Solutions</h2>
+
+    <h3>Problem 1: Finding Wavelength from Frequency and Speed</h3>
+    <p>
+      A wave has a frequency of 500 Hz and travels with a speed of 340 m/s. Find its wavelength.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( \lambda = \frac{v}{f} = \frac{340}{500} = 0.68 \, \text{m} \)
+    </div>
+
+    <h3>Problem 2: Frequency Heard by Moving Observer</h3>
+    <p>
+      A source emits sound at 1000 Hz. An observer moves towards the source at 20 m/s. If the speed of sound is 340 m/s, find the frequency heard by the observer.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( f' = f \frac{v + v_o}{v} = 1000 \times \frac{340 + 20}{340} = 1058.8 \, \text{Hz} \)
+    </div>
+
+    <h3>Problem 3: Beat Frequency</h3>
+    <p>
+      Two tuning forks of frequencies 256 Hz and 260 Hz are sounded together. Find the beat frequency.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( f_{\text{beats}} = |260 - 256| = 4 \, \text{Hz} \)
+    </div>
+
+    <h2>12. Tips to Master Waves for JEE</h2>
+    <ul>
+      <li>Practice drawing waveforms and identify nodes and antinodes.</li>
+      <li>Memorize key formulas and understand their derivations.</li>
+      <li>Work through problems on superposition and standing waves carefully.</li>
+      <li>Understand physical meaning of Doppler effect and practice sign conventions.</li>
+      <li>Make use of diagrams to visualize wave propagation and interference.</li>
+      <li>Revise concepts of sound waves, intensity, and decibel scale frequently.</li>
+    </ul>
+
+    <h2>13. Conclusion</h2>
+    <p>
+      Waves are a fascinating and fundamental topic in JEE Physics that links concepts of motion, energy transfer, and sound. This comprehensive guide equips you with essential knowledge, formulas, and problem-solving strategies to confidently tackle waves questions in JEE Mains and Advanced. Regular practice and conceptual clarity will help you achieve excellence.
+    </p>
+
+    <p>
+      Keep revising, practicing, and experimenting with wave problems, and you'll build the confidence needed to ace the waves topic in your JEE exams.
+    </p>
+
+  </section>
+</body>
+
+</html>

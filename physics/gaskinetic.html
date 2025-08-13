@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Gas and Kinetic Theory Complete Guide – Formulas & Concepts</title>
+  <meta name="description" content="Comprehensive JEE Physics Gas and Kinetic Theory guide covering gas laws, kinetic theory of gases, Maxwell-Boltzmann distribution, specific heats, and important formulas with examples for JEE preparation." />
+  <meta name="keywords" content="JEE Physics Gas Laws, Kinetic Theory of Gases, Maxwell-Boltzmann Distribution, Specific Heat, Ideal Gas Equation, JEE Gas Problems" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Gas and Kinetic Theory Complete Guide</h1>
+
+    <p>
+      The study of gases and kinetic theory is an important part of the JEE Physics syllabus. Understanding gas laws, molecular theory, and the statistical behavior of gas molecules forms the basis of many JEE problems. This detailed guide covers all the essentials of gas laws, kinetic theory, Maxwell-Boltzmann distribution, specific heat capacities, and related formulas and concepts to help you prepare effectively.
+    </p>
+
+    <h2>1. Introduction to Gases and Gas Laws</h2>
+    <p>
+      Gases are fluids that expand to fill their containers. The behavior of gases is described by empirical gas laws which relate pressure, volume, temperature, and amount of gas.
+    </p>
+
+    <h3>1.1 Boyle’s Law (Isothermal Process)</h3>
+    <p>
+      At constant temperature, the volume of a given mass of gas is inversely proportional to pressure:
+    </p>
+    <div class="formula">
+      \( \displaystyle P V = \text{constant} \quad \text{or} \quad P_1 V_1 = P_2 V_2 \)
+    </div>
+
+    <h3>1.2 Charles’s Law (Isobaric Process)</h3>
+    <p>
+      At constant pressure, the volume of a given mass of gas is directly proportional to its absolute temperature:
+    </p>
+    <div class="formula">
+      \( \displaystyle \frac{V}{T} = \text{constant} \quad \text{or} \quad \frac{V_1}{T_1} = \frac{V_2}{T_2} \)
+    </div>
+
+    <h3>1.3 Gay-Lussac’s Law (Isovolumetric Process)</h3>
+    <p>
+      At constant volume, the pressure of a given mass of gas is directly proportional to its absolute temperature:
+    </p>
+    <div class="formula">
+      \( \displaystyle \frac{P}{T} = \text{constant} \quad \text{or} \quad \frac{P_1}{T_1} = \frac{P_2}{T_2} \)
+    </div>
+
+    <h3>1.4 Avogadro’s Law</h3>
+    <p>
+      Equal volumes of gases at the same temperature and pressure contain equal number of molecules.
+    </p>
+
+    <h3>1.5 Ideal Gas Equation</h3>
+    <p>
+      Combining the above gas laws leads to the ideal gas equation:
+    </p>
+    <div class="formula">
+      \( \displaystyle PV = nRT \)
+    </div>
+    <p>
+      Where \( P \) = pressure, \( V \) = volume, \( n \) = number of moles, \( R = 8.314 \, \text{J/mol K} \), \( T \) = absolute temperature.
+    </p>
+
+    <h2>2. Kinetic Theory of Gases</h2>
+    <p>
+      Kinetic theory explains macroscopic properties of gases in terms of molecular motion and collisions.
+    </p>
+
+    <h3>2.1 Postulates of Kinetic Theory</h3>
+    <ul>
+      <li>Gas consists of a large number of identical molecules moving randomly in all directions.</li>
+      <li>The volume of molecules is negligible compared to the volume of the container.</li>
+      <li>Molecules undergo perfectly elastic collisions with each other and container walls.</li>
+      <li>There are no intermolecular forces except during collisions.</li>
+      <li>The average kinetic energy of molecules is proportional to the absolute temperature.</li>
+    </ul>
+
+    <h3>2.2 Pressure Exerted by Gas Molecules</h3>
+    <p>
+      Pressure arises from molecules colliding elastically with container walls. For \( N \) molecules of mass \( m \) in volume \( V \), average molecular speed squared is \( \overline{v^2} \). The pressure is:
+    </p>
+    <div class="formula">
+      \( \displaystyle P = \frac{1}{3} \frac{N}{V} m \overline{v^2} \)
+    </div>
+
+    <h3>2.3 Average Kinetic Energy and Temperature</h3>
+    <p>
+      The average kinetic energy per molecule is:
+    </p>
+    <div class="formula">
+      \( \displaystyle E_{\text{avg}} = \frac{1}{2} m \overline{v^2} = \frac{3}{2} k_B T \)
+    </div>
+    <p>
+      where \( k_B = 1.38 \times 10^{-23} \, \text{J/K} \) is Boltzmann constant.
+    </p>
+
+    <h3>2.4 Root Mean Square Speed</h3>
+    <p>
+      The root mean square speed \( v_{\text{rms}} \) is:
+    </p>
+    <div class="formula">
+      \( \displaystyle v_{\text{rms}} = \sqrt{\overline{v^2}} = \sqrt{\frac{3RT}{M}} \)
+    </div>
+    <p>
+      Where \( M \) is molar mass in kg/mol.
+    </p>
+
+    <h3>2.5 Average and Most Probable Speeds</h3>
+    <ul>
+      <li>Most probable speed: \( v_p = \sqrt{\frac{2RT}{M}} \)</li>
+      <li>Average speed: \( v_{\text{avg}} = \sqrt{\frac{8RT}{\pi M}} \)</li>
+    </ul>
+
+    <h2>3. Maxwell-Boltzmann Distribution</h2>
+    <p>
+      This distribution describes the fraction of molecules having speed between \( v \) and \( v + dv \).
+    </p>
+    <div class="formula">
+      \( \displaystyle f(v) dv = 4 \pi \left(\frac{m}{2 \pi k_B T}\right)^{3/2} v^2 e^{-\frac{mv^2}{2 k_B T}} dv \)
+    </div>
+    <p>
+      The distribution curve shifts to higher speeds with increasing temperature.
+    </p>
+
+    <h2>4. Specific Heats of Gases</h2>
+    <p>
+      Specific heat is the heat capacity per unit mass or mole. For gases:
+    </p>
+
+    <h3>4.1 Molar Specific Heat at Constant Volume</h3>
+    <div class="formula">
+      \( \displaystyle C_V = \left( \frac{\partial Q}{\partial T} \right)_V \)
+    </div>
+
+    <h3>4.2 Molar Specific Heat at Constant Pressure</h3>
+    <div class="formula">
+      \( \displaystyle C_P = \left( \frac{\partial Q}{\partial T} \right)_P \)
+    </div>
+
+    <h3>4.3 Relation Between \( C_P \) and \( C_V \)</h3>
+    <div class="formula">
+      \( \displaystyle C_P - C_V = R \)
+    </div>
+
+    <h3>4.4 Ratio of Specific Heats \( \gamma \)</h3>
+    <div class="formula">
+      \( \displaystyle \gamma = \frac{C_P}{C_V} \)
+    </div>
+    <p>
+      Typical values: \( \gamma = \frac{5}{3} \) for monoatomic gases, \( \frac{7}{5} \) for diatomic gases.
+    </p>
+
+    <h2>5. Degrees of Freedom and Equipartition of Energy</h2>
+    <p>
+      Each molecule has degrees of freedom representing independent ways it can store energy: translation, rotation, and vibration.
+    </p>
+
+    <h3>5.1 Equipartition Theorem</h3>
+    <p>
+      Each degree of freedom contributes \( \frac{1}{2} k_B T \) energy per molecule.
+    </p>
+
+    <h3>5.2 Application to Specific Heat</h3>
+    <p>
+      For \( f \) degrees of freedom,
+    </p>
+    <div class="formula">
+      \( \displaystyle C_V = \frac{f}{2} R \quad ; \quad C_P = C_V + R = \frac{f + 2}{2} R \)
+    </div>
+
+    <h2>6. Real Gases and Van der Waals Equation</h2>
+    <p>
+      Real gases deviate from ideal gas behavior due to molecular size and intermolecular forces.
+    </p>
+
+    <h3>6.1 Van der Waals Equation</h3>
+    <div class="formula">
+      \( \displaystyle \left( P + \frac{a}{V_m^2} \right) (V_m - b) = RT \)
+    </div>
+    <p>
+      where \( a \) accounts for attractive forces, and \( b \) for finite molecular volume.
+    </p>
+
+    <h3>6.2 Critical Constants</h3>
+    <p>
+      Critical temperature \( T_c \), pressure \( P_c \), and volume \( V_c \) characterize gas-liquid transition.
+    </p>
+
+    <h2>7. Thermodynamic Processes of Gases</h2>
+    <ul>
+      <li><strong>Isothermal:</strong> \( PV = \text{constant} \)</li>
+      <li><strong>Adiabatic:</strong> \( PV^\gamma = \text{constant} \)</li>
+      <li><strong>Isobaric:</strong> \( V/T = \text{constant} \)</li>
+      <li><strong>Isochoric:</strong> \( P/T = \text{constant} \)</li>
+    </ul>
+
+    <h3>7.1 Work Done in Processes</h3>
+    <ul>
+      <li>Isothermal: \( W = nRT \ln \frac{V_f}{V_i} \)</li>
+      <li>Adiabatic: \( W = \frac{P_i V_i - P_f V_f}{\gamma - 1} \)</li>
+    </ul>
+
+    <h2>8. Mean Free Path</h2>
+    <p>
+      The mean free path \( \lambda \) is average distance traveled between collisions:
+    </p>
+    <div class="formula">
+      \( \displaystyle \lambda = \frac{1}{\sqrt{2} \pi d^2 \frac{N}{V}} \)
+    </div>
+    <p>
+      where \( d \) is molecular diameter and \( \frac{N}{V} \) number density.
+    </p>
+
+    <h2>9. Diffusion and Effusion</h2>
+    <p>
+      <strong>Diffusion:</strong> Movement of gas molecules from high to low concentration.
+    </p>
+    <p>
+      <strong>Effusion:</strong> Escape of gas molecules through a tiny hole without collisions.
+    </p>
+
+    <h3>9.1 Graham’s Law of Effusion</h3>
+    <p>
+      Rate of effusion \( r \) is inversely proportional to square root of molar mass:
+    </p>
+    <div class="formula">
+      \( \displaystyle \frac{r_1}{r_2} = \sqrt{\frac{M_2}{M_1}} \)
+    </div>
+
+    <h2>10. Important Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ideal Gas Equation</td>
+          <td>\( PV = nRT \)</td>
+          <td>Relates pressure, volume, temperature</td>
+        </tr>
+        <tr>
+          <td>Pressure from Kinetic Theory</td>
+          <td>\( P = \frac{1}{3} \frac{N}{V} m \overline{v^2} \)</td>
+          <td>Pressure due to molecular collisions</td>
+        </tr>
+        <tr>
+          <td>Average Kinetic Energy</td>
+          <td>\( E_{\text{avg}} = \frac{3}{2} k_B T \)</td>
+          <td>Energy per molecule proportional to temperature</td>
+        </tr>
+        <tr>
+          <td>Root Mean Square Speed</td>
+          <td>\( v_{\text{rms}} = \sqrt{\frac{3RT}{M}} \)</td>
+          <td>Speed measure in kinetic theory</td>
+        </tr>
+        <tr>
+          <td>Van der Waals Equation</td>
+          <td>\( \left(P + \frac{a}{V_m^2}\right)(V_m - b) = RT \)</td>
+          <td>Real gas behavior</td>
+        </tr>
+        <tr>
+          <td>Mean Free Path</td>
+          <td>\( \lambda = \frac{1}{\sqrt{2} \pi d^2 \frac{N}{V}} \)</td>
+          <td>Average distance between collisions</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>11. Sample Problems and Solutions</h2>
+
+    <h3>Problem 1: Calculate RMS Speed of Oxygen Molecules at 300 K</h3>
+    <p>
+      Given molar mass of oxygen \( M = 32 \times 10^{-3} \, \text{kg/mol} \), find \( v_{\text{rms}} \).
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( v_{\text{rms}} = \sqrt{\frac{3RT}{M}} = \sqrt{\frac{3 \times 8.314 \times 300}{0.032}} \)
+    </div>
+    <p>
+      Calculating,
+    </p>
+    <p>
+      \( v_{\text{rms}} = \sqrt{233606.25} = 483.3 \, \text{m/s} \)
+    </p>
+
+    <h3>Problem 2: Work Done During Isothermal Expansion</h3>
+    <p>
+      One mole of an ideal gas expands isothermally at 300 K from volume 10 L to 20 L. Calculate work done.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( W = nRT \ln \frac{V_f}{V_i} = 1 \times 8.314 \times 300 \times \ln \frac{20}{10} \)
+    </div>
+    <p>
+      \( W = 2494.2 \times 0.693 = 1728.5 \, \text{J} \)
+    </p>
+
+    <h2>12. Tips to Score High in JEE Gas and Kinetic Theory Questions</h2>
+    <ul>
+      <li>Memorize and understand all gas laws and their derivations.</li>
+      <li>Practice problems on root mean square, average, and most probable speeds.</li>
+      <li>Understand the physical meaning of Maxwell-Boltzmann distribution.</li>
+      <li>Revise relations between specific heats and degrees of freedom regularly.</li>
+      <li>Focus on conceptual questions on real gas behavior and deviations.</li>
+      <li>Work on thermodynamic process calculations thoroughly.</li>
+    </ul>
+
+    <h2>13. Conclusion</h2>
+    <p>
+      Mastering gases and kinetic theory requires understanding core concepts, practicing formulas, and solving a variety of problems. This guide compiles everything you need to confidently handle this important JEE physics chapter. Regular revision and problem solving will enhance your command over the topic and boost your JEE score.
+    </p>
+
+    <p>
+      Keep practicing, stay curious, and success will follow. Good luck!
+    </p>
+
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Momentum and Inertia – Complete Guide with Formulas & Examples</title>
+  <meta name="description" content="Comprehensive JEE Physics guide on Momentum and Inertia covering all concepts, formulas, theorems, collisions, moment of inertia, and solved examples." />
+  <meta name="keywords" content="JEE Physics Momentum, Inertia, Impulse, Collisions, Conservation of Momentum, Moment of Inertia, Torque, Angular Momentum" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Momentum and Inertia – Complete Guide</h1>
+
+    <p>
+      Momentum and inertia are foundational concepts in mechanics that appear frequently in JEE Physics. This comprehensive guide covers definitions, mathematical formulations, conservation laws, collisions, moment of inertia, angular momentum, torque, and problem-solving strategies essential for JEE aspirants.
+    </p>
+
+    <h2>1. Inertia</h2>
+    <p>
+      Inertia is the property of matter to resist any change in its state of motion. The greater the inertia, the harder it is to change the velocity of the object.
+    </p>
+    <p>
+      Mass is a quantitative measure of inertia. Objects with larger mass have more inertia.
+    </p>
+
+    <h2>2. Momentum</h2>
+    <p>
+      Momentum is the quantity of motion of a moving body. It is a vector quantity.
+    </p>
+
+    <h3>2.1 Linear Momentum</h3>
+    <p>
+      For a particle of mass \( m \) moving with velocity \( \vec{v} \), linear momentum \( \vec{p} \) is defined as:
+    </p>
+    <div class="formula">
+      \( \vec{p} = m \vec{v} \)
+    </div>
+
+    <h3>2.2 Impulse</h3>
+    <p>
+      Impulse is the change in momentum caused by a force applied over a time interval \( \Delta t \):
+    </p>
+    <div class="formula">
+      \( \vec{J} = \vec{F} \Delta t = \Delta \vec{p} = m \vec{v_f} - m \vec{v_i} \)
+    </div>
+    <p>
+      Impulse has the same direction as force and is measured in \( \text{Ns} \) (Newton-seconds).
+    </p>
+
+    <h3>2.3 Relation between Force and Momentum</h3>
+    <p>
+      Force is the rate of change of momentum:
+    </p>
+    <div class="formula">
+      \( \vec{F} = \frac{d\vec{p}}{dt} \)
+    </div>
+
+    <h2>3. Conservation of Momentum</h2>
+    <p>
+      In a closed system with no external forces, total momentum before an event equals total momentum after the event.
+    </p>
+    <div class="formula">
+      \( \sum \vec{p}_{initial} = \sum \vec{p}_{final} \)
+    </div>
+    <p>
+      This principle is fundamental in collision problems.
+    </p>
+
+    <h2>4. Collisions</h2>
+    <p>
+      Collisions are interactions between bodies where forces act over a short time interval. Types of collisions important for JEE:
+    </p>
+
+    <h3>4.1 Elastic Collision</h3>
+    <p>
+      Both momentum and kinetic energy are conserved.
+    </p>
+
+    <h3>4.2 Inelastic Collision</h3>
+    <p>
+      Momentum is conserved but kinetic energy is not.
+    </p>
+
+    <h3>4.3 Perfectly Inelastic Collision</h3>
+    <p>
+      Bodies stick together after collision, moving with a common velocity.
+    </p>
+
+    <h3>4.4 Formulas for 1D Elastic Collision between two masses \( m_1 \) and \( m_2 \)</h3>
+    <p>
+      Initial velocities: \( u_1, u_2 \)  
+      Final velocities: \( v_1, v_2 \)
+    </p>
+    <div class="formula">
+      \( v_1 = \frac{(m_1 - m_2)}{m_1 + m_2} u_1 + \frac{2 m_2}{m_1 + m_2} u_2 \)
+    </div>
+    <div class="formula">
+      \( v_2 = \frac{2 m_1}{m_1 + m_2} u_1 + \frac{(m_2 - m_1)}{m_1 + m_2} u_2 \)
+    </div>
+
+    <h2>5. Center of Mass</h2>
+    <p>
+      Center of mass (COM) is the point representing the average position of the mass distribution of a system.
+    </p>
+    <p>
+      For a system of particles:
+    </p>
+    <div class="formula">
+      \( \vec{R} = \frac{\sum m_i \vec{r_i}}{\sum m_i} \)
+    </div>
+    <p>
+      The motion of the system can be described by the motion of the COM.
+    </p>
+
+    <h2>6. Rotational Inertia and Moment of Inertia</h2>
+    <p>
+      Moment of inertia \( I \) is the rotational analog of mass. It measures how difficult it is to change an object’s rotational motion about an axis.
+    </p>
+    <p>
+      For point masses:
+    </p>
+    <div class="formula">
+      \( I = \sum m_i r_i^2 \)
+    </div>
+    <p>
+      where \( r_i \) is distance from axis of rotation.
+    </p>
+
+    <h3>6.1 Common Moments of Inertia</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Object</th>
+          <th>Axis</th>
+          <th>Moment of Inertia \(I\)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Thin rod</td>
+          <td>About center, perpendicular to length</td>
+          <td>\( \frac{1}{12} M L^2 \)</td>
+        </tr>
+        <tr>
+          <td>Thin rod</td>
+          <td>About end</td>
+          <td>\( \frac{1}{3} M L^2 \)</td>
+        </tr>
+        <tr>
+          <td>Solid sphere</td>
+          <td>About center</td>
+          <td>\( \frac{2}{5} M R^2 \)</td>
+        </tr>
+        <tr>
+          <td>Hollow sphere</td>
+          <td>About center</td>
+          <td>\( \frac{2}{3} M R^2 \)</td>
+        </tr>
+        <tr>
+          <td>SOLID cylinder/disc</td>
+          <td>About central axis</td>
+          <td>\( \frac{1}{2} M R^2 \)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>7. Torque</h2>
+    <p>
+      Torque \( \vec{\tau} \) is the rotational analog of force. It causes angular acceleration.
+    </p>
+    <div class="formula">
+      \( \vec{\tau} = \vec{r} \times \vec{F} \)
+    </div>
+    <p>
+      Magnitude: \( \tau = r F \sin \theta \)  
+      where \( r \) is lever arm, \( F \) force magnitude, \( \theta \) angle between force and lever arm.
+    </p>
+
+    <h2>8. Angular Momentum</h2>
+    <p>
+      Angular momentum \( \vec{L} \) for a particle is:
+    </p>
+    <div class="formula">
+      \( \vec{L} = \vec{r} \times \vec{p} = I \vec{\omega} \)
+    </div>
+    <p>
+      where \( \vec{\omega} \) is angular velocity.
+    </p>
+
+    <h3>8.1 Conservation of Angular Momentum</h3>
+    <p>
+      In absence of external torque, total angular momentum remains constant:
+    </p>
+    <div class="formula">
+      \( L_{initial} = L_{final} \)
+    </div>
+
+    <h2>9. Important Examples</h2>
+
+    <h3>Example 1: Calculate momentum and impulse</h3>
+    <p>
+      A 3 kg object moves at 5 m/s. Calculate its momentum and the impulse needed to stop it.
+    </p>
+    <p>Solution:</p>
+    <div class="formula">
+      \( p = m v = 3 \times 5 = 15\, \mathrm{kg\, m/s} \)
+    </div>
+    <p>
+      Impulse needed \( J = \Delta p = 15 \, \mathrm{Ns} \) (direction opposite to motion).
+    </p>
+
+    <h3>Example 2: Elastic collision velocities</h3>
+    <p>
+      Two balls of equal mass collide elastically. Ball 1 moves at 4 m/s; Ball 2 is at rest. Find final velocities.
+    </p>
+    <p>Solution:</p>
+    <div class="formula">
+      For equal masses in elastic collision, they exchange velocities:
+    </div>
+    <p>
+      \( v_1 = 0 \), \( v_2 = 4 \, m/s \)
+    </p>
+
+    <h3>Example 3: Moment of inertia of rod</h3>
+    <p>
+      Find moment of inertia of a 2 m rod of mass 3 kg about center.
+    </p>
+    <p>Solution:</p>
+    <div class="formula">
+      \( I = \frac{1}{12} M L^2 = \frac{1}{12} \times 3 \times (2)^2 = 1 \, \mathrm{kg\,m^2} \)
+    </div>
+
+    <h2>10. Tips for JEE Preparation on Momentum and Inertia</h2>
+    <ul>
+      <li>Understand vector nature of momentum and apply conservation laws carefully.</li>
+      <li>Practice 1D and 2D collision problems thoroughly.</li>
+      <li>Memorize moments of inertia for standard shapes and use parallel/ perpendicular axis theorems.</li>
+      <li>Use impulse-momentum theorem in force-time problems.</li>
+      <li>Visualize physical situations, draw free-body diagrams and vector components.</li>
+      <li>Relate linear and angular quantities clearly.</li>
+    </ul>
+
+    <h2>11. Summary Table of Important Formulas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Linear momentum</td>
+          <td>\( \vec{p} = m \vec{v} \)</td>
+          <td>Vector quantity</td>
+        </tr>
+        <tr>
+          <td>Impulse</td>
+          <td>\( \vec{J} = \vec{F} \Delta t = \Delta \vec{p} \)</td>
+          <td>Change in momentum</td>
+        </tr>
+        <tr>
+          <td>Force and momentum</td>
+          <td>\( \vec{F} = \frac{d\vec{p}}{dt} \)</td>
+          <td>Rate of change of momentum</td>
+        </tr>
+        <tr>
+          <td>Conservation of momentum</td>
+          <td>\( \sum \vec{p}_{initial} = \sum \vec{p}_{final} \)</td>
+          <td>Closed system, no external force</td>
+        </tr>
+        <tr>
+          <td>Moment of inertia</td>
+          <td>\( I = \sum m_i r_i^2 \)</td>
+          <td>Rotational mass</td>
+        </tr>
+        <tr>
+          <td>Torque</td>
+          <td>\( \vec{\tau} = \vec{r} \times \vec{F} \)</td>
+          <td>Rotational force</td>
+        </tr>
+        <tr>
+          <td>Angular momentum</td>
+          <td>\( \vec{L} = \vec{r} \times \vec{p} = I \vec{\omega} \)</td>
+          <td>Rotational analog of linear momentum</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      Momentum and inertia concepts are central to mechanics. Mastery will improve your problem-solving speed and accuracy in JEE Physics.
+    </div>
+  </section>
+</body>
+
+</html>

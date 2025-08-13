@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Kinematics Full Guide – Concepts, Formulas & Problems</title>
+  <meta name="description" content="Complete JEE Physics Kinematics guide covering motion in one and two dimensions, equations of motion, projectile, relative velocity, and solved examples." />
+  <meta name="keywords" content="JEE Physics Kinematics, Equations of Motion, Projectile Motion, Relative Velocity, Motion in 2D, JEE Preparation Physics" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Kinematics – Full Guide</h1>
+
+    <p>
+      Kinematics is a fundamental chapter in JEE Physics that deals with the motion of objects without considering the forces causing them. This comprehensive guide covers all essential topics including motion in one and two dimensions, equations of motion, projectile motion, relative velocity, circular motion basics, and includes key formulas, concept explanations, and solved examples to help you master the subject.
+    </p>
+
+    <h2>1. Introduction to Kinematics</h2>
+    <p>
+      Kinematics describes how objects move — their position, velocity, and acceleration — as functions of time. The study of motion is usually divided into:
+    </p>
+    <ul>
+      <li>Motion in one dimension (straight line motion)</li>
+      <li>Motion in two dimensions (plane motion)</li>
+    </ul>
+    <p>
+      Basic quantities involved:
+    </p>
+    <ul>
+      <li><strong>Displacement (s):</strong> Vector quantity representing the change in position.</li>
+      <li><strong>Distance:</strong> Scalar quantity representing the total path length travelled.</li>
+      <li><strong>Speed:</strong> Scalar, rate of change of distance.</li>
+      <li><strong>Velocity (v):</strong> Vector, rate of change of displacement.</li>
+      <li><strong>Acceleration (a):</strong> Vector, rate of change of velocity.</li>
+    </ul>
+
+    <h2>2. Motion in One Dimension</h2>
+    <h3>2.1 Displacement, Velocity, and Speed</h3>
+    <p>
+      Displacement is given by:
+    </p>
+    <div class="formula">
+      \( \vec{s} = \vec{r}(t) - \vec{r}(t_0) \)
+    </div>
+    <p>Instantaneous velocity:</p>
+    <div class="formula">
+      \( \vec{v} = \frac{d\vec{s}}{dt} \)
+    </div>
+    <p>Average velocity:</p>
+    <div class="formula">
+      \( \bar{v} = \frac{\Delta s}{\Delta t} \)
+    </div>
+
+    <h3>2.2 Equations of Motion for Constant Acceleration</h3>
+    <p>
+      When acceleration \( a \) is constant, the motion is described by the equations:
+    </p>
+    <div class="formula">
+      \[
+      \begin{cases}
+      v = u + at \\
+      s = ut + \frac{1}{2}at^2 \\
+      v^2 = u^2 + 2as
+      \end{cases}
+      \]
+    </div>
+    <p>Where,</p>
+    <ul>
+      <li>\( u \): initial velocity</li>
+      <li>\( v \): final velocity</li>
+      <li>\( a \): acceleration</li>
+      <li>\( t \): time</li>
+      <li>\( s \): displacement</li>
+    </ul>
+
+    <h3>2.3 Graphical Representation of Motion</h3>
+    <p>
+      Important graphs include displacement vs. time, velocity vs. time, and acceleration vs. time. The slope and area under these graphs provide key insights:
+    </p>
+    <ul>
+      <li>Slope of displacement-time graph = velocity.</li>
+      <li>Area under velocity-time graph = displacement.</li>
+      <li>Slope of velocity-time graph = acceleration.</li>
+      <li>Area under acceleration-time graph = change in velocity.</li>
+    </ul>
+
+    <h2>3. Motion in Two Dimensions</h2>
+    <h3>3.1 Vector Representation of Motion</h3>
+    <p>
+      Motion in a plane is described by vector components along two perpendicular axes, commonly x and y:
+    </p>
+    <div class="formula">
+      \[
+      \vec{r} = x \hat{i} + y \hat{j}
+      \]
+    </div>
+    <p>Velocity and acceleration also have components \( v_x, v_y \) and \( a_x, a_y \).</p>
+
+    <h3>3.2 Projectile Motion</h3>
+    <p>
+      Projectile motion is a special case of 2D motion under gravity, where the object moves under constant acceleration \( g \) vertically downward, and no acceleration horizontally.
+    </p>
+    <p>Key formulas assuming launch from ground level with speed \( u \) at angle \( \theta \):</p>
+
+    <div class="formula">
+      \[
+      \begin{aligned}
+      & \text{Horizontal velocity: } v_x = u \cos \theta \\
+      & \text{Vertical velocity: } v_y = u \sin \theta - g t \\
+      & \text{Horizontal displacement: } x = u \cos \theta \cdot t \\
+      & \text{Vertical displacement: } y = u \sin \theta \cdot t - \frac{1}{2} g t^2 \\
+      & \text{Time of flight: } T = \frac{2 u \sin \theta}{g} \\
+      & \text{Maximum height: } H = \frac{u^2 \sin^2 \theta}{2g} \\
+      & \text{Range: } R = \frac{u^2 \sin 2\theta}{g}
+      \end{aligned}
+      \]
+    </div>
+
+    <h3>3.3 Trajectory Equation</h3>
+    <p>Eliminating \( t \) gives the parabolic trajectory:</p>
+    <div class="formula">
+      \[
+      y = x \tan \theta - \frac{g x^2}{2 u^2 \cos^2 \theta}
+      \]
+    </div>
+
+    <h2>4. Relative Velocity</h2>
+    <p>
+      Relative velocity is the velocity of one object as observed from another moving object. If \( \vec{v}_{AB} \) is velocity of A relative to B, and \( \vec{v}_A, \vec{v}_B \) are velocities of A and B relative to ground:
+    </p>
+    <div class="formula">
+      \( \vec{v}_{AB} = \vec{v}_A - \vec{v}_B \)
+    </div>
+    <p>
+      This concept is crucial for problems involving boats in a stream, trains passing each other, or objects moving on a moving platform.
+    </p>
+
+    <h2>5. Uniform Circular Motion (Basic Introduction)</h2>
+    <p>
+      An object moving in a circle of radius \( r \) at constant speed \( v \) experiences centripetal acceleration \( a_c \):
+    </p>
+    <div class="formula">
+      \( a_c = \frac{v^2}{r} \)
+    </div>
+    <p>
+      The velocity vector changes direction continuously though speed is constant.
+    </p>
+
+    <h2>6. Important Tips and Tricks for Kinematics in JEE</h2>
+    <ul>
+      <li>Always break vectors into components for 2D problems.</li>
+      <li>Use equations of motion separately for x and y directions.</li>
+      <li>Remember time of flight, maximum height, and range formulas for projectiles.</li>
+      <li>Draw neat diagrams labeling all knowns and unknowns.</li>
+      <li>Check dimensional consistency of formulas before applying.</li>
+      <li>For relative velocity, carefully consider the frame of reference.</li>
+    </ul>
+
+    <h2>7. Solved Example Problems</h2>
+
+    <h3>Example 1: Find the time taken by a car starting from rest and moving with acceleration 2 m/s² to cover 100 m.</h3>
+    <p>Given:</p>
+    <ul>
+      <li>Initial velocity \( u = 0 \)</li>
+      <li>Acceleration \( a = 2 \, m/s^2 \)</li>
+      <li>Displacement \( s = 100 \, m \)</li>
+    </ul>
+    <p>Using \( s = ut + \frac{1}{2} a t^2 \), we get:</p>
+    <div class="formula">
+      \( 100 = 0 + \frac{1}{2} \times 2 \times t^2 = t^2 \implies t = 10 \, \text{seconds} \)
+    </div>
+
+    <h3>Example 2: A projectile is fired at 30° with a velocity of 20 m/s. Find the maximum height reached.</h3>
+    <p>Given:</p>
+    <ul>
+      <li>Initial speed \( u = 20 \, m/s \)</li>
+      <li>Angle \( \theta = 30^\circ \)</li>
+      <li>Acceleration due to gravity \( g = 9.8 \, m/s^2 \)</li>
+    </ul>
+    <p>Maximum height formula:</p>
+    <div class="formula">
+      \( H = \frac{u^2 \sin^2 \theta}{2 g} = \frac{(20)^2 \times (\sin 30^\circ)^2}{2 \times 9.8} = \frac{400 \times 0.25}{19.6} = 5.10 \, m \)
+    </div>
+
+    <h2>8. Summary and Final Notes</h2>
+    <p>
+      Kinematics is the backbone of mechanics and requires a clear understanding of vector quantities, equations of motion, and coordinate decomposition. Make sure to practice diverse problems regularly, focus on conceptual clarity, and memorize key formulas for JEE success.
+    </p>
+
+    <div class="highlight">
+      Consistent practice and solving previous year JEE problems on kinematics can greatly improve your speed and accuracy.
+    </div>
+
+  </section>
+</body>
+
+</html>

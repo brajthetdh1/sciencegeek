@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Work, Energy and Power – Complete Guide with Formulas & Examples</title>
+  <meta name="description" content="Complete JEE Physics guide on Work, Energy and Power covering all concepts, formulas, theorems, examples and tips to master this crucial chapter." />
+  <meta name="keywords" content="JEE Physics Work Energy Power, Work done by force, kinetic energy, potential energy, power formulas, work-energy theorem, JEE preparation" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Work, Energy and Power – Complete Guide</h1>
+
+    <p>
+      The chapter on <strong>Work, Energy and Power</strong> is vital in the JEE Physics syllabus. Understanding these concepts deeply is essential for solving many mechanics problems efficiently. This guide covers fundamental definitions, important formulas, work-energy theorem, types of energy, power and efficiency, and numerous solved examples to strengthen your preparation.
+    </p>
+
+    <h2>1. What is Work in Physics?</h2>
+    <p>
+      Work is said to be done when a force causes displacement of a body in the direction of the force. It is a scalar quantity measured in Joules (J).
+    </p>
+
+    <h3>1.1 Mathematical Definition of Work</h3>
+    <p>
+      If a constant force \( \vec{F} \) acts on a body causing displacement \( \vec{d} \), work done \( W \) is:
+    </p>
+    <div class="formula">
+      \( W = \vec{F} \cdot \vec{d} = F d \cos \theta \)
+    </div>
+    <p>
+      where \( \theta \) is the angle between the force and displacement vectors.
+    </p>
+
+    <h3>1.2 Work Done by a Variable Force</h3>
+    <p>
+      When force varies with position, work done is the integral:
+    </p>
+    <div class="formula">
+      \( W = \int_{x_i}^{x_f} F(x) \, dx \)
+    </div>
+
+    <h3>1.3 Sign of Work Done</h3>
+    <ul>
+      <li><strong>Positive work:</strong> Force and displacement in the same direction (\( 0^\circ \leq \theta < 90^\circ \)).</li>
+      <li><strong>Negative work:</strong> Force and displacement in opposite direction (\( 90^\circ < \theta \leq 180^\circ \)).</li>
+      <li><strong>Zero work:</strong> Force perpendicular to displacement (\( \theta = 90^\circ \)), e.g., centripetal force in uniform circular motion.</li>
+    </ul>
+
+    <h2>2. Energy</h2>
+    <p>
+      Energy is the capacity to do work. It exists in multiple forms but JEE focuses mainly on mechanical energy forms.
+    </p>
+
+    <h3>2.1 Kinetic Energy (KE)</h3>
+    <p>
+      The energy possessed by a body due to its motion is called kinetic energy.
+    </p>
+    <div class="formula">
+      \( KE = \frac{1}{2} m v^2 \)
+    </div>
+    <p>
+      where \( m \) is mass and \( v \) is velocity.
+    </p>
+
+    <h3>2.2 Potential Energy (PE)</h3>
+    <p>
+      The energy possessed by a body due to its position or configuration.
+    </p>
+
+    <h4>2.2.1 Gravitational Potential Energy</h4>
+    <p>
+      For an object of mass \( m \) at height \( h \) above a reference level:
+    </p>
+    <div class="formula">
+      \( PE = m g h \)
+    </div>
+
+    <h4>2.2.2 Elastic Potential Energy</h4>
+    <p>
+      Energy stored in a stretched or compressed spring:
+    </p>
+    <div class="formula">
+      \( PE_{spring} = \frac{1}{2} k x^2 \)
+    </div>
+    <p>
+      where \( k \) is the spring constant and \( x \) is displacement from equilibrium.
+    </p>
+
+    <h2>3. Work-Energy Theorem</h2>
+    <p>
+      This theorem relates the net work done on a body to the change in its kinetic energy:
+    </p>
+    <div class="formula">
+      \( W_{net} = \Delta KE = \frac{1}{2} m v_f^2 - \frac{1}{2} m v_i^2 \)
+    </div>
+    <p>
+      It means net work done on a body changes its kinetic energy.
+    </p>
+
+    <h2>4. Power</h2>
+    <p>
+      Power is the rate of doing work or the rate of transfer of energy. It is a scalar quantity measured in Watts (W).
+    </p>
+
+    <h3>4.1 Formula for Power</h3>
+    <div class="formula">
+      \( P = \frac{W}{t} \)
+    </div>
+    <p>
+      where \( W \) is work done and \( t \) is time taken.
+    </p>
+
+    <h3>4.2 Instantaneous Power</h3>
+    <p>
+      When force \( F \) acts on a body moving with velocity \( v \) in the direction of force:
+    </p>
+    <div class="formula">
+      \( P = \vec{F} \cdot \vec{v} = F v \cos \theta \)
+    </div>
+
+    <h3>4.3 Horsepower</h3>
+    <p>
+      1 horsepower (hp) = 746 Watts.
+    </p>
+
+    <h2>5. Conservative and Non-Conservative Forces</h2>
+
+    <h3>5.1 Conservative Forces</h3>
+    <p>
+      A force is conservative if work done by it on an object moving between two points is independent of the path taken. Examples include gravitational and elastic spring forces.
+    </p>
+
+    <h3>5.2 Non-Conservative Forces</h3>
+    <p>
+      Forces like friction and air resistance, where work done depends on the path and dissipates mechanical energy as heat.
+    </p>
+
+    <h3>5.3 Conservation of Mechanical Energy</h3>
+    <p>
+      In absence of non-conservative forces, total mechanical energy (sum of KE and PE) remains constant:
+    </p>
+    <div class="formula">
+      \( KE_i + PE_i = KE_f + PE_f \)
+    </div>
+
+    <h2>6. Elastic Collisions and Energy Considerations</h2>
+    <p>
+      Elastic collisions conserve both momentum and kinetic energy, while inelastic collisions do not conserve kinetic energy.
+    </p>
+
+    <h2>7. Applications and Examples</h2>
+
+    <h3>Example 1: Work done by force on a moving block</h3>
+    <p>
+      A force of 10 N acts on a block moving 5 m in the same direction. Find work done.
+    </p>
+    <p>
+      Solution:
+    </p>
+    <div class="formula">
+      \( W = F \times d = 10 \times 5 = 50 \, J \)
+    </div>
+
+    <h3>Example 2: Calculating kinetic energy</h3>
+    <p>
+      A 2 kg mass moves with velocity 3 m/s. Find kinetic energy.
+    </p>
+    <p>Solution:</p>
+    <div class="formula">
+      \( KE = \frac{1}{2} m v^2 = \frac{1}{2} \times 2 \times 3^2 = 9 \, J \)
+    </div>
+
+    <h3>Example 3: Power of a motor lifting a load</h3>
+    <p>
+      A motor lifts a 50 kg load to height 10 m in 5 seconds. Calculate power.
+    </p>
+    <p>Solution:</p>
+    <p>Work done = \( mgh = 50 \times 9.8 \times 10 = 4900 \, J \)</p>
+    <p>Power = Work / time = \( 4900 / 5 = 980 \, W \)</p>
+
+    <h2>8. Efficiency</h2>
+    <p>
+      Efficiency measures the effectiveness of a machine or system in converting input energy/work into useful output.
+    </p>
+    <div class="formula">
+      \( \text{Efficiency} = \frac{\text{Useful Work Output}}{\text{Total Work Input}} \times 100\% \)
+    </div>
+
+    <h2>9. Conservation of Energy in Practical Situations</h2>
+    <p>
+      Problems involving roller coasters, pendulums, and spring systems often use energy conservation principles.
+    </p>
+
+    <h2>10. Tips for JEE Work, Energy and Power</h2>
+    <ul>
+      <li>Memorize key formulas and understand when and how to apply them.</li>
+      <li>Practice problems on variable forces using integrals.</li>
+      <li>Work on conceptual questions differentiating work done by different forces.</li>
+      <li>Understand energy transformations and power calculations clearly.</li>
+      <li>Use energy conservation for efficient problem-solving instead of force analysis where possible.</li>
+      <li>Draw clear diagrams showing forces, displacements, and energy changes.</li>
+    </ul>
+
+    <h2>11. Summary Table of Important Formulas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Work done by force</td>
+          <td>\( W = F d \cos \theta \)</td>
+          <td>Scalar quantity</td>
+        </tr>
+        <tr>
+          <td>Kinetic energy</td>
+          <td>\( KE = \frac{1}{2} m v^2 \)</td>
+          <td>Energy due to motion</td>
+        </tr>
+        <tr>
+          <td>Potential energy (gravity)</td>
+          <td>\( PE = m g h \)</td>
+          <td>Energy due to position</td>
+        </tr>
+        <tr>
+          <td>Elastic potential energy</td>
+          <td>\( PE = \frac{1}{2} k x^2 \)</td>
+          <td>Energy stored in spring</td>
+        </tr>
+        <tr>
+          <td>Power</td>
+          <td>\( P = \frac{W}{t} \)</td>
+          <td>Rate of work done</td>
+        </tr>
+        <tr>
+          <td>Work-Energy theorem</td>
+          <td>\( W_{net} = \Delta KE \)</td>
+          <td>Net work equals change in kinetic energy</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      Mastering the concepts of Work, Energy, and Power will help you solve complex JEE problems with ease and build a strong foundation for advanced physics topics.
+    </div>
+
+  </section>
+</body>
+
+</html>

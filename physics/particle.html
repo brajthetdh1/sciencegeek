@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics System of Particles – Complete Guide with Formulas & Examples</title>
+  <meta name="description" content="Comprehensive JEE Physics guide on System of Particles, covering center of mass, motion, momentum conservation, collisions, internal & external forces, and problem-solving techniques." />
+  <meta name="keywords" content="JEE Physics System of Particles, Center of Mass, Momentum of System, Internal Forces, External Forces, Collision, Conservation of Momentum" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 0;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: System of Particles – Complete Guide</h1>
+
+    <p>
+      The concept of the system of particles is essential in mechanics, especially in understanding complex motion involving multiple interacting bodies. For JEE aspirants, mastering this topic can help solve a wide range of problems related to the motion of composite bodies, collisions, and conservation laws. This guide covers everything you need to know about the system of particles, including center of mass, motion, momentum, internal and external forces, and problem-solving techniques.
+    </p>
+
+    <h2>1. What is a System of Particles?</h2>
+    <p>
+      A system of particles is a collection of two or more particles that interact with each other through forces. Instead of analyzing each particle separately, we consider the system as a whole and study its overall motion and dynamics.
+    </p>
+    <p>
+      This approach simplifies many problems where the particles are connected or interacting, such as in rigid bodies, molecules, or colliding bodies.
+    </p>
+
+    <h2>2. Center of Mass (COM)</h2>
+    <p>
+      The center of mass is the weighted average position of all the particles in the system. It acts as the point where the total mass of the system can be considered to be concentrated for translational motion analysis.
+    </p>
+
+    <h3>2.1 Definition</h3>
+    <p>
+      For a system of particles with masses \( m_1, m_2, \ldots, m_n \) located at position vectors \( \vec{r}_1, \vec{r}_2, \ldots, \vec{r}_n \), the position vector of the center of mass \( \vec{R} \) is:
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{R} = \frac{\sum_{i=1}^n m_i \vec{r}_i}{\sum_{i=1}^n m_i} \)
+    </div>
+
+    <h3>2.2 Properties of Center of Mass</h3>
+    <ul>
+      <li>The center of mass lies inside the body for uniform density bodies.</li>
+      <li>COM moves as if all external forces act on it alone.</li>
+      <li>Relative motion of particles with respect to COM can be analyzed separately.</li>
+      <li>COM depends only on mass distribution, not on external forces.</li>
+    </ul>
+
+    <h2>3. Motion of the Center of Mass</h2>
+    <p>
+      The velocity of the center of mass \( \vec{V} \) is given by differentiating \( \vec{R} \) with respect to time:
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{V} = \frac{d \vec{R}}{dt} = \frac{\sum m_i \vec{v}_i}{\sum m_i} \)
+    </div>
+    <p>
+      where \( \vec{v}_i \) is the velocity of the \( i^{th} \) particle.
+    </p>
+    <p>
+      Similarly, acceleration of the center of mass \( \vec{A} \):
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{A} = \frac{d \vec{V}}{dt} = \frac{\sum m_i \vec{a}_i}{\sum m_i} \)
+    </div>
+
+    <h3>3.1 Interpretation</h3>
+    <p>
+      The motion of the system's center of mass behaves like a single particle of mass equal to total mass under the influence of the net external force acting on the system.
+    </p>
+
+    <h2>4. Momentum of a System of Particles</h2>
+    <p>
+      The total linear momentum \( \vec{P} \) of the system is the vector sum of the momenta of all individual particles:
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{P} = \sum_{i=1}^n m_i \vec{v}_i \)
+    </div>
+    <p>
+      Using center of mass velocity, it can be shown that:
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{P} = M \vec{V} \), where \( M = \sum_{i=1}^n m_i \)
+    </div>
+    <p>
+      This means total momentum equals total mass times velocity of center of mass.
+    </p>
+
+    <h2>5. Newton’s Laws for System of Particles</h2>
+    <p>
+      Applying Newton’s second law to each particle and summing over the system, we get:
+    </p>
+    <div class="formula">
+      \( \displaystyle \sum_{i=1}^n \vec{F}_i = \sum_{i=1}^n m_i \vec{a}_i \)
+    </div>
+    <p>
+      Forces \( \vec{F}_i \) can be split into external and internal forces:
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{F}_i = \vec{F}_{i}^{ext} + \sum_{j \neq i} \vec{F}_{ij}^{int} \)
+    </div>
+    <p>
+      where \( \vec{F}_{ij}^{int} \) is force on \( i^{th} \) particle due to \( j^{th} \) particle.
+    </p>
+
+    <h3>5.1 Internal Forces Cancel Out</h3>
+    <p>
+      By Newton’s third law, internal forces between pairs of particles are equal and opposite:
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{F}_{ij}^{int} = - \vec{F}_{ji}^{int} \)
+    </div>
+    <p>
+      Summing all internal forces over the system cancels out:
+    </p>
+    <div class="formula">
+      \( \displaystyle \sum_{i=1}^n \sum_{j \neq i} \vec{F}_{ij}^{int} = \vec{0} \)
+    </div>
+    <p>
+      Hence, total force on system equals sum of external forces only.
+    </p>
+
+    <h3>5.2 Equation of Motion for the System</h3>
+    <p>
+      Therefore,
+    </p>
+    <div class="formula">
+      \( \displaystyle \sum \vec{F}^{ext} = M \vec{A} \)
+    </div>
+    <p>
+      where \( M \) is total mass, \( \vec{A} \) acceleration of center of mass.
+    </p>
+
+    <h2>6. Work-Energy Theorem for System of Particles</h2>
+    <p>
+      Work done by external forces on the system changes the total kinetic energy of the system.
+    </p>
+    <p>
+      Total kinetic energy \( K \) is:
+    </p>
+    <div class="formula">
+      \( \displaystyle K = \frac{1}{2} M V^2 + K_{internal} \)
+    </div>
+    <p>
+      where \( \frac{1}{2} M V^2 \) is kinetic energy of center of mass motion and \( K_{internal} \) is kinetic energy due to motion relative to COM.
+    </p>
+
+    <h2>7. Collisions and Conservation Laws in Systems</h2>
+    <p>
+      Momentum conservation applies to a system of particles if no external net force acts on it.
+    </p>
+    <p>
+      Internal forces can change individual particle momenta but do not affect total system momentum.
+    </p>
+
+    <h3>7.1 Types of Collisions</h3>
+    <ul>
+      <li><strong>Elastic collision:</strong> both kinetic energy and momentum conserved.</li>
+      <li><strong>Inelastic collision:</strong> momentum conserved but kinetic energy not conserved.</li>
+      <li><strong>Perfectly inelastic collision:</strong> particles stick together, maximum kinetic energy lost.</li>
+    </ul>
+
+    <h3>7.2 Collision Problems in System of Particles</h3>
+    <p>
+      Often JEE problems involve multiple particle collisions where applying conservation laws to the system simplifies calculations.
+    </p>
+
+    <h2>8. Examples & Problem-Solving</h2>
+
+    <h3>Example 1: Center of Mass of Two Particles</h3>
+    <p>
+      Two particles of masses 2 kg and 3 kg are located at points \( (1, 2) \) m and \( (4, 6) \) m respectively. Find the coordinates of the center of mass.
+    </p>
+    <p>Solution:</p>
+    <div class="formula">
+      \( \displaystyle X_{cm} = \frac{2 \times 1 + 3 \times 4}{2+3} = \frac{2 + 12}{5} = \frac{14}{5} = 2.8 \, m \)
+    </div>
+    <div class="formula">
+      \( \displaystyle Y_{cm} = \frac{2 \times 2 + 3 \times 6}{2+3} = \frac{4 + 18}{5} = \frac{22}{5} = 4.4 \, m \)
+    </div>
+    <p>Coordinates of COM = (2.8, 4.4) m</p>
+
+    <h3>Example 2: Velocity of Center of Mass</h3>
+    <p>
+      Two particles move with velocities \( \vec{v}_1 = 3 \hat{i} + 4 \hat{j} \) m/s and \( \vec{v}_2 = -1 \hat{i} + 2 \hat{j} \) m/s and masses 2 kg and 3 kg. Find velocity of center of mass.
+    </p>
+    <p>Solution:</p>
+    <div class="formula">
+      \( \displaystyle \vec{V} = \frac{2 (3 \hat{i} + 4 \hat{j}) + 3 (-1 \hat{i} + 2 \hat{j})}{2 + 3} = \frac{(6 - 3) \hat{i} + (8 + 6) \hat{j}}{5} = \frac{3 \hat{i} + 14 \hat{j}}{5} \)
+    </div>
+    <p>
+      \( \displaystyle \vec{V} = 0.6 \hat{i} + 2.8 \hat{j} \, m/s \)
+    </p>
+
+    <h3>Example 3: Conservation of Momentum in Collision</h3>
+    <p>
+      Two particles of masses 5 kg and 3 kg move towards each other with speeds 6 m/s and 4 m/s respectively. They collide and stick together. Find velocity of combined mass after collision.
+    </p>
+    <p>Solution:</p>
+    <p>Assuming 1D motion along x-axis, taking direction of 5 kg mass as positive:</p>
+    <div class="formula">
+      \( \displaystyle v = \frac{5 \times 6 - 3 \times 4}{5 + 3} = \frac{30 - 12}{8} = \frac{18}{8} = 2.25 \, m/s \)
+    </div>
+    <p>The combined mass moves with velocity 2.25 m/s in the direction of the 5 kg mass.</p>
+
+    <h2>9. Internal and External Forces in Detail</h2>
+    <p>
+      Forces acting on particles of a system can be classified into:
+    </p>
+    <ul>
+      <li><strong>Internal forces:</strong> forces particles exert on each other within the system.</li>
+      <li><strong>External forces:</strong> forces acting on the system from outside (gravity, friction, tension, etc.).</li>
+    </ul>
+
+    <p>
+      Internal forces affect relative motion of particles but do not change total momentum of the system.
+    </p>
+
+    <h2>10. Mathematical Treatment of Internal Forces</h2>
+    <p>
+      For particles \( i \) and \( j \), internal force exerted by \( j \) on \( i \) is \( \vec{F}_{ij} \).
+    </p>
+    <p>
+      According to Newton’s third law:
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{F}_{ij} = - \vec{F}_{ji} \)
+    </div>
+    <p>
+      Summing over all internal forces in the system:
+    </p>
+    <div class="formula">
+      \( \displaystyle \sum_{i=1}^n \sum_{j \neq i} \vec{F}_{ij} = \vec{0} \)
+    </div>
+    <p>
+      This property simplifies the equation of motion for the system, as internal forces do not contribute to net external force.
+    </p>
+
+    <h2>11. Applications in JEE Problems</h2

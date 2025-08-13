@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics: Units and Measurement – Complete Guide</title>
+  <meta name="description" content="Comprehensive JEE Physics guide on Units and Measurement covering physical quantities, systems of units, measurement techniques, errors, significant figures, and dimensional analysis." />
+  <meta name="keywords" content="JEE Physics Units and Measurement, Physical Quantities, SI Units, Measurement Errors, Dimensional Analysis, JEE Preparation" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+    h1, h2 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+    th {
+      background-color: #e0e7ff;
+    }
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>JEE Physics: Units and Measurement – Complete Guide</h1>
+
+    <p>
+      Units and Measurement is a foundational chapter in JEE Physics that introduces how physical quantities are defined, measured, and related. It covers essential topics such as physical quantities, unit systems, measurement techniques, errors in measurement, significant figures, and dimensional analysis. A strong grasp of these concepts is vital for accurate problem solving and a solid understanding of physics principles.
+    </p>
+
+    <h2>1. Physical Quantities: Fundamental and Derived</h2>
+    <p>
+      Physical quantities are properties that can be measured or calculated. They are classified into:
+    </p>
+    <ul>
+      <li><strong>Fundamental (Base) Quantities:</strong> These quantities are independent and cannot be described in terms of other quantities. The seven fundamental quantities in SI units are:
+        <ul>
+          <li>Length (meter, m)</li>
+          <li>Mass (kilogram, kg)</li>
+          <li>Time (second, s)</li>
+          <li>Electric current (ampere, A)</li>
+          <li>Temperature (kelvin, K)</li>
+          <li>Amount of substance (mole, mol)</li>
+          <li>Luminous intensity (candela, cd)</li>
+        </ul>
+      </li>
+      <li><strong>Derived Quantities:</strong> Quantities defined by combining fundamental quantities through mathematical relationships. Examples include velocity, acceleration, force, pressure, energy, power, electric charge, and voltage.</li>
+    </ul>
+
+    <h2>2. Systems of Units</h2>
+    <p>
+      A system of units is a set of standard units used for measurement. Important systems include:
+    </p>
+    <ul>
+      <li><strong>CGS System:</strong> Centimeter, gram, second.</li>
+      <li><strong>MKS System:</strong> Meter, kilogram, second.</li>
+      <li><strong>FPS System:</strong> Foot, pound, second.</li>
+      <li><strong>SI System (International System of Units):</strong> Universally used system based on seven fundamental units listed above.</li>
+    </ul>
+
+    <h2>3. Important SI Units of Derived Quantities</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Quantity</th>
+          <th>Unit</th>
+          <th>Symbol</th>
+          <th>Dimension</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Force</td><td>Newton</td><td>N</td><td>$MLT^{-2}$</td></tr>
+        <tr><td>Pressure</td><td>Pascal</td><td>Pa</td><td>$ML^{-1}T^{-2}$</td></tr>
+        <tr><td>Energy</td><td>Joule</td><td>J</td><td>$ML^{2}T^{-2}$</td></tr>
+        <tr><td>Power</td><td>Watt</td><td>W</td><td>$ML^{2}T^{-3}$</td></tr>
+        <tr><td>Electric Charge</td><td>Coulomb</td><td>C</td><td>$IT$</td></tr>
+        <tr><td>Electric Potential</td><td>Volt</td><td>V</td><td>$ML^{2}T^{-3}I^{-1}$</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4. Measurement and Instruments</h2>
+    <p>
+      Measurement is the process of comparing an unknown quantity to a standard unit. Common instruments include:
+    </p>
+    <ul>
+      <li><strong>Length:</strong> Meter scale, Vernier calipers, Screw gauge.</li>
+      <li><strong>Mass:</strong> Electronic balance, Beam balance.</li>
+      <li><strong>Time:</strong> Stopwatch, Atomic clock.</li>
+      <li><strong>Temperature:</strong> Mercury and digital thermometers.</li>
+      <li><strong>Electric Current:</strong> Ammeter, Galvanometer.</li>
+    </ul>
+
+    <h2>5. Accuracy, Precision, and Errors</h2>
+    <p>
+      Accuracy refers to closeness to the true value; precision indicates consistency in repeated measurements. Errors are deviations from the true value, categorized as:
+    </p>
+    <ul>
+      <li><strong>Systematic Errors:</strong> Consistent, reproducible errors from faulty instruments or procedures.</li>
+      <li><strong>Random Errors:</strong> Unpredictable fluctuations caused by environment or observer.</li>
+      <li><strong>Gross Errors:</strong> Human mistakes like misreading or calculation slips.</li>
+    </ul>
+
+    <h2>6. Significant Figures</h2>
+    <p>
+      Significant figures represent all known digits plus one uncertain digit in a measurement. Rules:
+    </p>
+    <ul>
+      <li>All non-zero digits are significant.</li>
+      <li>Zeros between non-zero digits are significant.</li>
+      <li>Leading zeros are not significant.</li>
+      <li>Trailing zeros in decimals are significant.</li>
+    </ul>
+
+    <h2>7. Dimensional Analysis</h2>
+    <p>
+      Dimensional analysis checks equation correctness and derives relations using dimensions of physical quantities. Fundamental dimensions include Mass (M), Length (L), Time (T), Electric Current (I), Temperature (θ), Amount of Substance (N), and Luminous Intensity (J).
+    </p>
+    <p>
+      For example, velocity \(v = \frac{\text{distance}}{\text{time}}\) has dimension \( [L T^{-1}] \). Kinetic energy \( E_k = \frac{1}{2} m v^2 \) has dimension \( [M L^2 T^{-2}] \).
+    </p>
+
+    <h2>8. Least Count and Measurement Precision</h2>
+    <p>
+      Least count is the smallest measurable value of an instrument, indicating precision:
+    </p>
+    <ul>
+      <li>Vernier calipers: Typically 0.01 cm.</li>
+      <li>Screw gauge: As small as 0.001 cm.</li>
+    </ul>
+
+    <h2>9. Methods to Reduce Errors</h2>
+    <ul>
+      <li>Take multiple readings and calculate averages.</li>
+      <li>Calibrate instruments before use.</li>
+      <li>Use instruments with smaller least count.</li>
+      <li>Minimize parallax errors by correct observation.</li>
+      <li>Control environmental factors like temperature and vibrations.</li>
+    </ul>
+
+    <h2>10. Unit Conversion</h2>
+    <p>
+      Conversion between units is done via multiplication by appropriate factors:
+    </p>
+    <ul>
+      <li>1 inch = 2.54 cm</li>
+      <li>1 pound = 0.4536 kg</li>
+      <li>1 calorie = 4.184 joules</li>
+      <li>1 atm = 1.013 × 10<sup>5</sup> pascals</li>
+      <li>Temperature: \( K = °C + 273.15 \)</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>Summary:</strong> Units and Measurement form the foundation for physics problem-solving in JEE. Understanding physical quantities, unit systems, precise measurement techniques, error management, and dimensional analysis equips you to tackle diverse physics problems effectively and confidently.
+    </div>
+  </section>
+</body>
+</html>

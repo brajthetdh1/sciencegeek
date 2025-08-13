@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Laws of Motion – Complete Guide with Formulas & Examples</title>
+  <meta name="description" content="Comprehensive guide to JEE Physics Laws of Motion covering Newton’s laws, friction, circular motion, force analysis, and solved problems for exam success." />
+  <meta name="keywords" content="JEE Physics Laws of Motion, Newton's Laws, Friction, Circular Motion, Force, JEE Preparation Physics" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Laws of Motion – Complete Guide</h1>
+
+    <p>
+      Laws of Motion form a crucial part of the mechanics syllabus in JEE Physics. This chapter primarily revolves around Newton's laws, force analysis, friction, motion on inclined planes, tension, circular motion basics, and includes comprehensive solved examples. Mastery of these topics is essential to solve a wide range of problems in JEE Main and Advanced exams.
+    </p>
+
+    <h2>1. Introduction to Laws of Motion</h2>
+    <p>
+      Motion is caused due to forces. Understanding the relationship between forces acting on objects and the resulting motion is the core objective of the Laws of Motion. Newton's three laws lay the foundation of classical mechanics.
+    </p>
+
+    <h2>2. Newton's Laws of Motion</h2>
+
+    <h3>2.1 Newton's First Law (Law of Inertia)</h3>
+    <p>
+      This law states: <em>"An object at rest remains at rest and an object in motion continues to move with constant velocity unless acted upon by a net external force."</em>
+    </p>
+    <p>
+      It introduces the concept of inertia — the tendency of an object to resist change in its motion. The greater the mass, the greater the inertia.
+    </p>
+
+    <h3>2.2 Newton's Second Law (Fundamental Law of Dynamics)</h3>
+    <p>
+      It quantifies the effect of force on motion. The net force \( \vec{F} \) acting on a body is proportional to the rate of change of its momentum \( \vec{p} \):
+    </p>
+    <div class="formula">
+      \( \vec{F} = \frac{d\vec{p}}{dt} \)
+    </div>
+    <p>
+      For constant mass \( m \), momentum \( \vec{p} = m \vec{v} \), the law simplifies to:
+    </p>
+    <div class="formula">
+      \( \vec{F} = m \vec{a} \)
+    </div>
+    <p>
+      Here,
+    </p>
+    <ul>
+      <li>\( \vec{F} \) = net force on the object (vector)</li>
+      <li>\( m \) = mass (scalar)</li>
+      <li>\( \vec{a} \) = acceleration (vector)</li>
+    </ul>
+
+    <h3>2.3 Newton's Third Law (Action and Reaction)</h3>
+    <p>
+      It states: <em>"To every action, there is an equal and opposite reaction."</em>
+    </p>
+    <p>
+      Forces always occur in pairs acting on two different bodies. If body A exerts a force \( \vec{F} \) on body B, then body B simultaneously exerts a force \( -\vec{F} \) on body A.
+    </p>
+
+    <h2>3. Force and Mass</h2>
+    <p>
+      <strong>Force</strong> is a vector quantity that can cause a change in motion. Its SI unit is the Newton (N), where
+    </p>
+    <div class="formula">
+      1 Newton = 1 kg·m/s²
+    </div>
+    <p>
+      Mass is a scalar quantity representing the amount of matter.
+    </p>
+
+    <h2>4. Free Body Diagrams (FBD)</h2>
+    <p>
+      Drawing Free Body Diagrams is essential to analyze forces acting on an object. It involves:
+    </p>
+    <ul>
+      <li>Isolating the object.</li>
+      <li>Representing all forces acting on it by arrows (gravity, normal force, tension, friction, applied forces).</li>
+      <li>Using the FBD to write equations based on Newton's laws.</li>
+    </ul>
+
+    <h2>5. Types of Forces</h2>
+
+    <h3>5.1 Gravitational Force</h3>
+    <p>
+      The weight \( W \) of an object of mass \( m \) near Earth’s surface is:
+    </p>
+    <div class="formula">
+      \( W = mg \)
+    </div>
+    <p>where \( g \approx 9.8 \, m/s^2 \).</p>
+
+    <h3>5.2 Normal Force</h3>
+    <p>
+      The perpendicular contact force exerted by a surface on an object.
+    </p>
+
+    <h3>5.3 Tension</h3>
+    <p>
+      Force transmitted through a string, rope or cable when pulled tight.
+    </p>
+
+    <h3>5.4 Frictional Force</h3>
+    <p>
+      The force opposing relative motion between two surfaces in contact.
+    </p>
+
+    <h2>6. Friction</h2>
+
+    <h3>6.1 Types of Friction</h3>
+    <ul>
+      <li><strong>Static friction \( f_s \):</strong> Prevents motion between stationary surfaces.</li>
+      <li><strong>Kinetic friction \( f_k \):</strong> Acts between moving surfaces.</li>
+    </ul>
+
+    <h3>6.2 Laws of Friction</h3>
+    <ul>
+      <li>Friction acts opposite to the direction of motion or impending motion.</li>
+      <li>Frictional force is proportional to the normal reaction force.</li>
+      <li>Friction is independent of the apparent area of contact.</li>
+      <li>Friction depends on the nature of surfaces.</li>
+    </ul>
+
+    <h3>6.3 Coefficients of Friction</h3>
+    <p>
+      The frictional force magnitude is:
+    </p>
+    <div class="formula">
+      \( f = \mu N \)
+    </div>
+    <p>Where:</p>
+    <ul>
+      <li>\( \mu_s \) = coefficient of static friction (maximum static friction: \( f_s^{max} = \mu_s N \))</li>
+      <li>\( \mu_k \) = coefficient of kinetic friction (usually \( \mu_k < \mu_s \))</li>
+      <li>\( N \) = normal force</li>
+    </ul>
+
+    <h3>6.4 Motion on an Inclined Plane with Friction</h3>
+    <p>
+      Components of weight along and perpendicular to incline:
+    </p>
+    <div class="formula">
+      \[
+      \begin{cases}
+      W_{\parallel} = mg \sin \theta \\
+      W_{\perp} = mg \cos \theta
+      \end{cases}
+      \]
+    </div>
+    <p>
+      Friction force \( f = \mu N = \mu mg \cos \theta \).
+    </p>
+
+    <h2>7. Motion Under a Constant Force</h2>
+    <p>
+      If a constant force acts on a body, it produces constant acceleration, and equations of motion (from Kinematics) apply.
+    </p>
+
+    <h2>8. Circular Motion (Basic Concepts)</h2>
+
+    <h3>8.1 Centripetal Force and Acceleration</h3>
+    <p>
+      An object moving in a circle of radius \( r \) at speed \( v \) experiences acceleration directed toward the center:
+    </p>
+    <div class="formula">
+      \( a_c = \frac{v^2}{r} \)
+    </div>
+    <p>
+      The required centripetal force:
+    </p>
+    <div class="formula">
+      \( F_c = m a_c = m \frac{v^2}{r} \)
+    </div>
+
+    <h3>8.2 Examples of Centripetal Force</h3>
+    <ul>
+      <li>Tension in a string during circular motion</li>
+      <li>Normal force in vertical circular motion</li>
+      <li>Gravitational force providing centripetal force for planetary orbits</li>
+    </ul>
+
+    <h2>9. Impulse and Momentum</h2>
+
+    <h3>9.1 Momentum</h3>
+    <p>
+      Momentum \( \vec{p} \) is the product of mass and velocity:
+    </p>
+    <div class="formula">
+      \( \vec{p} = m \vec{v} \)
+    </div>
+
+    <h3>9.2 Impulse</h3>
+    <p>
+      Impulse \( \vec{J} \) is the change in momentum caused by a force acting over a time interval:
+    </p>
+    <div class="formula">
+      \( \vec{J} = \Delta \vec{p} = \vec{F}_{avg} \Delta t \)
+    </div>
+
+    <h2>10. Solved Example Problems</h2>
+
+    <h3>Example 1: A block of mass 5 kg is pushed on a horizontal surface with a force of 20 N. The coefficient of kinetic friction is 0.1. Find acceleration.</h3>
+    <p>Given:</p>
+    <ul>
+      <li>Mass \( m = 5 \, kg \)</li>
+      <li>Applied force \( F = 20 \, N \)</li>
+      <li>Kinetic friction coefficient \( \mu_k = 0.1 \)</li>
+      <li>Acceleration due to gravity \( g = 9.8 \, m/s^2 \)</li>
+    </ul>
+    <p>Solution:</p>
+    <p>Friction force \( f = \mu_k mg = 0.1 \times 5 \times 9.8 = 4.9 \, N \)</p>
+    <p>Net force \( F_{net} = F - f = 20 - 4.9 = 15.1 \, N \)</p>
+    <p>Acceleration \( a = \frac{F_{net}}{m} = \frac{15.1}{5} = 3.02 \, m/s^2 \)</p>
+
+    <h3>Example 2: Two blocks of masses 3 kg and 5 kg are connected by a light string and pulled by a force of 16 N on a frictionless surface. Find the acceleration and tension in the string.</h3>
+    <p>Given:</p>
+    <ul>
+      <li>\( m_1 = 3 \, kg \), \( m_2 = 5 \, kg \)</li>
+      <li>Force \( F = 16 \, N \)</li>
+      <li>Surface is frictionless.</li>
+    </ul>
+    <p>Solution:</p>
+    <p>Total mass \( m = m_1 + m_2 = 8 \, kg \)</p>
+    <p>Acceleration \( a = \frac{F}{m} = \frac{16}{8} = 2 \, m/s^2 \)</p>
+    <p>Tension \( T \) in string pulling \( m_1 \):</p>
+    <div class="formula">
+      \( T = m_1 a = 3 \times 2 = 6 \, N \)
+    </div>
+
+    <h2>11. Important Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Newton’s 2nd Law</td>
+          <td>\( \vec{F} = m \vec{a} \)</td>
+          <td>Force causes acceleration</td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td>\( W = mg \)</td>
+          <td>Force due to gravity</td>
+        </tr>
+        <tr>
+          <td>Friction Force</td>
+          <td>\( f = \mu N \)</td>
+          <td>\( \mu \) = coefficient of friction</td>
+        </tr>
+        <tr>
+          <td>Centripetal Force</td>
+          <td>\( F_c = m \frac{v^2}{r} \)</td>
+          <td>Force causing circular motion</td>
+        </tr>
+        <tr>
+          <td>Impulse</td>
+          <td>\( J = \Delta p = F_{avg} \Delta t \)</td>
+          <td>Change in momentum</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>12. Tips to Master Laws of Motion for JEE</h2>
+    <ul>
+      <li>Practice drawing clear free body diagrams every time.</li>
+      <li>Understand vector nature of forces and components.</li>
+      <li>Memorize formulas, but also focus on conceptual clarity.</li>
+      <li>Work through previous year JEE questions on friction and circular motion thoroughly.</li>
+      <li>Revise Newton’s laws and their applications multiple times.</li>
+      <li>Perform dimensional checks on equations during problem solving.</li>
+      <li>Learn the difference and relation between static and kinetic friction.</li>
+      <li>Focus on problem-solving speed by solving many practice problems.</li>
+    </ul>
+
+    <div class="highlight">
+      Mastering the Laws of Motion not only helps you solve mechanics problems but also builds a solid foundation for topics like dynamics, work-energy, and rotational motion.
+    </div>
+
+  </section>
+</body>
+
+</html>

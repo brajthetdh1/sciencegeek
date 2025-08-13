@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Gravitation Complete Guide – Formulas, Concepts & Examples</title>
+  <meta name="description" content="Comprehensive JEE Physics Gravitation guide covering Newton's law of gravitation, gravitational potential & field, acceleration due to gravity, Kepler's laws, escape velocity, orbital motion, and solved examples." />
+  <meta name="keywords" content="JEE Physics Gravitation, Newton's Law of Gravitation, Gravitational Field, Gravitational Potential, Kepler's Laws, Escape Velocity, Orbital Motion, Gravitation Formulas" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Gravitation – Complete Guide</h1>
+
+    <p>
+      Gravitation is a fundamental force governing the motion of celestial bodies and objects on Earth. It is a core topic in JEE Physics with multiple important concepts, formulas, and problem-solving techniques. This complete guide covers Newton’s law of gravitation, gravitational field and potential, acceleration due to gravity, Kepler’s laws, escape velocity, orbital motion, and important solved examples to help you master gravitation for the JEE exam.
+    </p>
+
+    <h2>1. Newton's Law of Universal Gravitation</h2>
+    <p>
+      Newton’s law states that every point mass attracts every other point mass with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between them.
+    </p>
+    <div class="formula">
+      \( \displaystyle F = G \frac{m_1 m_2}{r^2} \)
+    </div>
+    <p>
+      where:
+    </p>
+    <ul>
+      <li>\( F \) = gravitational force between masses</li>
+      <li>\( G = 6.674 \times 10^{-11} \, \text{Nm}^2/\text{kg}^2 \) = universal gravitational constant</li>
+      <li>\( m_1, m_2 \) = masses of the objects</li>
+      <li>\( r \) = distance between the centers of masses</li>
+    </ul>
+
+    <h3>1.1 Characteristics of Gravitational Force</h3>
+    <ul>
+      <li>It is always attractive.</li>
+      <li>It acts along the line joining the two masses.</li>
+      <li>It is a central force and conservative.</li>
+      <li>It follows the inverse-square law.</li>
+    </ul>
+
+    <h2>2. Gravitational Field</h2>
+    <p>
+      The gravitational field at a point in space is defined as the gravitational force experienced by a unit mass placed at that point.
+    </p>
+    <div class="formula">
+      \( \displaystyle \vec{g} = \frac{\vec{F}}{m} \)
+    </div>
+    <p>
+      For a mass \( M \), the gravitational field at a distance \( r \) from its center is:
+    </p>
+    <div class="formula">
+      \( \displaystyle g = \frac{GM}{r^2} \)
+    </div>
+    <p>
+      The field direction is always towards the mass causing the field.
+    </p>
+
+    <h3>2.1 Gravitational Field due to Multiple Masses</h3>
+    <p>
+      The net gravitational field at any point due to multiple masses is the vector sum of the individual fields due to each mass.
+    </p>
+
+    <h2>3. Gravitational Potential</h2>
+    <p>
+      Gravitational potential at a point is defined as the work done in bringing a unit mass from infinity to that point in the gravitational field.
+    </p>
+    <div class="formula">
+      \( \displaystyle V = - \frac{GM}{r} \)
+    </div>
+    <p>
+      It is a scalar quantity and negative because the gravitational force is attractive.
+    </p>
+
+    <h3>3.1 Relationship between Gravitational Field and Potential</h3>
+    <p>
+      The gravitational field is the negative gradient of the potential:
+    </p>
+    <div class="formula">
+      \( \displaystyle g = - \frac{dV}{dr} \)
+    </div>
+
+    <h2>4. Acceleration Due to Gravity (g)</h2>
+    <p>
+      The acceleration due to gravity at the surface of a planet of mass \( M \) and radius \( R \) is:
+    </p>
+    <div class="formula">
+      \( \displaystyle g = \frac{GM}{R^2} \)
+    </div>
+    <p>
+      On Earth, \( g \approx 9.8 \, \text{m/s}^2 \).
+    </p>
+
+    <h3>4.1 Variation of g with Height and Depth</h3>
+    <p><strong>At height \( h \) above surface:</strong></p>
+    <div class="formula">
+      \( \displaystyle g_h = g \left(1 - \frac{2h}{R}\right) \) (for \( h \ll R \))
+    </div>
+    <p><strong>At depth \( d \) below surface:</strong></p>
+    <div class="formula">
+      \( \displaystyle g_d = g \left(1 - \frac{d}{R}\right) \)
+    </div>
+
+    <h2>5. Kepler's Laws of Planetary Motion</h2>
+    <p>
+      Johannes Kepler formulated three laws describing planetary orbits which are crucial in JEE Gravitation problems.
+    </p>
+
+    <h3>5.1 First Law (Law of Ellipses)</h3>
+    <p>
+      Every planet moves around the sun in an elliptical orbit with the sun at one focus.
+    </p>
+
+    <h3>5.2 Second Law (Law of Areas)</h3>
+    <p>
+      The line joining a planet and the sun sweeps equal areas in equal intervals of time.
+    </p>
+
+    <h3>5.3 Third Law (Law of Periods)</h3>
+    <p>
+      The square of the time period \( T \) of a planet is proportional to the cube of the semi-major axis \( r \) of its orbit:
+    </p>
+    <div class="formula">
+      \( \displaystyle T^2 \propto r^3 \quad \text{or} \quad \frac{T_1^2}{r_1^3} = \frac{T_2^2}{r_2^3} \)
+    </div>
+
+    <h2>6. Orbital Velocity and Escape Velocity</h2>
+
+    <h3>6.1 Orbital Velocity</h3>
+    <p>
+      The velocity required for a satellite to move in a circular orbit of radius \( r \) around a planet of mass \( M \):
+    </p>
+    <div class="formula">
+      \( \displaystyle v = \sqrt{\frac{GM}{r}} \)
+    </div>
+    <p>
+      This velocity ensures the centripetal force needed for circular orbit is provided by gravitational force.
+    </p>
+
+    <h3>6.2 Escape Velocity</h3>
+    <p>
+      The minimum velocity required by a body to escape the gravitational field of a planet without further propulsion is:
+    </p>
+    <div class="formula">
+      \( \displaystyle v_{esc} = \sqrt{\frac{2GM}{R}} = \sqrt{2gR} \)
+    </div>
+    <p>
+      Here, \( R \) is the radius of the planet.
+    </p>
+
+    <h3>6.3 Relation Between Orbital and Escape Velocity</h3>
+    <div class="formula">
+      \( \displaystyle v_{esc} = \sqrt{2} \times v_{orbital} \)
+    </div>
+
+    <h2>7. Gravitational Potential Energy</h2>
+    <p>
+      The gravitational potential energy of two masses \( m_1 \) and \( m_2 \) separated by distance \( r \) is:
+    </p>
+    <div class="formula">
+      \( \displaystyle U = -G \frac{m_1 m_2}{r} \)
+    </div>
+    <p>
+      It is negative due to the attractive nature of gravitational force, indicating a bound system.
+    </p>
+
+    <h2>8. Total Energy of a Satellite</h2>
+    <p>
+      The total mechanical energy \( E \) of a satellite of mass \( m \) orbiting a planet of mass \( M \) in a circular orbit of radius \( r \):
+    </p>
+    <div class="formula">
+      \( \displaystyle E = K + U = -\frac{GMm}{2r} \)
+    </div>
+    <p>
+      where \( K = \frac{1}{2} m v^2 = \frac{GMm}{2r} \) is kinetic energy and \( U = -\frac{GMm}{r} \) is potential energy.
+    </p>
+
+    <h2>9. Gravitational Force Inside Earth</h2>
+    <p>
+      Assuming uniform density, gravitational acceleration at depth \( d \) inside Earth:
+    </p>
+    <div class="formula">
+      \( \displaystyle g_d = g \left(1 - \frac{d}{R}\right) \)
+    </div>
+    <p>
+      where \( R \) is Earth’s radius.
+    </p>
+
+    <h2>10. Important Concepts & Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Newton's Gravitational Force</td>
+          <td>\( F = G \frac{m_1 m_2}{r^2} \)</td>
+          <td>Attractive force between two masses</td>
+        </tr>
+        <tr>
+          <td>Gravitational Field</td>
+          <td>\( g = \frac{GM}{r^2} \)</td>
+          <td>Force per unit mass at distance \( r \)</td>
+        </tr>
+        <tr>
+          <td>Gravitational Potential</td>
+          <td>\( V = - \frac{GM}{r} \)</td>
+          <td>Work done per unit mass from infinity</td>
+        </tr>
+        <tr>
+          <td>Acceleration Due to Gravity on Surface</td>
+          <td>\( g = \frac{GM}{R^2} \)</td>
+          <td>Depends on planet's mass & radius</td>
+        </tr>
+        <tr>
+          <td>Escape Velocity</td>
+          <td>\( v_{esc} = \sqrt{2gR} \)</td>
+          <td>Minimum to escape planet’s gravity</td>
+        </tr>
+        <tr>
+          <td>Orbital Velocity</td>
+          <td>\( v = \sqrt{\frac{GM}{r}} \)</td>
+          <td>For stable circular orbit radius \( r \)</td>
+        </tr>
+        <tr>
+          <td>Kepler’s Third Law</td>
+          <td>\( T^2 \propto r^3 \)</td>
+          <td>Relation between period and orbit size</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>11. Sample Problems with Solutions</h2>
+
+    <h3>Problem 1: Gravitational Force Between Two Spheres</h3>
+    <p>
+      Two solid spheres of masses 10 kg and 15 kg have radii 0.5 m and 0.3 m respectively. They are placed such that their surfaces are 1 m apart. Find the gravitational force between them.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <p>
+      Distance between centers:
+    </p>
+    <div class="formula">
+      \( r = 1 + 0.5 + 0.3 = 1.8 \, m \)
+    </div>
+    <p>
+      Force:
+    </p>
+    <div class="formula">
+      \( F = G \frac{m_1 m_2}{r^2} = 6.674 \times 10^{-11} \times \frac{10 \times 15}{(1.8)^2} \approx 3.09 \times 10^{-10} \, N \)
+    </div>
+
+    <h3>Problem 2: Satellite Orbit Height</h3>
+    <p>
+      A satellite orbits Earth with a velocity of 7.5 km/s. Calculate its height above the Earth’s surface. (Given \( R_{earth} = 6400 \, km \), \( g = 9.8 \, m/s^2 \))
+    </p>
+    <p><strong>Solution:</strong></p>
+    <p>
+      Using orbital velocity formula:
+    </p>
+    <div class="formula">
+      \( v = \sqrt{\frac{GM}{r}} = \sqrt{gR_{earth}^2 / r} \)
+    </div>
+    <p>
+      Rearranged:
+    </p>
+    <div class="formula">
+      \( r = \frac{g R_{earth}^2}{v^2} \)
+    </div>
+    <p>
+      Convert units:
+    </p>
+    <ul>
+      <li>\( v = 7.5 \times 10^3 \, m/s \)</li>
+      <li>\( R_{earth} = 6.4 \times 10^6 \, m \)</li>
+    </ul>
+    <p>
+      Calculate \( r \):
+    </p>
+    <div class="formula">
+      \( r = \frac{9.8 \times (6.4 \times 10^6)^2}{(7.5 \times 10^3)^2} \approx 1.1 \times 10^7 \, m \)
+    </div>
+    <p>
+      Height \( h = r - R_{earth} = 1.1 \times 10^7 - 6.4 \times 10^6 = 4.6 \times 10^6 \, m = 4600 \, km \)
+    </p>
+
+    <h3>Problem 3: Escape Velocity from Moon</h3>
+    <p>
+      Find the escape velocity from the Moon given its radius \( 1.74 \times 10^6 \, m \) and acceleration due to gravity \( 1.62 \, m/s^2 \).
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( v_{esc} = \sqrt{2 g R} = \sqrt{2 \times 1.62 \times 1.74 \times 10^6} \approx 2375 \, m/s \)
+    </div>
+
+    <h2>12. Tips & Tricks to Ace Gravitation in JEE</h2>
+    <ul>
+      <li><strong>Memorize key formulas:</strong> Newton’s law, gravitational field, potential, escape velocity, orbital velocity.</li>
+      <li><strong>Understand concepts:</strong> Difference between gravitational force, field, potential, and energy.</li>
+      <li><strong>Practice vector addition:</strong> For fields due to multiple masses.</li>
+      <li><strong>Use dimensional analysis:</strong> To check formula correctness.</li>
+      <li><strong>Solve previous years’ questions:</strong> Especially on satellite motion, gravitation inside Earth, and Kepler’s laws.</li>
+      <li><strong>Keep track of units:</strong> Always convert to SI before calculations.</li>
+      <li><strong>Draw clear diagrams:</strong> For orbits, forces, and vectors.</li>
+    </ul>
+
+    <h2>13. Conclusion</h2>
+    <p>
+      Gravitation is a vital topic that tests your conceptual understanding and mathematical skills. A strong grasp of Newton's law, gravitational fields, potentials, orbital mechanics, and energy concepts can boost your JEE Physics score significantly. Practice problems regularly, and apply the formulas carefully while maintaining clarity in your approach.
+    </p>
+    <p>
+      This complete guide serves as your foundation for mastering Gravitation in JEE Physics. Keep revising the concepts and solving problems to build confidence and speed.
+    </p>
+
+  </section>
+</body>
+
+</html>
