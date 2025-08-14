@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Chemistry Equilibrium Complete Guide | Concepts, Laws & Formulas</title>
+  <meta name="description"
+    content="Comprehensive JEE Chemistry Equilibrium guide covering chemical equilibrium, equilibrium constant, Le Chatelier’s principle, ionic equilibrium, solubility product, and practical problem-solving tips." />
+  <meta name="keywords"
+    content="JEE Chemistry equilibrium, chemical equilibrium, equilibrium constant, Le Chatelier's principle, ionic equilibrium, solubility product, JEE preparation chemistry" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.75;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 3rem 3.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 12px 24px -6px rgba(59, 130, 246, 0.2);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.6rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2.25rem;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.9rem;
+    }
+
+    ol {
+      margin-left: 2.25rem;
+      margin-bottom: 2rem;
+    }
+
+    ol li {
+      margin-bottom: 0.9rem;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      color: #1e40af;
+      display: inline-block;
+      margin-bottom: 1.3rem;
+    }
+
+    .formula {
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      background-color: #e0e7ff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.4rem;
+      display: inline-block;
+      margin: 0.4rem 0 1.4rem 0;
+      color: #3730a3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.5rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #2563eb;
+      padding: 1rem 1.2rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    thead tr {
+      background-color: #bfdbfe;
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Chemistry Equilibrium Complete Guide</h1>
+
+    <p>
+      Chemical equilibrium is a fundamental concept in JEE Chemistry covering reversible reactions, dynamic equilibrium,
+      and the quantitative expression of equilibrium constants. Understanding this topic helps solve various complex
+      problems related to reaction spontaneity, ionic balance, and solubility equilibria.
+    </p>
+
+    <h2>1. Introduction to Chemical Equilibrium</h2>
+
+    <p>
+      In a reversible reaction, the forward and backward reactions occur simultaneously. When the rate of forward
+      reaction equals the rate of backward reaction, the system is said to be in <strong>dynamic equilibrium</strong>.
+    </p>
+
+    <p>
+      For the general reaction,
+    </p>
+    <p class="formula">
+      aA + bB \rightleftharpoons cC + dD
+    </p>
+    <p>at equilibrium, concentrations satisfy the <strong>law of mass action</strong>.</p>
+
+    <h2>2. Equilibrium Constant (K)</h2>
+
+    <p>The equilibrium constant quantifies the position of equilibrium:</p>
+    <p class="formula">
+      K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b}
+    </p>
+
+    <p>Where square brackets denote molar concentrations.</p>
+
+    <p>Similarly, for gases, we use partial pressures to define:</p>
+    <p class="formula">
+      K_p = \frac{P_C^c P_D^d}{P_A^a P_B^b}
+    </p>
+
+    <h3>2.1 Relation Between \( K_c \) and \( K_p \)</h3>
+
+    <p>
+      The relation between \( K_p \) and \( K_c \) is given by:
+    </p>
+    <p class="formula">
+      K_p = K_c (RT)^{\Delta n}
+    </p>
+    <p>
+      Where \( \Delta n = (c + d) - (a + b) \) is the change in moles of gas, \( R \) is the gas constant, and \( T \) is
+      temperature in Kelvin.
+    </p>
+
+    <h2>3. Factors Affecting Equilibrium (Le Chatelier’s Principle)</h2>
+
+    <p>
+      Le Chatelier’s principle states that if a change is imposed on a system at equilibrium, the system adjusts to
+      partially counteract the change and establish a new equilibrium.
+    </p>
+
+    <h3>3.1 Effect of Concentration</h3>
+
+    <p>
+      Increasing reactant concentration shifts equilibrium towards products, while increasing product concentration shifts
+      it towards reactants.
+    </p>
+
+    <h3>3.2 Effect of Pressure</h3>
+
+    <p>
+      Changing pressure affects equilibria involving gases. Increasing pressure shifts equilibrium toward the side with
+      fewer moles of gas.
+    </p>
+
+    <h3>3.3 Effect of Temperature</h3>
+
+    <p>
+      Temperature change shifts equilibrium depending on reaction enthalpy:
+    </p>
+    <ul>
+      <li>Endothermic reaction: Increasing temperature shifts equilibrium towards products.</li>
+      <li>Exothermic reaction: Increasing temperature shifts equilibrium towards reactants.</li>
+    </ul>
+
+    <h3>3.4 Effect of Catalyst</h3>
+
+    <p>
+      Catalyst speeds up both forward and backward reactions equally, so it does not affect equilibrium position but helps
+      attain equilibrium faster.
+    </p>
+
+    <h2>4. Ionic Equilibrium</h2>
+
+    <p>
+      Ionic equilibrium deals with equilibria involving ions in aqueous solutions — acid-base equilibria, hydrolysis,
+      salt solutions, and buffer systems.
+    </p>
+
+    <h3>4.1 Acid-Base Equilibria</h3>
+
+    <p>Arrhenius, Bronsted-Lowry, and Lewis definitions describe acids and bases.</p>
+
+    <p>For a weak acid \( HA \), dissociation is:</p>
+    <p class="formula">
+      HA \rightleftharpoons H^+ + A^-
+    </p>
+
+    <p>Acid dissociation constant \( K_a \):</p>
+    <p class="formula">
+      K_a = \frac{[H^+][A^-]}{[HA]}
+    </p>
+
+    <p>Similarly, for weak bases:</p>
+    <p class="formula">
+      B + H_2O \rightleftharpoons BH^+ + OH^-
+    </p>
+
+    <p>Base dissociation constant \( K_b \):</p>
+    <p class="formula">
+      K_b = \frac{[BH^+][OH^-]}{[B]}
+    </p>
+
+    <h3>4.2 Relation Between \(K_w\), \(K_a\), and \(K_b\)</h3>
+
+    <p>
+      The ionization constant of water \( K_w \) is \( 1.0 \times 10^{-14} \) at 25°C:
+    </p>
+    <p class="formula">
+      K_w = [H^+][OH^-]
+    </p>
+
+    <p>
+      And,
+    </p>
+    <p class="formula">
+      K_a \times K_b = K_w
+    </p>
+
+    <h3>4.3 pH and pOH</h3>
+
+    <p>
+      pH is the negative logarithm of hydrogen ion concentration:
+    </p>
+    <p class="formula">
+      pH = -\log[H^+]
+    </p>
+
+    <p>Similarly, pOH:</p>
+    <p class="formula">
+      pOH = -\log[OH^-]
+    </p>
+
+    <p>At 25°C:</p>
+    <p class="formula">
+      pH + pOH = 14
+    </p>
+
+    <h3>4.4 Buffer Solutions</h3>
+
+    <p>
+      A buffer resists pH changes upon addition of small amounts of acid or base. Typically composed of a weak acid and
+      its conjugate base or vice versa.
+    </p>
+
+    <p>
+      Henderson-Hasselbalch equation for buffer pH:
+    </p>
+    <p class="formula">
+      pH = pK_a + \log \frac{[A^-]}{[HA]}
+    </p>
+
+    <h2>5. Solubility Equilibria and Solubility Product (Ksp)</h2>
+
+    <p>
+      Sparingly soluble salts establish equilibrium between solid and ions in solution.
+    </p>
+
+    <p>Example:</p>
+    <p class="formula">
+      AgCl (s) \rightleftharpoons Ag^+ (aq) + Cl^- (aq)
+    </p>
+
+    <p>Solubility product constant:</p>
+    <p class="formula">
+      K_{sp} = [Ag^+][Cl^-]
+    </p>
+
+    <h3>5.1 Calculating Solubility from Ksp</h3>
+
+    <p>
+      For salt \( MX \) dissociating into \( M^+ \) and \( X^- \):
+    </p>
+    <p class="formula">
+      MX \rightleftharpoons M^+ + X^-
+    </p>
+
+    <p>Let solubility be \( s \) mol/L, then:</p>
+    <p class="formula">
+      K_{sp} = s \times s = s^2
+    </p>
+
+    <p>So, solubility \( s = \sqrt{K_{sp}} \).</p>
+
+    <h3>5.2 Common Ion Effect</h3>
+
+    <p>
+      Presence of a common ion suppresses solubility due to Le Chatelier’s principle. For example, solubility of AgCl
+      decreases in presence of \( Cl^- \) ions.
+    </p>
+
+    <h3>5.3 Factors Affecting Solubility</h3>
+
+    <ul>
+      <li>Common ion effect decreases solubility.</li>
+      <li>pH affects solubility of salts containing basic or acidic ions.</li>
+      <li>Complex ion formation can increase solubility.</li>
+    </ul>
+
+    <h2>6. Applications of Equilibrium</h2>
+
+    <h3>6.1 Calculations Involving Equilibrium Concentrations</h3>
+
+    <p>Use ICE tables (Initial, Change, Equilibrium) to calculate concentrations of species.</p>
+
+    <h3>6.2 Predicting Direction of Reaction</h3>
+
+    <p>
+      Reaction quotient \( Q \) is calculated using initial concentrations. Comparing \( Q \) with \( K \) determines the
+      direction:
+    </p>
+    <ul>
+      <li>If \( Q < K \), reaction proceeds forward.</li>
+      <li>If \( Q = K \), system is at equilibrium.</li>
+      <li>If \( Q > K \), reaction proceeds backward.</li>
+    </ul>
+
+    <h3>6.3 Effect of Temperature on K</h3>
+
+    <p>For endothermic reactions, increasing temperature increases \( K \); for exothermic, it decreases \( K \).</p>
+
+    <h2>7. Important Formulas Summary</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Equilibrium Constant (Kc)</td>
+          <td>\( K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b} \)</td>
+          <td>Molar concentration terms</td>
+        </tr>
+        <tr>
+          <td>Equilibrium Constant (Kp)</td>
+          <td>\( K_p = \frac{P_C^c P_D^d}{P_A^a P_B^b} \)</td>
+          <td>Partial pressure terms</td>
+        </tr>
+        <tr>
+          <td>Relation Kp and Kc</td>
+          <td>\( K_p = K_c (RT)^{\Delta n} \)</td>
+          <td>\( \Delta n \) = change in moles of gas</td>
+        </tr>
+        <tr>
+          <td>Acid dissociation constant</td>
+          <td>\( K_a = \frac{[H^+][A^-]}{[HA]} \)</td>
+          <td>For weak acids</td>
+        </tr>
+        <tr>
+          <td>Base dissociation constant</td>
+          <td>\( K_b = \frac{[BH^+][OH^-]}{[B]} \)</td>
+          <td>For weak bases</td>
+        </tr>
+        <tr>
+          <td>Water ion product</td>
+          <td>\( K_w = [H^+][OH^-] = 1.0 \times 10^{-14} \)</td>
+          <td>At 25°C</td>
+        </tr>
+        <tr>
+          <td>pH and pOH</td>
+          <td>pH = -log[H<sup>+</sup>], pOH = -log[OH<sup>-</sup>]</td>
+          <td>pH + pOH = 14 (at 25°C)</td>
+        </tr>
+        <tr>
+          <td>Solubility product</td>
+          <td>\( K_{sp} = [M^+]^m [X^-]^x \)</td>
+          <td>For sparingly soluble salts</td>
+        </tr>
+        <tr>
+          <td>Henderson-Hasselbalch equation</td>
+          <td>\( pH = pK_a + \log \frac{[A^-]}{[HA]} \)</td>
+          <td>Buffer solutions</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>8. Tips to Master JEE Chemistry Equilibrium</h2>
+
+    <ul>
+      <li>Focus on understanding the concept of dynamic equilibrium thoroughly.</li>
+      <li>Practice problems involving equilibrium constant calculations.</li>
+      <li>Memorize key formulas and their conditions of application.</li>
+      <li>Use ICE tables systematically for concentration calculations.</li>
+      <li>Get comfortable with ionic equilibrium concepts and buffer problems.</li>
+      <li>Study solubility product concepts, especially common ion effect.</li>
+      <li>Attempt previous years’ JEE questions on equilibrium to build confidence.</li>
+      <li>Revise Le Chatelier’s principle regularly and apply in questions.</li>
+    </ul>
+
+    <p>
+      Equilibrium is a challenging but rewarding topic in JEE Chemistry. With consistent practice and conceptual clarity,
+      you can excel in this important area.
+    </p>
+  </section>
+</body>
+
+</html>

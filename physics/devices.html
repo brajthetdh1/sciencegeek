@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Electronic Devices Complete Guide | Semiconductors, Diodes, Transistors & More</title>
+  <meta name="description"
+    content="Comprehensive JEE Physics Electronic Devices guide covering semiconductors, p-n junction diodes, transistors, logic gates, amplifiers, and important concepts for JEE preparation." />
+  <meta name="keywords"
+    content="JEE Physics Electronic Devices, Semiconductors, Diodes, Transistors, Logic Gates, Amplifiers, JEE Preparation, Physics Guide" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      },
+      svg: { fontCache: 'global' },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.75;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+
+    /* Simple diode and transistor symbol styling */
+    .device-diagram {
+      margin: 1.5rem 0;
+      font-family: monospace;
+      white-space: pre;
+      background: #e0e7ff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Electronic Devices Complete Guide</h1>
+
+    <p>
+      Electronic devices form an important and scoring part of the JEE Physics syllabus. This guide covers
+      semiconductors, p-n junction diodes, transistors, logic gates, amplifiers, and more with detailed explanations,
+      formulas, and tips tailored for JEE aspirants. Understanding these topics helps you solve questions related to
+      circuits, digital electronics, and modern applications efficiently.
+    </p>
+
+    <h2>1. Introduction to Semiconductors</h2>
+    <p>
+      Semiconductors are materials with conductivity between conductors and insulators. Their electrical properties can be
+      controlled by doping and external influences, which makes them essential for electronic devices.
+    </p>
+    <p>
+      <strong>Types of semiconductors:</strong>
+    </p>
+    <ul>
+      <li>Intrinsic semiconductor: Pure semiconductor material like silicon or germanium.</li>
+      <li>Extrinsic semiconductor: Doped semiconductor which has added impurities to increase conductivity.</li>
+    </ul>
+    <p>
+      <strong>Doping:</strong>
+      <br />
+      - <em>n-type</em> doping adds donor impurities (like phosphorus) which provide extra electrons.<br />
+      - <em>p-type</em> doping adds acceptor impurities (like boron) which create holes (positive charge carriers).
+    </p>
+    <p>
+      The conductivity in semiconductors increases with temperature and doping.
+    </p>
+
+    <h2>2. p-n Junction and Diode</h2>
+    <h3>2.1 Formation of p-n Junction</h3>
+    <p>
+      When p-type and n-type semiconductors are joined, a p-n junction forms. Electrons from n-region diffuse to the p-region
+      and holes from p-region diffuse to n-region, creating a depletion region with an electric field that opposes further diffusion.
+    </p>
+    <p>
+      This depletion region acts as a potential barrier.
+    </p>
+
+    <h3>2.2 Diode Characteristics</h3>
+    <p>
+      A diode allows current in one direction (forward bias) and blocks in the other (reverse bias).
+    </p>
+    <p>
+      <strong>Forward bias:</strong> p-side connected to positive terminal, n-side to negative; diode conducts current.<br />
+      <strong>Reverse bias:</strong> p-side connected to negative terminal, n-side to positive; diode blocks current (except a small leakage current).
+    </p>
+    <div class="device-diagram">
+      Diode symbol:     ----|>|----
+    </div>
+
+    <h3>2.3 Diode Equation</h3>
+    <p>
+      The current through a diode is approximately given by the Shockley diode equation:
+    </p>
+    <div class="formula">
+      $$I = I_0 \left(e^{\frac{qV}{kT}} - 1\right)$$
+    </div>
+    <p>
+      Where:<br />
+      \(I_0\) = reverse saturation current,<br />
+      \(q\) = electron charge = \(1.6 \times 10^{-19} \text{C}\),<br />
+      \(V\) = applied voltage,<br />
+      \(k\) = Boltzmann constant,\(1.38 \times 10^{-23} \text{J/K}\),<br />
+      \(T\) = temperature in Kelvin.
+    </p>
+
+    <h3>2.4 Diode Applications</h3>
+    <ul>
+      <li>Rectification (conversion of AC to DC).</li>
+      <li>Voltage regulation (Zener diodes).</li>
+      <li>Signal demodulation and clipping.</li>
+    </ul>
+
+    <h2>3. Zener Diode</h2>
+    <p>
+      Zener diode is designed to operate in reverse bias in breakdown region without damage. It maintains a nearly constant
+      voltage called the Zener voltage, useful for voltage regulation.
+    </p>
+
+    <h2>4. Bipolar Junction Transistor (BJT)</h2>
+    <h3>4.1 Introduction</h3>
+    <p>
+      BJT is a three-layer semiconductor device (either NPN or PNP) used as an amplifier or switch. The three terminals are
+      emitter (E), base (B), and collector (C).
+    </p>
+    <div class="device-diagram">
+      NPN transistor symbol:    --|>--
+      <br />
+      PNP transistor symbol:    --|<--
+    </div>
+
+    <h3>4.2 Working Principle</h3>
+    <p>
+      In an NPN transistor, a small base current controls a much larger current flowing from collector to emitter. The
+      transistor operation depends on the biasing of junctions:
+    </p>
+    <ul>
+      <li>Emitter-Base junction: Forward biased</li>
+      <li>Collector-Base junction: Reverse biased</li>
+    </ul>
+
+    <h3>4.3 Current Relations</h3>
+    <p>
+      The main currents satisfy:
+    </p>
+    <div class="formula">
+      $$I_C = \beta I_B$$
+      <br />
+      $$I_E = I_B + I_C = (1 + \beta) I_B$$
+    </div>
+    <p>
+      Where \(I_B\), \(I_C\), and \(I_E\) are base, collector, and emitter currents respectively, and \(\beta\) is the current gain.
+    </p>
+
+    <h3>4.4 Transistor Configurations</h3>
+    <p>
+      Common configurations for BJTs are:
+    </p>
+    <ul>
+      <li>Common Emitter (CE): High gain, used as amplifier</li>
+      <li>Common Base (CB): Low input impedance, voltage gain</li>
+      <li>Common Collector (CC): Voltage follower</li>
+    </ul>
+
+    <h3>4.5 Transistor as Amplifier</h3>
+    <p>
+      The transistor amplifies current and voltage. Voltage gain is given by:
+    </p>
+    <div class="formula">
+      $$A_v = \frac{V_{out}}{V_{in}}$$
+    </div>
+    <p>
+      The input is applied between base and emitter, and output is taken between collector and emitter.
+    </p>
+
+    <h3>4.6 Transistor as Switch</h3>
+    <p>
+      The transistor can act as an electronic switch, working in cutoff (OFF) and saturation (ON) states, controlled by base current.
+    </p>
+
+    <h2>5. Field Effect Transistor (FET)</h2>
+    <p>
+      FETs are voltage-controlled devices used for switching and amplifying signals. Types include:
+    </p>
+    <ul>
+      <li>JFET (Junction FET)</li>
+      <li>MOSFET (Metal-Oxide-Semiconductor FET)</li>
+    </ul>
+    <p>
+      FETs have high input impedance and are widely used in digital and analog circuits.
+    </p>
+
+    <h2>6. Logic Gates and Digital Electronics</h2>
+    <h3>6.1 Introduction</h3>
+    <p>
+      Logic gates are basic building blocks of digital circuits, performing logical operations on inputs to produce an output.
+    </p>
+
+    <h3>6.2 Basic Logic Gates</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Gate</th>
+          <th>Symbol</th>
+          <th>Truth Table</th>
+          <th>Boolean Expression</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AND</td>
+          <td>&#8727;</td>
+          <td>
+            <pre>
+A | B | Output
+0 | 0 | 0
+0 | 1 | 0
+1 | 0 | 0
+1 | 1 | 1
+</pre>
+          </td>
+          <td>$Y = A \cdot B$</td>
+        </tr>
+        <tr>
+          <td>OR</td>
+          <td>+</td>
+          <td>
+            <pre>
+A | B | Output
+0 | 0 | 0
+0 | 1 | 1
+1 | 0 | 1
+1 | 1 | 1
+</pre>
+          </td>
+          <td>$Y = A + B$</td>
+        </tr>
+        <tr>
+          <td>NOT</td>
+          <td>¬</td>
+          <td>
+            <pre>
+A | Output
+0 | 1
+1 | 0
+</pre>
+          </td>
+          <td>$Y = \overline{A}$</td>
+        </tr>
+        <tr>
+          <td>NAND</td>
+          <td>⊼</td>
+          <td>
+            <pre>
+A | B | Output
+0 | 0 | 1
+0 | 1 | 1
+1 | 0 | 1
+1 | 1 | 0
+</pre>
+          </td>
+          <td>$Y = \overline{A \cdot B}$</td>
+        </tr>
+        <tr>
+          <td>NOR</td>
+          <td>⊽</td>
+          <td>
+            <pre>
+A | B | Output
+0 | 0 | 1
+0 | 1 | 0
+1 | 0 | 0
+1 | 1 | 0
+</pre>
+          </td>
+          <td>$Y = \overline{A + B}$</td>
+        </tr>
+        <tr>
+          <td>XOR</td>
+          <td>⊕</td>
+          <td>
+            <pre>
+A | B | Output
+0 | 0 | 0
+0 | 1 | 1
+1 | 0 | 1
+1 | 1 | 0
+</pre>
+          </td>
+          <td>$Y = A \oplus B = A \overline{B} + \overline{A} B$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>7. Amplifiers and Oscillators</h2>
+    <h3>7.1 Amplifiers</h3>
+    <p>
+      Amplifiers increase the amplitude of electrical signals. The gain of an amplifier is the ratio of output to input signal.
+    </p>
+    <p>
+      <strong>Voltage gain:</strong> $$A_v = \frac{V_{out}}{V_{in}}$$
+    </p>
+    <p>
+      Types of amplifiers include voltage amplifiers, power amplifiers, and operational amplifiers.
+    </p>
+
+    <h3>7.2 Oscillators</h3>
+    <p>
+      Oscillators generate continuous AC signals without input, used in radio, clocks, and signal generators.
+    </p>
+    <p>
+      Common types are LC oscillators and RC oscillators.
+    </p>
+
+    <h2>8. Important Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Device/Concept</th>
+          <th>Formula/Relation</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Diode Equation</td>
+          <td>$$I = I_0 \left(e^{\frac{qV}{kT}} - 1\right)$$</td>
+          <td>Current through diode</td>
+        </tr>
+        <tr>
+          <td>Transistor Currents</td>
+          <td>$$I_C = \beta I_B, \quad I_E = I_B + I_C$$</td>
+          <td>Relation between currents in BJT</td>
+        </tr>
+        <tr>
+          <td>Brewster's Angle</td>
+          <td>$$\tan \theta_B = \frac{n_2}{n_1}$$</td>
+          <td>Angle for polarization by reflection</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>9. Practice Problems</h2>
+
+    <h3>Problem 1: Diode Forward Voltage</h3>
+    <p>
+      A silicon diode has a reverse saturation current \(I_0 = 10^{-12} \text{A}\) and is at room temperature (300K). Calculate the forward current when
+      a voltage of 0.7 V is applied.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      $$I = I_0 \left(e^{\frac{qV}{kT}} - 1\right)$$
+    </div>
+    <p>
+      Substituting,
+    </p>
+    <div class="formula">
+      $$\frac{qV}{kT} = \frac{1.6 \times 10^{-19} \times 0.7}{1.38 \times 10^{-23} \times 300} \approx 27$$
+    </div>
+    <p>
+      So,
+    </p>
+    <div class="formula">
+      $$I \approx 10^{-12} \times (e^{27} - 1) \approx 10^{-12} \times 5.3 \times 10^{11} = 0.53 \text{A}$$
+    </div>
+
+    <h3>Problem 2: Transistor Base Current</h3>
+    <p>
+      In an NPN transistor, the collector current is 100 mA and the current gain \(\beta = 50\). Find the base current.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      $$I_B = \frac{I_C}{\beta} = \frac{0.1}{50} = 2 \times 10^{-3} \text{A} = 2 \text{mA}$$
+    </div>
+
+    <h2>10. Tips for JEE Exam</h2>
+    <ul>
+      <li>Understand the physical working of devices, don’t just memorize formulas.</li>
+      <li>Practice circuit diagrams and recognize symbols for all devices.</li>
+      <li>Practice numerical problems on diode and transistor circuits.</li>
+      <li>Memorize key characteristics and parameters like \(\beta\), \(I_0\), and threshold voltages.</li>
+      <li>Revise Boolean algebra and logic gate truth tables regularly.</li>
+    </ul>
+
+    <p>
+      This complete guide covers the essential concepts you need for mastering electronic devices in JEE Physics. Regular
+      practice, revision, and problem-solving will help you score confidently on this topic.
+    </p>
+  </section>
+</body>
+
+</html>

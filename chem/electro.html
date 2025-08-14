@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Chemistry Electrochemistry Complete Guide | Concepts & Formulas</title>
+  <meta name="description"
+    content="Comprehensive JEE Chemistry Electrochemistry guide covering galvanic cells, electrode potential, Nernst equation, conductance, electrolysis, and key formulas for exam success." />
+  <meta name="keywords"
+    content="JEE Chemistry Electrochemistry, Galvanic Cells, Electrode Potential, Nernst Equation, Conductance, Electrolysis, JEE preparation" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      line-height: 1.8;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      background: #ffffff;
+      padding: 3rem 3.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -10px rgba(59, 130, 246, 0.3);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    .formula {
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      background-color: #e0e7ff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.4rem;
+      display: inline-block;
+      margin: 0.6rem 0 1.4rem 0;
+      color: #3730a3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.5rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #2563eb;
+      padding: 1rem 1.2rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    thead tr {
+      background-color: #bfdbfe;
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Chemistry Electrochemistry Complete Guide</h1>
+
+    <p>
+      Electrochemistry is a crucial and highly scoring topic in JEE Chemistry. It deals with the relationship between
+      electrical energy and chemical changes. This guide provides a thorough understanding of electrochemical cells,
+      electrode potentials, the Nernst equation, conductance, electrolysis, and important formulas and concepts for
+      exam preparation.
+    </p>
+
+    <h2>1. Introduction to Electrochemistry</h2>
+    <p>
+      Electrochemistry studies chemical processes that cause electrons to move, producing electric current or involving
+      electrical energy to cause chemical changes. It involves two major types of cells:
+    </p>
+    <ul>
+      <li><strong>Galvanic/Voltaic Cells:</strong> Convert chemical energy to electrical energy spontaneously.</li>
+      <li><strong>Electrolytic Cells:</strong> Use electrical energy to drive non-spontaneous chemical reactions.</li>
+    </ul>
+
+    <h2>2. Galvanic Cells and Standard Electrode Potential</h2>
+    <p>
+      A galvanic cell consists of two electrodes immersed in electrolyte solutions connected externally by a wire
+      allowing electron flow.
+    </p>
+    <p>
+      The half-cell reactions involve oxidation at the anode and reduction at the cathode.
+    </p>
+
+    <h3>2.1 Standard Electrode Potential (\( E^\circ \))</h3>
+    <p>
+      Standard electrode potential is the measure of the ability of a half-cell to gain or lose electrons compared to
+      the standard hydrogen electrode (SHE), defined as 0 V.
+    </p>
+    <p class="formula">
+      \text{Oxidation half reaction: } \mathrm{Zn} \rightarrow \mathrm{Zn}^{2+} + 2e^- \quad E^\circ = -0.76 \text{ V}
+    </p>
+    <p class="formula">
+      \text{Reduction half reaction: } \mathrm{Cu}^{2+} + 2e^- \rightarrow \mathrm{Cu} \quad E^\circ = +0.34 \text{ V}
+    </p>
+    <p>
+      Cell potential is calculated as:
+    </p>
+    <p class="formula">
+      E^\circ_\text{cell} = E^\circ_\text{cathode} - E^\circ_\text{anode}
+    </p>
+
+    <h3>2.2 Daniell Cell Example</h3>
+    <p>
+      The Daniell cell consists of a zinc electrode in ZnSO₄ solution and a copper electrode in CuSO₄ solution.
+      Oxidation at Zn anode and reduction at Cu cathode produce cell voltage:
+    </p>
+    <p class="formula">
+      E^\circ_\text{cell} = 0.34 - (-0.76) = 1.10 \text{ V}
+    </p>
+
+    <h2>3. The Nernst Equation</h2>
+    <p>
+      The Nernst equation relates the cell potential to the concentration (or pressure) of the reactants and products
+      under non-standard conditions.
+    </p>
+    <p class="formula">
+      E = E^\circ - \frac{RT}{nF} \ln Q
+    </p>
+    <p>
+      Where:
+    </p>
+    <ul>
+      <li>\( E \) = cell potential under non-standard conditions</li>
+      <li>\( E^\circ \) = standard cell potential</li>
+      <li>\( R \) = gas constant (8.314 J/mol·K)</li>
+      <li>\( T \) = temperature in Kelvin</li>
+      <li>\( n \) = number of electrons transferred</li>
+      <li>\( F \) = Faraday constant (96485 C/mol)</li>
+      <li>\( Q \) = reaction quotient</li>
+    </ul>
+    <p>
+      At 25°C (298 K), the equation simplifies to:
+    </p>
+    <p class="formula">
+      E = E^\circ - \frac{0.0591}{n} \log Q
+    </p>
+
+    <h2>4. Electrochemical Series and Its Applications</h2>
+    <p>
+      The electrochemical series lists elements and their standard electrode potentials in order. Applications include:
+    </p>
+    <ul>
+      <li>Predicting the feasibility of redox reactions.</li>
+      <li>Determining oxidizing and reducing agents strength.</li>
+      <li>Calculating cell voltages.</li>
+    </ul>
+
+    <h2>5. Conductance, Conductivity, and Molar Conductance</h2>
+    <p>
+      Conductance measures how well an electrolyte solution conducts electricity.
+    </p>
+
+    <h3>5.1 Conductance (G)</h3>
+    <p>
+      Conductance is the reciprocal of resistance (\( R \)):
+    </p>
+    <p class="formula">
+      G = \frac{1}{R}
+    </p>
+    <p>
+      Measured in Siemens (S) or mho.
+    </p>
+
+    <h3>5.2 Specific Conductance (κ)</h3>
+    <p>
+      Specific conductance or conductivity is conductance of a solution of 1 cm length and 1 cm² cross-sectional area:
+    </p>
+    <p class="formula">
+      \kappa = \frac{G \times l}{A}
+    </p>
+    <p>
+      Where \( l \) is distance between electrodes and \( A \) is electrode area.
+    </p>
+
+    <h3>5.3 Molar Conductance (Λ<sub>m</sub>)</h3>
+    <p>
+      Molar conductance is conductance of all ions produced by one mole of electrolyte in solution:
+    </p>
+    <p class="formula">
+      \Lambda_m = \frac{\kappa \times 1000}{C}
+    </p>
+    <p>Where \( C \) = concentration in mol/L.</p>
+
+    <h3>5.4 Variation of Molar Conductance</h3>
+    <p>
+      Molar conductance increases with dilution due to decreased inter-ionic attraction.
+    </p>
+
+    <h2>6. Kohlrausch's Law</h2>
+    <p>
+      At infinite dilution, each ion contributes a definite value to the molar conductance, independent of other ions.
+    </p>
+    <p class="formula">
+      \Lambda_m^\infty = \lambda^+ + \lambda^-
+    </p>
+
+    <h2>7. Electrolysis and Faraday’s Laws</h2>
+    <p>
+      Electrolysis involves passing electric current to bring about a chemical change.
+    </p>
+
+    <h3>7.1 Faraday’s First Law</h3>
+    <p>
+      Mass of substance liberated at an electrode is proportional to the quantity of electricity passed.
+    </p>
+    <p class="formula">
+      m \propto Q = I \times t
+    </p>
+    <p>or</p>
+    <p class="formula">
+      m = Z \times Q
+    </p>
+    <p>Where \( Z \) = electrochemical equivalent.</p>
+
+    <h3>7.2 Faraday’s Second Law</h3>
+    <p>
+      Masses of different substances liberated by the same quantity of electricity are proportional to their chemical
+      equivalent weights.
+    </p>
+
+    <h3>7.3 Calculation of Electrolysis</h3>
+    <p>
+      Using Faraday’s laws:
+    </p>
+    <p class="formula">
+      Q = I \times t
+    </p>
+    <p>
+      Moles of electrons = \( \frac{Q}{F} \)
+    </p>
+    <p>
+      Mass of substance = \( \frac{(E \times Q)}{F} \), where \( E \) is equivalent weight.
+    </p>
+
+    <h2>8. Electrochemical Cells: Types and Examples</h2>
+    <p>
+      <strong>Primary Cells:</strong> Non-rechargeable cells, e.g., Dry cell.<br />
+      <strong>Secondary Cells:</strong> Rechargeable cells, e.g., Lead-acid battery.<br />
+      <strong>Fuel Cells:</strong> Generate electricity by continuous fuel supply, e.g., Hydrogen-oxygen fuel cell.
+    </p>
+
+    <h2>9. Applications of Electrochemistry</h2>
+    <ul>
+      <li>Corrosion prevention</li>
+      <li>Electroplating and purification of metals</li>
+      <li>Battery technology</li>
+      <li>Industrial production of chemicals</li>
+    </ul>
+
+    <h2>10. Important Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cell potential</td>
+          <td>\( E^\circ_\text{cell} = E^\circ_\text{cathode} - E^\circ_\text{anode} \)</td>
+          <td>Standard conditions</td>
+        </tr>
+        <tr>
+          <td>Nernst Equation</td>
+          <td>\( E = E^\circ - \frac{0.0591}{n} \log Q \)</td>
+          <td>At 25°C</td>
+        </tr>
+        <tr>
+          <td>Conductance</td>
+          <td>\( G = \frac{1}{R} \)</td>
+          <td>Siemens</td>
+        </tr>
+        <tr>
+          <td>Specific Conductance</td>
+          <td>\( \kappa = \frac{G l}{A} \)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Molar Conductance</td>
+          <td>\( \Lambda_m = \frac{\kappa \times 1000}{C} \)</td>
+          <td>mol/L concentration</td>
+        </tr>
+        <tr>
+          <td>Faraday’s First Law</td>
+          <td>\( m = Z Q \)</td>
+          <td>Electrochemical equivalent</td>
+        </tr>
+        <tr>
+          <td>Faraday’s Second Law</td>
+          <td>\( m \propto \text{Equivalent weight} \)</td>
+          <td>Mass proportionality</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>11. Sample Problems and Practice Tips</h2>
+    <h3>Problem 1:</h3>
+    <p>
+      Calculate the standard cell potential for the following cell:
+      <br />
+      \(\mathrm{Zn(s)}|\mathrm{Zn^{2+}(aq)}||\mathrm{Cu^{2+}(aq)}|\mathrm{Cu(s)}\)
+      <br />
+      Given, \(E^\circ_{\mathrm{Zn^{2+}/Zn}} = -0.76 \, V\), \(E^\circ_{\mathrm{Cu^{2+}/Cu}} = +0.34 \, V\).
+    </p>
+    <p><strong>Solution:</strong></p>
+    <p>
+      \( E^\circ_\text{cell} = E^\circ_\text{cathode} - E^\circ_\text{anode} = 0.34 - (-0.76) = 1.10 \, V \)
+    </p>
+
+    <h3>Problem 2:</h3>
+    <p>
+      Calculate the emf of a cell at 25°C if the concentration of \(\mathrm{Cu^{2+}}\) is 0.01 M and \(\mathrm{Zn^{2+}}\)
+      is 1 M. (Use Nernst equation)
+    </p>
+    <p><strong>Solution:</strong></p>
+    <p>
+      Reaction quotient, \( Q = \frac{[\mathrm{Zn^{2+}}]}{[\mathrm{Cu^{2+}}]} = \frac{1}{0.01} = 100 \)
+    </p>
+    <p>
+      Number of electrons, \( n = 2 \)
+    </p>
+    <p>
+      \( E = E^\circ - \frac{0.0591}{n} \log Q = 1.10 - \frac{0.0591}{2} \log 100 = 1.10 - 0.0591 = 1.0409\, V \)
+    </p>
+
+    <h3>Tips for JEE Electrochemistry Preparation:</h3>
+    <ul>
+      <li>Memorize standard electrode potentials and their applications.</li>
+      <li>Practice writing balanced half-reactions and full redox reactions.</li>
+      <li>Understand the concept and application of the Nernst equation thoroughly.</li>
+      <li>Revise Faraday’s laws carefully; they form the basis for electrolysis problems.</li>
+      <li>Learn formulas related to conductance, molar conductance, and Kohlrausch's law.</li>
+      <li>Practice numerical problems on electrochemical cells and conductance frequently.</li>
+      <li>Focus on problem-solving speed and accuracy for JEE level questions.</li>
+    </ul>
+
+    <p>
+      Electrochemistry is an interesting yet challenging topic, but with consistent practice and concept clarity,
+      mastering it is definitely achievable and rewarding for your JEE exams.
+    </p>
+
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Thermodynamics Complete Guide – Concepts & Formulas</title>
+  <meta name="description" content="Detailed JEE Physics Thermodynamics guide covering laws, processes, work, heat, entropy, specific heats, engines, and formulas with examples for JEE preparation." />
+  <meta name="keywords" content="JEE Physics Thermodynamics, First Law of Thermodynamics, Second Law, Entropy, Carnot Engine, Heat Engines, Thermodynamic Processes, JEE Preparation" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      border-left: 5px solid #3b82f6;
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      border-radius: 0.5rem;
+      color: #1e3a8a;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Thermodynamics Complete Guide</h1>
+
+    <p>
+      Thermodynamics is a fundamental branch of physics focused on heat, work, energy, and their transformations. For JEE aspirants, mastering thermodynamics concepts, laws, formulas, and problem-solving strategies is crucial to scoring high marks. This comprehensive guide covers the first and second laws of thermodynamics, thermodynamic processes, entropy, engines, and related formulas with detailed explanations and examples.
+    </p>
+
+    <h2>1. Basics and Terminology</h2>
+    <p>
+      <strong>System:</strong> The part of the universe under study (e.g., gas in a cylinder).<br />
+      <strong>Surroundings:</strong> Everything outside the system.<br />
+      <strong>Boundary:</strong> Real or imaginary surface separating system and surroundings.<br />
+      <strong>State Variables:</strong> Pressure \(P\), volume \(V\), temperature \(T\), internal energy \(U\), etc.<br />
+      <strong>Process:</strong> Change from one state to another.<br />
+      <strong>Cycle:</strong> A sequence of processes returning the system to its initial state.
+    </p>
+
+    <h2>2. Zeroth Law of Thermodynamics</h2>
+    <p>
+      If two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This law defines temperature.
+    </p>
+
+    <h2>3. First Law of Thermodynamics</h2>
+    <p>
+      It is the law of conservation of energy applied to thermodynamics:
+    </p>
+    <div class="formula">
+      \( \displaystyle \Delta U = Q - W \)
+    </div>
+    <p>
+      Where \( \Delta U \) = change in internal energy,<br />
+      \( Q \) = heat added to system (positive if added),<br />
+      \( W \) = work done by system on surroundings (positive if done by system).
+    </p>
+
+    <h3>3.1 Internal Energy (\(U\))</h3>
+    <p>
+      Internal energy is the total microscopic kinetic and potential energy of molecules. For an ideal gas, \( U \) depends only on temperature.
+    </p>
+
+    <h3>3.2 Work Done by Gas</h3>
+    <p>
+      Work done during volume change:
+    </p>
+    <div class="formula">
+      \( \displaystyle W = \int_{V_i}^{V_f} P \, dV \)
+    </div>
+
+    <h3>3.3 Sign Conventions</h3>
+    <ul>
+      <li>Heat absorbed by the system: \( Q > 0 \)</li>
+      <li>Heat released by the system: \( Q < 0 \)</li>
+      <li>Work done by the system: \( W > 0 \)</li>
+      <li>Work done on the system: \( W < 0 \)</li>
+    </ul>
+
+    <h2>4. Thermodynamic Processes</h2>
+    <p>Important idealized processes are:</p>
+
+    <h3>4.1 Isothermal Process (\( T = \text{constant} \))</h3>
+    <p>
+      Temperature remains constant, so \( \Delta U = 0 \).
+    </p>
+    <div class="formula">
+      \( \displaystyle W = nRT \ln \frac{V_f}{V_i} \quad ; \quad Q = W \)
+    </div>
+
+    <h3>4.2 Adiabatic Process (\( Q = 0 \))</h3>
+    <p>
+      No heat exchange with surroundings.
+    </p>
+    <div class="formula">
+      \( \displaystyle P V^\gamma = \text{constant}, \quad TV^{\gamma-1} = \text{constant}, \quad T^{\gamma} P^{1-\gamma} = \text{constant} \)
+    </div>
+    <p>
+      Work done:
+    </p>
+    <div class="formula">
+      \( \displaystyle W = \frac{P_f V_f - P_i V_i}{\gamma - 1} \)
+    </div>
+
+    <h3>4.3 Isobaric Process (\( P = \text{constant} \))</h3>
+    <div class="formula">
+      \( \displaystyle W = P (V_f - V_i) \)
+    </div>
+
+    <h3>4.4 Isochoric Process (\( V = \text{constant} \))</h3>
+    <p>
+      No work done: \( W = 0 \).
+    </p>
+
+    <h2>5. Specific Heat Capacities</h2>
+    <p>
+      For ideal gases:
+    </p>
+    <ul>
+      <li>At constant volume \( C_V = \left(\frac{\partial Q}{\partial T}\right)_V \)</li>
+      <li>At constant pressure \( C_P = \left(\frac{\partial Q}{\partial T}\right)_P \)</li>
+    </ul>
+    <p>
+      Relation:
+    </p>
+    <div class="formula">
+      \( \displaystyle C_P - C_V = R \quad ; \quad \gamma = \frac{C_P}{C_V} \)
+    </div>
+
+    <h2>6. Second Law of Thermodynamics</h2>
+    <p>
+      The second law introduces the concept of entropy and directionality of natural processes:
+    </p>
+    <ul>
+      <li>Heat cannot spontaneously flow from cold to hot body.</li>
+      <li>It is impossible to convert all heat into work without other effects (no 100% efficient heat engine).</li>
+      <li>Entropy of an isolated system never decreases.</li>
+    </ul>
+
+    <h3>6.1 Clausius Statement</h3>
+    <p>Heat cannot flow spontaneously from cold to hot.</p>
+
+    <h3>6.2 Kelvin-Planck Statement</h3>
+    <p>Impossible to construct a heat engine operating in a cycle with 100% efficiency.</p>
+
+    <h2>7. Entropy (\( S \))</h2>
+    <p>
+      Entropy measures the disorder or randomness of a system.
+    </p>
+    <div class="formula">
+      \( \displaystyle dS = \frac{dQ_{\text{rev}}}{T} \)
+    </div>
+    <p>
+      For a reversible process:
+    </p>
+    <div class="formula">
+      \( \displaystyle \Delta S = \int \frac{dQ_{\text{rev}}}{T} \)
+    </div>
+
+    <h3>7.1 Entropy Change for Ideal Gas</h3>
+    <div class="formula">
+      \( \displaystyle \Delta S = n C_V \ln \frac{T_f}{T_i} + n R \ln \frac{V_f}{V_i} \)
+    </div>
+
+    <h2>8. Heat Engines and Refrigerators</h2>
+
+    <h3>8.1 Heat Engine</h3>
+    <p>
+      Converts heat energy into mechanical work.
+    </p>
+    <p>
+      Efficiency:
+    </p>
+    <div class="formula">
+      \( \displaystyle \eta = \frac{W}{Q_H} = 1 - \frac{Q_C}{Q_H} \)
+    </div>
+    <p>
+      Where \( Q_H \) = heat absorbed from hot reservoir, \( Q_C \) = heat rejected to cold reservoir.
+    </p>
+
+    <h3>8.2 Carnot Engine</h3>
+    <p>
+      Theoretical engine with maximum efficiency operating between two reservoirs.
+    </p>
+    <div class="formula">
+      \( \displaystyle \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H} \)
+    </div>
+
+    <h3>8.3 Refrigerator and Heat Pump</h3>
+    <p>
+      Refrigerator transfers heat from cold to hot reservoir using work input.
+    </p>
+    <p>
+      Coefficient of Performance (COP):
+    </p>
+    <div class="formula">
+      \( \displaystyle COP_{\text{refrigerator}} = \frac{Q_C}{W} = \frac{T_C}{T_H - T_C} \quad ; \quad COP_{\text{heat pump}} = \frac{Q_H}{W} = \frac{T_H}{T_H - T_C} \)
+    </div>
+
+    <h2>9. Thermodynamic Potentials</h2>
+
+    <h3>9.1 Internal Energy \( U \)</h3>
+    <p>Energy contained within the system.</p>
+
+    <h3>9.2 Enthalpy \( H \)</h3>
+    <div class="formula">
+      \( \displaystyle H = U + PV \)
+    </div>
+
+    <h3>9.3 Helmholtz Free Energy \( F \)</h3>
+    <div class="formula">
+      \( \displaystyle F = U - TS \)
+    </div>
+
+    <h3>9.4 Gibbs Free Energy \( G \)</h3>
+    <div class="formula">
+      \( \displaystyle G = H - TS = U + PV - TS \)
+    </div>
+
+    <h2>10. Important Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First Law</td>
+          <td>\( \Delta U = Q - W \)</td>
+          <td>Energy conservation</td>
+        </tr>
+        <tr>
+          <td>Work done (Isothermal)</td>
+          <td>\( W = nRT \ln \frac{V_f}{V_i} \)</td>
+          <td>Constant temperature</td>
+        </tr>
+        <tr>
+          <td>Work done (Adiabatic)</td>
+          <td>\( W = \frac{P_f V_f - P_i V_i}{\gamma - 1} \)</td>
+          <td>No heat exchange</td>
+        </tr>
+        <tr>
+          <td>Entropy change (ideal gas)</td>
+          <td>\( \Delta S = n C_V \ln \frac{T_f}{T_i} + n R \ln \frac{V_f}{V_i} \)</td>
+          <td>Disorder measure</td>
+        </tr>
+        <tr>
+          <td>Carnot efficiency</td>
+          <td>\( \eta = 1 - \frac{T_C}{T_H} \)</td>
+          <td>Max theoretical efficiency</td>
+        </tr>
+        <tr>
+          <td>COP Refrigerator</td>
+          <td>\( \frac{T_C}{T_H - T_C} \)</td>
+          <td>Performance measure</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>11. Sample Problems and Solutions</h2>
+
+    <h3>Problem 1: Work Done in Isothermal Expansion</h3>
+    <p>
+      One mole of an ideal gas expands isothermally at 300 K from 10 L to 20 L. Calculate the work done.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( W = nRT \ln \frac{V_f}{V_i} = 1 \times 8.314 \times 300 \times \ln \frac{20}{10} \)
+    </div>
+    <p>
+      \( W = 2494.2 \times 0.693 = 1728.5 \, \text{J} \)
+    </p>
+
+    <h3>Problem 2: Efficiency of Carnot Engine</h3>
+    <p>
+      Calculate the efficiency of a Carnot engine working between 500 K and 300 K.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      \( \eta = 1 - \frac{T_C}{T_H} = 1 - \frac{300}{500} = 0.4 = 40\% \)
+    </div>
+
+    <h2>12. Tips for JEE Thermodynamics</h2>
+    <ul>
+      <li>Understand all thermodynamic processes and their formulas thoroughly.</li>
+      <li>Practice work and heat calculations in different processes.</li>
+      <li>Memorize relations between specific heats and their physical significance.</li>
+      <li>Focus on entropy and its calculation in various scenarios.</li>
+      <li>Get familiar with Carnot engines and refrigerators and their efficiencies.</li>
+      <li>Solve as many previous year problems and mock tests as possible.</li>
+    </ul>
+
+    <h2>13. Conclusion</h2>
+    <p>
+      Thermodynamics is a key topic in JEE physics requiring conceptual clarity and practice. This guide compiles all essential laws, processes, formulas, and problem-solving strategies to boost your confidence and performance. Stay consistent with your studies, revise regularly, and apply these concepts to excel in the exam.
+    </p>
+
+    <p>
+      Good luck with your preparation and keep practicing!
+    </p>
+
+  </section>
+</body>
+
+</html>

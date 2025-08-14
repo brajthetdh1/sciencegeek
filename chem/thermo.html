@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Chemistry Thermodynamics Complete Guide | Concepts, Laws & Formulas</title>
+  <meta name="description"
+    content="Comprehensive JEE Chemistry Thermodynamics guide covering laws of thermodynamics, internal energy, enthalpy, entropy, Gibbs free energy, and practical problem-solving tips." />
+  <meta name="keywords"
+    content="JEE Chemistry thermodynamics, first law of thermodynamics, internal energy, enthalpy, entropy, Gibbs free energy, JEE preparation chemistry" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #ffffff;
+      padding: 2.5rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      padding: 0.3rem 0.6rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      color: #1e40af;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .formula {
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      background-color: #e0e7ff;
+      padding: 0.4rem 0.6rem;
+      border-radius: 0.3rem;
+      display: inline-block;
+      margin: 0.3rem 0 1rem 0;
+      color: #3730a3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #2563eb;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    thead tr {
+      background-color: #bfdbfe;
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Chemistry Thermodynamics Complete Guide</h1>
+
+    <p>
+      Thermodynamics forms a crucial part of Physical Chemistry for JEE. It deals with energy changes, spontaneity, and
+      equilibrium in chemical systems. This guide covers the fundamental laws of thermodynamics, important thermodynamic
+      functions such as internal energy, enthalpy, entropy, Gibbs free energy, and their applications. We also discuss
+      important equations, derivations, and tips to solve JEE problems confidently.
+    </p>
+
+    <h2>1. Basics of Thermodynamics</h2>
+    <p>
+      Thermodynamics studies the relationship between heat, work, energy, and how these influence chemical reactions and
+      physical changes.
+    </p>
+    <p>Key Terminologies:</p>
+    <ul>
+      <li><strong>System:</strong> Part of the universe under study.</li>
+      <li><strong>Surroundings:</strong> Everything outside the system.</li>
+      <li><strong>Boundary:</strong> Separates system and surroundings.</li>
+      <li><strong>Open System:</strong> Exchanges matter and energy.</li>
+      <li><strong>Closed System:</strong> Exchanges energy but not matter.</li>
+      <li><strong>Isolated System:</strong> No exchange of matter or energy.</li>
+    </ul>
+
+    <h2>2. First Law of Thermodynamics</h2>
+
+    <p>
+      Also known as the Law of Conservation of Energy, it states:
+    </p>
+    <p class="highlight">
+      Energy can neither be created nor destroyed, only transformed.
+    </p>
+
+    <p>
+      Mathematically,
+    </p>
+    <p class="formula">ΔU = Q - W</p>
+    <p>Where:</p>
+    <ul>
+      <li>ΔU = Change in internal energy of the system</li>
+      <li>Q = Heat absorbed by the system (+ve if absorbed, -ve if released)</li>
+      <li>W = Work done by the system on surroundings (+ve if work done by system, -ve if done on system)</li>
+    </ul>
+
+    <h3>2.1 Internal Energy (U)</h3>
+    <p>Internal energy is the total energy contained within a system, including kinetic and potential energies of molecules.</p>
+
+    <h3>2.2 Work Done in Different Processes</h3>
+
+    <ul>
+      <li><strong>Isothermal Process:</strong> Temperature remains constant; ΔU = 0.</li>
+      <li><strong>Isobaric Process:</strong> Pressure remains constant; work W = PΔV.</li>
+      <li><strong>Isochoric Process:</strong> Volume remains constant; W = 0.</li>
+      <li><strong>Adiabatic Process:</strong> No heat exchange (Q=0); work changes internal energy.</li>
+    </ul>
+
+    <p>
+      For work done by an ideal gas during expansion or compression,
+    </p>
+    <p class="formula">
+      W = \int P dV
+    </p>
+
+    <h2>3. Enthalpy (H)</h2>
+
+    <p>Enthalpy is a state function useful for processes at constant pressure:</p>
+    <p class="formula">H = U + PV</p>
+
+    <p>
+      Change in enthalpy ΔH is heat absorbed or evolved at constant pressure:
+    </p>
+    <p class="formula">ΔH = ΔU + PΔV = Q_P</p>
+
+    <h3>3.1 Types of Enthalpy Changes</h3>
+
+    <ul>
+      <li><strong>Enthalpy of Reaction:</strong> Heat change during chemical reaction.</li>
+      <li><strong>Enthalpy of Formation (ΔH_f°):</strong> Heat change forming 1 mole of compound from elements in standard state.</li>
+      <li><strong>Enthalpy of Combustion:</strong> Heat released on complete combustion.</li>
+      <li><strong>Enthalpy of Neutralization:</strong> Heat evolved when acid reacts with base.</li>
+      <li><strong>Enthalpy of Vaporization/Fusion:</strong> Heat required to vaporize/fuse 1 mole of substance.</li>
+    </ul>
+
+    <h2>4. Hess’s Law of Constant Heat Summation</h2>
+
+    <p>
+      The total enthalpy change for a reaction is the same regardless of the path taken, provided initial and final states
+      are the same.
+    </p>
+
+    <p>This helps calculate enthalpy changes indirectly using known reactions.</p>
+
+    <h2>5. Second Law of Thermodynamics</h2>
+
+    <p>
+      It states that the entropy of the universe always increases for spontaneous processes.
+    </p>
+
+    <p class="highlight">
+      \textit{No process is possible whose sole result is the transfer of heat from a cooler to a hotter body.}
+    </p>
+
+    <h3>5.1 Entropy (S)</h3>
+
+    <p>
+      Entropy is a measure of randomness or disorder of a system.
+    </p>
+
+    <p>
+      Change in entropy for a reversible process at temperature T:
+    </p>
+    <p class="formula">
+      \Delta S = \frac{Q_{\text{rev}}}{T}
+    </p>
+
+    <h3>5.2 Entropy and Spontaneity</h3>
+
+    <ul>
+      <li>ΔS_universe = ΔS_system + ΔS_surroundings > 0 for spontaneous process</li>
+      <li>Entropy increases with temperature and volume</li>
+      <li>Phase changes affect entropy: vaporization > fusion > solid → liquid</li>
+    </ul>
+
+    <h2>6. Gibbs Free Energy (G) and Helmholtz Free Energy (A)</h2>
+
+    <h3>6.1 Gibbs Free Energy</h3>
+
+    <p>Combines enthalpy and entropy to predict spontaneity at constant temperature and pressure:</p>
+    <p class="formula">G = H - TS</p>
+
+    <p>Change in Gibbs free energy:</p>
+    <p class="formula">ΔG = ΔH - TΔS</p>
+
+    <ul>
+      <li>ΔG < 0: Spontaneous reaction</li>
+      <li>ΔG = 0: Equilibrium</li>
+      <li>ΔG > 0: Non-spontaneous reaction</li>
+    </ul>
+
+    <h3>6.2 Helmholtz Free Energy</h3>
+
+    <p>Used at constant volume and temperature:</p>
+    <p class="formula">A = U - TS</p>
+
+    <h2>7. Thermodynamic Equations and Relations</h2>
+
+    <h3>7.1 Maxwell’s Relations</h3>
+
+    <p>Derived from the fundamental thermodynamic equations, these relate different partial derivatives:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Relation</th>
+          <th>Equation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>\(\left(\frac{\partial T}{\partial V}\right)_S = -\left(\frac{\partial P}{\partial S}\right)_V\)</td>
+          <td>Relates temperature & pressure changes</td>
+        </tr>
+        <tr>
+          <td>\(\left(\frac{\partial T}{\partial P}\right)_S = \left(\frac{\partial V}{\partial S}\right)_P\)</td>
+          <td>Relates temperature & volume changes</td>
+        </tr>
+        <tr>
+          <td>\(\left(\frac{\partial S}{\partial V}\right)_T = \left(\frac{\partial P}{\partial T}\right)_V\)</td>
+          <td>Entropy & pressure dependence on temperature and volume</td>
+        </tr>
+        <tr>
+          <td>\(\left(\frac{\partial S}{\partial P}\right)_T = -\left(\frac{\partial V}{\partial T}\right)_P\)</td>
+          <td>Entropy & volume dependence on temperature and pressure</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>7.2 Clapeyron Equation</h3>
+
+    <p>Relates pressure and temperature changes during phase transitions:</p>
+    <p class="formula">
+      \frac{dP}{dT} = \frac{\Delta H_{\text{trans}}}{T \Delta V_{\text{trans}}}
+    </p>
+
+    <h3>7.3 Clausius-Clapeyron Equation</h3>
+
+    <p>Describes vapor pressure dependence on temperature:</p>
+    <p class="formula">
+      \ln P = -\frac{\Delta H_{\text{vap}}}{RT} + C
+    </p>
+
+    <p>Or differential form:</p>
+    <p class="formula">
+      \frac{d \ln P}{dT} = \frac{\Delta H_{\text{vap}}}{RT^2}
+    </p>
+
+    <h2>8. Standard Thermodynamic Functions</h2>
+
+    <p>Standard values of ΔH°, ΔS°, ΔG° are measured at 1 atm and 298 K.</p>
+
+    <h3>8.1 Standard Enthalpy Change (ΔH°)</h3>
+    <p>Heat absorbed or released under standard conditions.</p>
+
+    <h3>8.2 Standard Entropy Change (ΔS°)</h3>
+    <p>Change in entropy under standard conditions.</p>
+
+    <h3>8.3 Standard Gibbs Energy Change (ΔG°)</h3>
+    <p>Change in Gibbs energy under standard conditions.</p>
+
+    <h3>8.4 Relation with Equilibrium Constant (K)</h3>
+
+    <p class="formula">
+      ΔG° = -RT \ln K
+    </p>
+
+    <p>This connects thermodynamics to chemical equilibrium.</p>
+
+    <h2>9. Thermodynamic Cycles</h2>
+
+    <h3>9.1 Carnot Cycle</h3>
+
+    <p>
+      Idealized thermodynamic cycle with maximum efficiency operating between two temperatures \(T_H\) (hot) and \(T_C\) (cold).
+    </p>
+
+    <p class="formula">
+      \eta = 1 - \frac{T_C}{T_H}
+    </p>
+
+    <h3>9.2 Other Cycles</h3>
+
+    <ul>
+      <li>Otto cycle, Diesel cycle, etc. (More relevant to physics/engineering)</li>
+    </ul>
+
+    <h2>10. Practical Tips for JEE Thermodynamics</h2>
+
+    <ul>
+      <li>Memorize key definitions, laws, and formulas.</li>
+      <li>Understand derivations conceptually for application in problems.</li>
+      <li>Practice problems on heat/work in different processes.</li>
+      <li>Get comfortable with entropy and Gibbs free energy problems.</li>
+      <li>Use standard thermodynamic tables for ΔH°, ΔS°, ΔG° calculations.</li>
+      <li>Relate thermodynamics to equilibrium and spontaneity questions.</li>
+      <li>Attempt previous years’ JEE questions on thermodynamics.</li>
+    </ul>
+
+    <p>
+      Thermodynamics combines theory and problem-solving skills. Strong command on this topic ensures high scoring in
+      JEE Chemistry and deepens your understanding of energy transformations in chemical processes.
+    </p>
+  </section>
+</body>
+
+</html>

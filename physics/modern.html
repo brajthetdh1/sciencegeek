@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Modern Physics Complete Guide | Atomic Models, Nuclear Physics & More</title>
+  <meta name="description"
+    content="Comprehensive JEE Physics Modern Physics guide covering atomic models, photoelectric effect, nuclear physics, radioactivity, X-rays, and important concepts for JEE preparation." />
+  <meta name="keywords"
+    content="JEE Physics Modern Physics, Atomic Models, Nuclear Physics, Photoelectric Effect, Radioactivity, X-rays, JEE Preparation" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      },
+      svg: { fontCache: 'global' },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.75;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Modern Physics Complete Guide</h1>
+
+    <p>
+      Modern Physics is a crucial section in JEE Physics, encompassing the study of atomic and nuclear phenomena, quantum
+      mechanics, photoelectric effect, and much more. This guide provides an in-depth overview of the topics, formulas,
+      and concepts needed to excel in this area. Understanding these topics will not only help you score well but also build
+      a strong foundation for higher studies in physics and engineering.
+    </p>
+
+    <h2>1. Atomic Models and Structure</h2>
+    <p>
+      Atomic models have evolved to explain the structure and behavior of atoms:
+    </p>
+    <ul>
+      <li><strong>Thomson’s Model:</strong> Also called the “plum pudding” model, where electrons are embedded in a positive sphere.</li>
+      <li><strong>Rutherford Model:</strong> Shows a tiny dense nucleus with electrons orbiting around it; explained alpha scattering experiment.</li>
+      <li><strong>Bohr’s Model:</strong> Electrons orbit nucleus in fixed energy levels or shells with quantized angular momentum.</li>
+    </ul>
+    <p>
+      <strong>Bohr’s postulates:</strong>
+    </p>
+    <ol>
+      <li>Electrons move in certain allowed circular orbits without radiating energy.</li>
+      <li>Angular momentum of electron is quantized:
+        $$mvr = n\hbar = n\frac{h}{2\pi}$$
+        where \(n=1,2,3,...\)</li>
+      <li>Energy is emitted or absorbed when electron jumps between orbits, given by:
+        $$\Delta E = h\nu$$
+      </li>
+    </ol>
+
+    <h3>Bohr Radius</h3>
+    <p>
+      The radius of the first orbit in hydrogen atom:
+    </p>
+    <div class="formula">
+      $$a_0 = \frac{4 \pi \epsilon_0 \hbar^2}{m e^2} \approx 0.529 \times 10^{-10} \text{m}$$
+    </div>
+
+    <h3>Energy Levels in Hydrogen Atom</h3>
+    <p>
+      Energy of \(n^{th}\) orbit is:
+    </p>
+    <div class="formula">
+      $$E_n = -\frac{13.6 \text{ eV}}{n^2}$$
+    </div>
+    <p>
+      Negative sign indicates bound state. Ionization energy corresponds to \(n \to \infty\).
+    </p>
+
+    <h2>2. Photoelectric Effect</h2>
+    <p>
+      The photoelectric effect demonstrates the particle nature of light where electrons are ejected from a metal surface
+      when light of sufficient frequency shines on it.
+    </p>
+
+    <h3>Einstein’s Photoelectric Equation</h3>
+    <p>
+      The maximum kinetic energy of emitted electrons:
+    </p>
+    <div class="formula">
+      $$K_{max} = h\nu - \phi$$
+    </div>
+    <p>
+      Where:<br />
+      \(h\) = Planck's constant \(6.626 \times 10^{-34} \text{Js}\)<br />
+      \(\nu\) = frequency of incident light<br />
+      \(\phi\) = work function of metal (minimum energy to eject electron)
+    </p>
+
+    <h3>Important Points</h3>
+    <ul>
+      <li>Threshold frequency: \( \nu_0 = \frac{\phi}{h} \), below which no electron is emitted.</li>
+      <li>Stopping potential (\(V_0\)) relates to max kinetic energy by \(eV_0 = K_{max}\).</li>
+      <li>Intensity affects number of electrons but not their kinetic energy.</li>
+    </ul>
+
+    <h2>3. Dual Nature of Matter</h2>
+    <p>
+      Electrons and other particles exhibit wave-particle duality.
+    </p>
+
+    <h3>De Broglie Wavelength</h3>
+    <p>
+      All matter has an associated wavelength given by:
+    </p>
+    <div class="formula">
+      $$\lambda = \frac{h}{p} = \frac{h}{mv}$$
+    </div>
+    <p>
+      This was experimentally confirmed by electron diffraction experiments.
+    </p>
+
+    <h2>4. X-Rays</h2>
+    <p>
+      X-rays are electromagnetic waves with high energy, produced by the deceleration of high-speed electrons (bremsstrahlung)
+      or characteristic X-rays from atomic transitions.
+    </p>
+
+    <h3>Duane-Hunt Law</h3>
+    <p>
+      The shortest wavelength in the X-ray spectrum:
+    </p>
+    <div class="formula">
+      $$\lambda_{min} = \frac{hc}{eV}$$
+    </div>
+    <p>
+      Where \(V\) is the accelerating voltage.
+    </p>
+
+    <h2>5. Nuclear Physics</h2>
+    <p>
+      Deals with the structure, stability, and reactions of atomic nuclei.
+    </p>
+
+    <h3>Basic Terms</h3>
+    <ul>
+      <li>Atomic number (\(Z\)): Number of protons.</li>
+      <li>Mass number (\(A\)): Number of protons + neutrons.</li>
+      <li>Isotopes: Same \(Z\), different \(A\).</li>
+      <li>Isobars: Same \(A\), different \(Z\).</li>
+      <li>Isotones: Same number of neutrons.</li>
+    </ul>
+
+    <h3>Mass-Energy Relation and Binding Energy</h3>
+    <p>
+      According to Einstein’s relation:
+    </p>
+    <div class="formula">
+      $$E = mc^2$$
+    </div>
+    <p>
+      The mass defect is the difference between mass of individual nucleons and nucleus. Binding energy:
+    </p>
+    <div class="formula">
+      $$BE = \text{(Mass defect)} \times c^2$$
+    </div>
+    <p>
+      Binding energy per nucleon indicates stability.
+    </p>
+
+    <h3>Radioactivity</h3>
+    <p>
+      Spontaneous nuclear decay emits alpha, beta, or gamma radiation.
+    </p>
+    <p>
+      Radioactive decay law:
+    </p>
+    <div class="formula">
+      $$N = N_0 e^{-\lambda t}$$
+    </div>
+    <p>
+      Where \(N_0\) is initial nuclei, \(\lambda\) is decay constant.
+    </p>
+    <p>
+      Half-life \(T_{1/2}\) is related to \(\lambda\):
+    </p>
+    <div class="formula">
+      $$T_{1/2} = \frac{\ln 2}{\lambda}$$
+    </div>
+
+    <h3>Types of Radioactive Decay</h3>
+    <ul>
+      <li><strong>Alpha decay:</strong> Emission of He nucleus (\(^4_2He\)).</li>
+      <li><strong>Beta decay:</strong> Electron (\(\beta^-\)) or positron (\(\beta^+\)) emission.</li>
+      <li><strong>Gamma decay:</strong> Emission of high-energy photons.</li>
+    </ul>
+
+    <h2>6. Nuclear Fission and Fusion</h2>
+    <h3>Nuclear Fission</h3>
+    <p>
+      Heavy nucleus splits into lighter nuclei releasing large energy, used in nuclear reactors.
+    </p>
+    <p>
+      Example:
+    </p>
+    <div class="formula">
+      $$^{235}U + n \to ^{92}Kr + ^{141}Ba + 3n + \text{energy}$$
+    </div>
+
+    <h3>Nuclear Fusion</h3>
+    <p>
+      Light nuclei combine to form heavier nuclei releasing energy, powering stars including the sun.
+    </p>
+    <p>
+      Example:
+    </p>
+    <div class="formula">
+      $$^2H + ^3H \to ^4He + n + \text{energy}$$
+    </div>
+
+    <h2>7. Important Constants and Formulas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Constant</th>
+          <th>Value</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Planck’s constant, \(h\)</td>
+          <td>\(6.626 \times 10^{-34} \, \text{Js}\)</td>
+          <td>Quantum of action</td>
+        </tr>
+        <tr>
+          <td>Speed of light, \(c\)</td>
+          <td>\(3 \times 10^{8} \, \text{m/s}\)</td>
+          <td>Electromagnetic wave speed</td>
+        </tr>
+        <tr>
+          <td>Electron charge, \(e\)</td>
+          <td>\(1.6 \times 10^{-19} \, \text{C}\)</td>
+          <td>Elementary charge</td>
+        </tr>
+        <tr>
+          <td>Mass of electron, \(m_e\)</td>
+          <td>\(9.11 \times 10^{-31} \, \text{kg}\)</td>
+          <td>Rest mass of electron</td>
+        </tr>
+        <tr>
+          <td>Bohr radius, \(a_0\)</td>
+          <td>\(0.529 \times 10^{-10} \, \text{m}\)</td>
+          <td>Radius of hydrogen atom’s 1st orbit</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>8. Practice Problems</h2>
+
+    <h3>Problem 1: Calculate the wavelength of an electron moving with velocity \(2 \times 10^6 \, \text{m/s}\).</h3>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      $$\lambda = \frac{h}{mv} = \frac{6.626 \times 10^{-34}}{9.11 \times 10^{-31} \times 2 \times 10^{6}} = 3.64 \times 10^{-10} \text{m}$$
+    </div>
+
+    <h3>Problem 2: A metal has a work function of 2 eV. Calculate the stopping potential if incident light wavelength is 400 nm.</h3>
+    <p><strong>Solution:</strong></p>
+    <p>
+      Energy of photon,
+    </p>
+    <div class="formula">
+      $$E = \frac{hc}{\lambda} = \frac{6.626 \times 10^{-34} \times 3 \times 10^{8}}{400 \times 10^{-9}} = 4.97 \times 10^{-19} \text{J} = 3.1 \, eV$$
+    </div>
+    <p>
+      Maximum kinetic energy:
+    </p>
+    <div class="formula">
+      $$K_{max} = 3.1 - 2 = 1.1 \, eV$$
+    </div>
+    <p>
+      Stopping potential,
+    </p>
+    <div class="formula">
+      $$V_0 = \frac{K_{max}}{e} = 1.1 \, \text{Volts}$$
+    </div>
+
+    <h2>9. Tips for JEE Exam</h2>
+    <ul>
+      <li>Understand concepts over rote learning, especially quantum principles.</li>
+      <li>Memorize key formulas and constants.</li>
+      <li>Practice numerical problems regularly to build accuracy and speed.</li>
+      <li>Revise all decay laws and radioactive series.</li>
+      <li>Visualize atomic models and transitions to better grasp photoelectric and X-ray concepts.</li>
+    </ul>
+
+    <p>
+      This comprehensive guide equips you with all the fundamental and advanced concepts in Modern Physics essential for
+      JEE preparation. Consistent study and problem-solving practice on these topics will ensure a strong performance in the exam.
+    </p>
+
+  </section>
+</body>
+
+</html>

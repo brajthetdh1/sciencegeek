@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Chemistry Redox Reactions Complete Guide | Concepts, Balancing & Applications</title>
+  <meta name="description"
+    content="Comprehensive JEE Chemistry Redox Reactions guide covering oxidation-reduction concepts, balancing methods, electrochemical cells, applications, and problem-solving tips for JEE preparation." />
+  <meta name="keywords"
+    content="JEE Chemistry redox reactions, oxidation, reduction, balancing redox reactions, electrochemical cells, redox equations, JEE preparation chemistry" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.75;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 3rem 3.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 12px 24px -6px rgba(59, 130, 246, 0.2);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.6rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2.25rem;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.9rem;
+    }
+
+    ol {
+      margin-left: 2.25rem;
+      margin-bottom: 2rem;
+    }
+
+    ol li {
+      margin-bottom: 0.9rem;
+    }
+
+    .highlight {
+      background-color: #dbeafe;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      color: #1e40af;
+      display: inline-block;
+      margin-bottom: 1.3rem;
+    }
+
+    .formula {
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      background-color: #e0e7ff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.4rem;
+      display: inline-block;
+      margin: 0.4rem 0 1.4rem 0;
+      color: #3730a3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.5rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #2563eb;
+      padding: 1rem 1.2rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    thead tr {
+      background-color: #bfdbfe;
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Chemistry Redox Reactions Complete Guide</h1>
+
+    <p>
+      Redox reactions, fundamental in JEE Chemistry, involve the transfer of electrons between chemical species. Mastery of
+      redox concepts is crucial for balancing reactions, understanding electrochemical cells, and solving numerical problems
+      efficiently. This comprehensive guide covers all essential topics, balancing methods, key formulas, and tips for
+      exam success.
+    </p>
+
+    <h2>1. Understanding Redox Reactions</h2>
+
+    <p>
+      A redox (reduction-oxidation) reaction is one in which electrons are transferred from one reactant to another.
+      Oxidation refers to the loss of electrons, while reduction is the gain of electrons.
+    </p>
+
+    <p class="formula">
+      \text{Oxidation: } \mathrm{A} \rightarrow \mathrm{A}^{n+} + n e^-
+    </p>
+    <p class="formula">
+      \text{Reduction: } \mathrm{B}^{m+} + m e^- \rightarrow \mathrm{B}
+    </p>
+
+    <p>
+      The species losing electrons is called the <strong>reducing agent</strong> and the one gaining electrons is the
+      <strong>oxidizing agent</strong>.
+    </p>
+
+    <h2>2. Oxidation Number (Oxidation State)</h2>
+
+    <p>
+      Oxidation number helps identify which atoms undergo oxidation or reduction. It is a hypothetical charge assigned to
+      an atom assuming ionic bonding.
+    </p>
+
+    <h3>2.1 Rules to Assign Oxidation Numbers</h3>
+
+    <ul>
+      <li>Elemental form: 0 (e.g., \( O_2, H_2, N_2 \))</li>
+      <li>Monoatomic ions: charge of the ion (e.g., \( Na^+ \) is +1)</li>
+      <li>Oxygen: usually -2 (except in peroxides -1)</li>
+      <li>Hydrogen: +1 with non-metals, -1 with metals</li>
+      <li>Sum of oxidation numbers in a neutral molecule = 0</li>
+      <li>Sum in a polyatomic ion = charge of the ion</li>
+    </ul>
+
+    <h2>3. Identifying Oxidation and Reduction</h2>
+
+    <p>
+      During a redox reaction, oxidation number of an element increases (oxidation) or decreases (reduction). Look for
+      changes in oxidation states in reactants and products.
+    </p>
+
+    <h2>4. Balancing Redox Reactions</h2>
+
+    <p>
+      Balancing redox reactions ensures mass and charge conservation. Two main methods:
+    </p>
+
+    <ul>
+      <li><strong>Oxidation Number Method</strong></li>
+      <li><strong>Ion-Electron Method (Half-Reaction Method)</strong></li>
+    </ul>
+
+    <h3>4.1 Oxidation Number Method Steps</h3>
+
+    <ol>
+      <li>Assign oxidation numbers to all elements.</li>
+      <li>Identify oxidized and reduced species.</li>
+      <li>Calculate change in oxidation numbers and balance electron transfer.</li>
+      <li>Balance other atoms except hydrogen and oxygen.</li>
+      <li>Balance oxygen using \( \mathrm{H_2O} \) and hydrogen using \( \mathrm{H^+} \) (in acidic medium) or \( \mathrm{OH^-} \) (in basic medium).</li>
+      <li>Balance charge by adding electrons.</li>
+      <li>Verify mass and charge balance.</li>
+    </ol>
+
+    <h3>4.2 Ion-Electron Method Steps</h3>
+
+    <ol>
+      <li>Separate the reaction into oxidation and reduction half-reactions.</li>
+      <li>Balance all elements except \( \mathrm{H} \) and \( \mathrm{O} \).</li>
+      <li>Balance oxygen atoms by adding \( \mathrm{H_2O} \).</li>
+      <li>Balance hydrogen atoms by adding \( \mathrm{H^+} \) ions (acidic medium) or \( \mathrm{OH^-} \) ions (basic medium).</li>
+      <li>Balance charge by adding electrons.</li>
+      <li>Multiply half-reactions to equalize electrons and add them.</li>
+      <li>Cancel out common species and verify.</li>
+    </ol>
+
+    <h2>5. Electrochemical Cells</h2>
+
+    <p>
+      Electrochemical cells convert chemical energy to electrical energy via redox reactions. Two main types:
+    </p>
+
+    <ul>
+      <li><strong>Galvanic (Voltaic) Cells:</strong> spontaneous redox reactions producing electric current.</li>
+      <li><strong>Electrolytic Cells:</strong> use external current to drive non-spontaneous reactions.</li>
+    </ul>
+
+    <h3>5.1 Galvanic Cell Components</h3>
+
+    <ul>
+      <li><strong>Anode:</strong> site of oxidation (loss of electrons)</li>
+      <li><strong>Cathode:</strong> site of reduction (gain of electrons)</li>
+      <li><strong>Salt Bridge:</strong> maintains charge neutrality by ion flow</li>
+    </ul>
+
+    <h3>5.2 Standard Electrode Potential (\(E^\circ\))</h3>
+
+    <p>
+      The electrode potential measured under standard conditions (1 M, 1 atm, 25°C). It indicates tendency to gain electrons.
+    </p>
+
+    <p class="formula">
+      E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}
+    </p>
+
+    <h3>5.3 Nernst Equation</h3>
+
+    <p>
+      Calculates cell potential under non-standard conditions:
+    </p>
+
+    <p class="formula">
+      E = E^\circ - \frac{RT}{nF} \ln Q
+    </p>
+
+    <p>At 25°C, simplified as:</p>
+    <p class="formula">
+      E = E^\circ - \frac{0.0592}{n} \log Q
+    </p>
+
+    <p>Where,</p>
+    <ul>
+      <li>\( E \): Cell potential</li>
+      <li>\( E^\circ \): Standard cell potential</li>
+      <li>\( R \): Gas constant</li>
+      <li>\( T \): Temperature in Kelvin</li>
+      <li>\( n \): Number of electrons transferred</li>
+      <li>\( F \): Faraday constant</li>
+      <li>\( Q \): Reaction quotient</li>
+    </ul>
+
+    <h2>6. Important Electrochemical Concepts</h2>
+
+    <h3>6.1 Electrochemical Series</h3>
+
+    <p>
+      A list of elements or ions arranged according to their standard electrode potentials. Helps predict redox behavior,
+      reaction spontaneity, and oxidizing/reducing strength.
+    </p>
+
+    <h3>6.2 Faraday’s Laws of Electrolysis</h3>
+
+    <ol>
+      <li>Mass of substance deposited or liberated at an electrode is proportional to the quantity of electricity passed.</li>
+      <li>Mass of substances deposited or liberated by the same quantity of electricity are proportional to their equivalent weights.</li>
+    </ol>
+
+    <p class="formula">
+      m = \frac{Q \times M}{n \times F}
+    </p>
+
+    <p>Where,</p>
+    <ul>
+      <li>m = mass of substance</li>
+      <li>Q = total charge passed</li>
+      <li>M = molar mass</li>
+      <li>n = number of electrons</li>
+      <li>F = Faraday constant (96485 C/mol)</li>
+    </ul>
+
+    <h2>7. Redox Titrations</h2>
+
+    <p>
+      Redox titrations involve reactions where the titrant or analyte undergoes oxidation or reduction. Common examples:
+    </p>
+
+    <ul>
+      <li>Permanganometry (using \( \mathrm{KMnO_4} \))</li>
+      <li>Iodometry (using iodine/iodide)</li>
+      <li>Chromatometry (using dichromate ions)</li>
+    </ul>
+
+    <h3>7.1 Example: Permanganometry</h3>
+
+    <p>
+      In acidic medium, permanganate ion acts as a strong oxidizing agent:
+    </p>
+    <p class="formula">
+      \mathrm{MnO_4^-} + 8 \mathrm{H^+} + 5 e^- \rightarrow \mathrm{Mn^{2+}} + 4 \mathrm{H_2O}
+    </p>
+
+    <h2>8. Common Redox Reaction Types</h2>
+
+    <ul>
+      <li>Metal displacement reactions</li>
+      <li>Reaction of metals with acids</li>
+      <li>Reactions involving halogens</li>
+      <li>Reactions in acidic and basic medium</li>
+      <li>Reaction involving free radicals</li>
+    </ul>
+
+    <h2>9. Practice Tips for JEE Redox Questions</h2>
+
+    <ul>
+      <li>Always assign oxidation numbers first.</li>
+      <li>Practice balancing redox reactions in both acidic and basic media.</li>
+      <li>Memorize common electrode potentials and electrochemical series.</li>
+      <li>Understand Faraday’s laws for electrolysis numericals.</li>
+      <li>Attempt redox titration problems and electrochemical cell problems.</li>
+      <li>Use the Nernst equation confidently for potential calculations.</li>
+      <li>Focus on conceptual clarity over rote memorization.</li>
+    </ul>
+
+    <h2>10. Summary Table of Important Formulas</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Oxidation Number Change</td>
+          <td>Increase = Oxidation; Decrease = Reduction</td>
+          <td>Identify oxidized/reduced atoms</td>
+        </tr>
+        <tr>
+          <td>Cell Potential</td>
+          <td>\( E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}} \)</td>
+          <td>Standard conditions</td>
+        </tr>
+        <tr>
+          <td>Nernst Equation</td>
+          <td>\( E = E^\circ - \frac{0.0592}{n} \log Q \)</td>
+          <td>At 25°C</td>
+        </tr>
+        <tr>
+          <td>Faraday’s Law</td>
+          <td>\( m = \frac{Q \times M}{n \times F} \)</td>
+          <td>Mass deposited</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>11. Conclusion</h2>
+
+    <p>
+      Redox reactions form an essential part of JEE Chemistry syllabus. With clear understanding of electron transfer,
+      oxidation states, balancing techniques, and electrochemical principles, you can master this topic effectively.
+      Consistent practice, solving numerical problems, and memorizing key concepts will ensure excellent exam
+      performance.
+    </p>
+  </section>
+</body>
+
+</html>

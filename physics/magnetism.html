@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Physics Magnetism Complete Guide | Concepts, Formulas & Problems</title>
+  <meta name="description" content="Comprehensive JEE Physics guide on Magnetism covering magnetic fields, magnetic forces, magnetic dipoles, Earth’s magnetism, and related concepts with formulas and solved problems for JEE preparation." />
+  <meta name="keywords" content="JEE Physics Magnetism, Magnetic Field, Magnetic Force, Magnetic Dipole, Earth's Magnetism, Magnetic Properties of Materials, JEE Preparation" />
+  <meta name="author" content="ScienceGeek Tutorials" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      },
+      svg: { fontCache: 'global' },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.75;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e7ff;
+    }
+
+    .formula {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.25rem;
+      color: #1e40af;
+      user-select: text;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>JEE Physics: Magnetism Complete Guide</h1>
+
+    <p>
+      Magnetism is a fundamental branch of physics essential for understanding natural phenomena and modern technology. In the JEE exam, magnetism is a vital topic involving magnetic fields, forces, dipoles, Earth's magnetism, and properties of materials. This comprehensive guide covers all crucial concepts, formulas, and sample problems to help you master magnetism for JEE preparation.
+    </p>
+
+    <h2>1. Introduction to Magnetism</h2>
+    <p>
+      Magnetism is a force experienced by moving charges and magnetic materials. It is closely related to electricity and is described by magnetic fields produced by electric currents and magnetic dipoles. Magnetic phenomena are caused by the motion of charges at atomic or macroscopic scales.
+    </p>
+
+    <h2>2. Magnetic Field and Magnetic Flux</h2>
+    <p>
+      The <strong>magnetic field</strong> \(\vec{B}\) is a vector field representing the magnetic influence on moving charges and magnets. It is measured in Tesla (T) or Weber per square meter.
+    </p>
+    <ul>
+      <li>Magnetic field lines are continuous closed loops.</li>
+      <li>Direction of \(\vec{B}\) is defined by the North to South pole outside the magnet.</li>
+    </ul>
+    <p>
+      Magnetic flux \(\Phi_B\) through an area \(A\) with magnetic field \(\vec{B}\) making angle \(\theta\):
+    </p>
+    <div class="formula">
+      $$\Phi_B = \int \vec{B} \cdot d\vec{A} = B A \cos \theta$$
+    </div>
+
+    <h2>3. Magnetic Force on Moving Charges and Currents</h2>
+    <p>
+      A charged particle \(q\) moving with velocity \(\vec{v}\) in magnetic field \(\vec{B}\) experiences Lorentz force:
+    </p>
+    <div class="formula">
+      $$\vec{F} = q \vec{v} \times \vec{B}$$
+    </div>
+    <p>
+      This force is always perpendicular to both velocity and magnetic field, causing circular or helical motion.
+    </p>
+
+    <h3>3.1 Radius of Circular Path</h3>
+    <p>
+      For velocity perpendicular to \(\vec{B}\), radius \(r\):
+    </p>
+    <div class="formula">
+      $$r = \frac{m v}{|q| B}$$
+    </div>
+
+    <h3>3.2 Cyclotron Frequency</h3>
+    <div class="formula">
+      $$f = \frac{|q| B}{2 \pi m}$$
+    </div>
+    <p>
+      Frequency of revolution of charged particle in uniform magnetic field.
+    </p>
+
+    <h2>4. Magnetic Field Due to a Current</h2>
+    <p>
+      Electric currents produce magnetic fields. The magnitude and direction depend on current shape and position.
+    </p>
+
+    <h3>4.1 Biot-Savart Law</h3>
+    <p>
+      Magnetic field \(d\vec{B}\) due to current element \(I d\vec{l}\) at distance \(r\):
+    </p>
+    <div class="formula">
+      $$d\vec{B} = \frac{\mu_0}{4\pi} \frac{I d\vec{l} \times \hat{r}}{r^2}$$
+    </div>
+
+    <h3>4.2 Magnetic Field Around Long Straight Wire</h3>
+    <p>
+      Using Ampere’s Law, magnetic field at distance \(r\):
+    </p>
+    <div class="formula">
+      $$B = \frac{\mu_0 I}{2\pi r}$$
+    </div>
+
+    <h3>4.3 Magnetic Field on Axis of Circular Loop</h3>
+    <p>
+      For loop radius \(R\), field at center:
+    </p>
+    <div class="formula">
+      $$B = \frac{\mu_0 I}{2R}$$
+    </div>
+
+    <h3>4.4 Magnetic Field Inside Solenoid</h3>
+    <p>
+      For solenoid with turns per unit length \(n\):
+    </p>
+    <div class="formula">
+      $$B = \mu_0 n I$$
+    </div>
+
+    <h2>5. Force Between Current-Carrying Conductors</h2>
+    <p>
+      Two parallel wires carrying currents \(I_1\), \(I_2\) separated by distance \(d\) exert force per unit length:
+    </p>
+    <div class="formula">
+      $$\frac{F}{L} = \frac{\mu_0}{2\pi} \frac{I_1 I_2}{d}$$
+    </div>
+    <p>
+      Force is attractive if currents flow in same direction; repulsive if opposite.
+    </p>
+
+    <h2>6. Magnetic Dipole Moment</h2>
+    <p>
+      Current loops behave like magnetic dipoles with magnetic moment:
+    </p>
+    <div class="formula">
+      $$\vec{\mu} = I \vec{A}$$
+    </div>
+    <p>
+      Where \(A\) is loop area and direction is given by right-hand thumb rule.
+    </p>
+
+    <h2>7. Torque on a Current Loop in Magnetic Field</h2>
+    <p>
+      Torque experienced by loop carrying current \(I\) in magnetic field \(B\):
+    </p>
+    <div class="formula">
+      $$\tau = I A B \sin \theta$$
+    </div>
+    <p>
+      \(\theta\) is angle between normal to loop and magnetic field.
+    </p>
+
+    <h2>8. Magnetic Properties of Materials</h2>
+    <p>
+      Materials respond differently to magnetic fields:
+    </p>
+    <ul>
+      <li><strong>Diamagnetic:</strong> Weakly repelled by magnetic field, no permanent dipoles.</li>
+      <li><strong>Paramagnetic:</strong> Weakly attracted due to unpaired electrons.</li>
+      <li><strong>Ferromagnetic:</strong> Strongly attracted, permanent dipoles align.</li>
+    </ul>
+    <p>
+      Magnetic susceptibility \(\chi_m\) and permeability \(\mu\) define material response:
+    </p>
+    <div class="formula">
+      $$\vec{B} = \mu \vec{H} = \mu_0 (1 + \chi_m) \vec{H}$$
+    </div>
+
+    <h2>9. Earth's Magnetism</h2>
+    <p>
+      Earth behaves like a giant magnet with magnetic field approximated by a dipole.
+    </p>
+    <ul>
+      <li><strong>Magnetic Declination:</strong> Angle between geographic north and magnetic north.</li>
+      <li><strong>Magnetic Inclination:</strong> Angle made by Earth's magnetic field with the horizontal.</li>
+      <li><strong>Magnetic Meridian:</strong> Plane containing Earth's magnetic field and vertical.</li>
+    </ul>
+
+    <h2>10. Magnetic Circuits</h2>
+    <p>
+      Magnetic circuits work like electric circuits but for magnetic flux:
+    </p>
+    <div class="formula">
+      $$\Phi = \frac{NI}{\mathcal{R}}$$
+    </div>
+    <p>
+      Where \(N\) is number of turns, \(I\) current, and \(\mathcal{R}\) reluctance of magnetic path.
+    </p>
+
+    <h2>11. Electromagnetic Induction (Brief Overview)</h2>
+    <p>
+      Changing magnetic flux induces electromotive force (emf):
+    </p>
+    <div class="formula">
+      $$\mathcal{E} = -\frac{d\Phi_B}{dt}$$
+    </div>
+    <p>
+      Detailed study of this falls under Faraday’s laws and Lenz’s law.
+    </p>
+
+    <h2>12. Important Formulas Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Formula</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Magnetic Flux</td>
+          <td>$$\Phi_B = B A \cos \theta$$</td>
+          <td>Area \(A\), angle \(\theta\)</td>
+        </tr>
+        <tr>
+          <td>Magnetic Force on Charge</td>
+          <td>$$\vec{F} = q \vec{v} \times \vec{B}$$</td>
+          <td>Velocity \(\vec{v}\), charge \(q\)</td>
+        </tr>
+        <tr>
+          <td>Radius of Circular Motion</td>
+          <td>$$r = \frac{m v}{|q| B}$$</td>
+          <td>Mass \(m\), velocity \(v\)</td>
+        </tr>
+        <tr>
+          <td>Magnetic Field Long Wire</td>
+          <td>$$B = \frac{\mu_0 I}{2\pi r}$$</td>
+          <td>Distance \(r\)</td>
+        </tr>
+        <tr>
+          <td>Force Between Wires</td>
+          <td>$$\frac{F}{L} = \frac{\mu_0}{2\pi} \frac{I_1 I_2}{d}$$</td>
+          <td>Distance \(d\)</td>
+        </tr>
+        <tr>
+          <td>Magnetic Moment</td>
+          <td>$$\vec{\mu} = I \vec{A}$$</td>
+          <td>Loop area \(A\)</td>
+        </tr>
+        <tr>
+          <td>Torque on Loop</td>
+          <td>$$\tau = I A B \sin \theta$$</td>
+          <td>Angle \(\theta\)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>13. Practice Problems</h2>
+
+    <h3>Problem 1: Magnetic Field at Center of Circular Loop</h3>
+    <p>
+      A circular loop of radius 0.1 m carries 5 A current. Find magnetic field at the center.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      $$B = \frac{\mu_0 I}{2 R} = \frac{4\pi \times 10^{-7} \times 5}{2 \times 0.1} = 3.14 \times 10^{-5} \, \text{T}$$
+    </div>
+
+    <h3>Problem 2: Force Between Two Parallel Wires</h3>
+    <p>
+      Two wires 0.5 m apart carry 3 A and 4 A currents in same direction. Find force per meter.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      $$\frac{F}{L} = \frac{\mu_0}{2\pi} \frac{I_1 I_2}{d} = \frac{4\pi \times 10^{-7}}{2\pi} \times \frac{3 \times 4}{0.5} = 4.8 \times 10^{-6} \, \text{N/m}$$
+    </div>
+
+    <h3>Problem 3: Torque on a Current Loop</h3>
+    <p>
+      A rectangular loop with area 0.02 \(m^2\) carries 2 A current in a 0.3 T magnetic field. Find torque if plane makes 60° angle with field.
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      $$\tau = I A B \sin \theta = 2 \times 0.02 \times 0.3 \times \sin 60^\circ = 0.0208 \, \text{Nm}$$
+    </div>
+
+    <h3>Problem 4: Radius of Circular Path for Electron</h3>
+    <p>
+      Electron moves at speed \(10^6\) m/s perpendicular to 0.01 T magnetic field. Find radius of circular path. (Mass of electron \(9.1 \times 10^{-31} kg\), charge \(1.6 \times 10^{-19} C\))
+    </p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula">
+      $$r = \frac{m v}{q B} = \frac{9.1 \times 10^{-31} \times 10^6}{1.6 \times 10^{-19} \times 0.01} = 5.7 \times 10^{-3} \, m$$
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>
+      Understanding magnetism requires mastering the behavior of magnetic fields, forces on charges and currents, magnetic dipoles, and material properties. Regular practice of problems and conceptual clarity are key for excelling in JEE Physics. Use this comprehensive guide as a reference and practice platform to strengthen your fundamentals in magnetism.
+    </p>
+
+  </section>
+</body>
+
+</html>
