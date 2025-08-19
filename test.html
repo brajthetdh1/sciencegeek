@@ -1,275 +1,868 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <!-- Prevent theme flash -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <!-- Tailwind (class-based dark mode) -->
+  <script>window.tailwind = { config: { darkMode: 'class' } };</script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Hub – Complete Preparation Portal</title>
+  <meta name="description" content="All-in-one exam preparation hub: tips, quizzes, mocks, question banks, syllabus tracker, past papers, flashcards, pomodoro, streaks, and more." />
+  <meta name="keywords" content="exam hub, exam tips, quizzes, mock tests, question bank, syllabus tracker, past year papers, flashcards, pomodoro, streak, leaderboard" />
+  <meta name="author" content="Your Site Name" />
 
-   <title>ScienceGeek - Tutorials & Resources for Science & Math Enthusiasts</title>
-  <meta name="description" content="ScienceGeek offers in-depth tutorials, quizzes, and resources for Physics, Mathematics, Chemistry, and JEE exam preparation." />
-  <meta name="keywords" content="Science tutorials, Math tutorials, Physics lessons, Chemistry lessons, JEE preparation, Online science classes, Science quizzes" />
-  <meta name="author" content="Braj Bhushan Kumar" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="ScienceGeek - Science & Math Tutorials" />
-  <meta property="og:description" content="Explore tutorials and resources for Physics, Math, Chemistry and competitive exams preparation." />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Exam Hub – Complete Preparation Portal" />
+  <meta property="og:description" content="Prepare smarter with tips, quizzes, mocks, Q-banks, syllabus, past papers, flashcards, pomodoro, streaks, and more." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.sciencegeek.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80" />
+  <meta property="og:url" content="https://example.com/exam-hub" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Exam Hub – Complete Preparation Portal" />
+  <meta name="twitter:description" content="Your one-stop exam prep portal." />
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Structured Data (JSON-LD) -->
+  <!-- FAQ JSON-LD (sample placeholders) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "ScienceGeek",
-    "url": "https://www.sciencegeek.in",
-    "description": "ScienceGeek offers tutorials and resources for science and math students preparing for exams like JEE.",
-    "sameAs": [
-      "https://www.facebook.com/sciencegeek"
-    ]
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is the best way to use this Exam Hub?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with the syllabus tracker, take a mock weekly, practice daily quizzes, review flashcards, track streaks, and use the pomodoro timer. Bookmark important items and keep notes."
+      }
+    }, {
+      "@type": "Question",
+      "name": "How often should I attempt mock tests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Attempt one full mock per week and analyze thoroughly. Increase frequency to two per week in the final month."
+      }
+    }]
   }
   </script>
 
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium; }
+    .flip {
+      perspective: 1000px;
+    }
+    .flip-inner {
+      position: relative; width: 100%; height: 160px;
+      transform-style: preserve-3d; transition: transform .6s;
+    }
+    .flip.flipped .flip-inner { transform: rotateY(180deg); }
+    .flip-front, .flip-back {
+      position: absolute; inset: 0; backface-visibility: hidden;
+      @apply flex items-center justify-center p-4 rounded-lg;
+    }
+    .flip-back { transform: rotateY(180deg); }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-blue-700 to-green-600 shadow-lg sticky top-0 z-50">
-  <div class="container mx-auto px-6 py-4 flex items-center">
-    <!-- Logo (left) -->
-    <a href="index.html" class="flex items-center space-x-3 mr-4">
-      <div class="p-2 rounded-full bg-gradient-to-br from-green-400 to-blue-500 shadow-md">
-        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M7 2c6 6 4 14 10 20M17 2c-6 6-4 14-10 20"></path>
-        </svg>
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-gray-950/80 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap gap-3 items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="#top" class="text-lg font-semibold">📘 Exam Hub</a>
+        <div class="hidden lg:flex gap-3 text-sm">
+          <a href="#tips" class="hover:underline">Tips</a>
+          <a href="#mocks" class="hover:underline">Mocks</a>
+          <a href="#quizzes" class="hover:underline">Quizzes</a>
+          <a href="#qbank" class="hover:underline">Q-Bank</a>
+          <a href="#syllabus" class="hover:underline">Syllabus</a>
+          <a href="#papers" class="hover:underline">Papers</a>
+          <a href="#flashcards" class="hover:underline">Flashcards</a>
+          <a href="#pomodoro" class="hover:underline">Pomodoro</a>
+          <a href="#streaks" class="hover:underline">Streaks</a>
+          <a href="#leaderboard" class="hover:underline">Leaderboard</a>
+          <a href="#calendar" class="hover:underline">Calendar</a>
+          <a href="#resources" class="hover:underline">Downloads</a>
+          <a href="#faq" class="hover:underline">FAQ</a>
+        </div>
       </div>
-      <span class="text-3xl font-bold text-white tracking-wide">ScienceGeek</span>
-    </a>
-
-    <!-- Center menu (desktop only) -->
-    <div class="hidden md:flex flex-1 justify-center">
-      <div class="flex space-x-8">
-        <a href="math.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Math</a>
-        <a href="physics.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Physics</a>
-        <a href="exam.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Exam</a>
-        <a href="blogs.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Blogs</a>
+      <div class="flex items-center gap-2 w-full md:w-auto">
+        <input id="globalSearch" type="search" placeholder="Search all…"
+               class="flex-1 md:w-64 px-3 py-2 rounded-md bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm"
+               aria-label="Search across page content">
+        <button id="themeToggle"
+                class="rounded-md px-3 py-2 bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 text-sm">
+          🌙 Dark
+        </button>
       </div>
     </div>
+  </nav>
 
-    <!-- Right-side: desktop small menu + mobile button -->
-    <div class="flex items-center space-x-4">
-      <!-- Right menu (desktop) -->
-      <nav class="hidden md:flex md:items-center md:space-x-6">
-        <a href="index.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Home</a>
-        <a href="about.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">About</a>
-        <a href="contact.html" class="text-white hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded">Contact</a>
-      </nav>
+  <header id="top" class="max-w-7xl mx-auto px-4 pt-8 pb-4">
+    <h1 class="text-3xl font-bold">All-in-One Exam Preparation Portal</h1>
+    <p class="mt-1 text-gray-600 dark:text-gray-300">Replace placeholders with your real content. Everything else is wired up.</p>
+  </header>
 
-      <!-- Mobile menu button -->
-      <button id="menuBtn" class="md:hidden focus:outline-none text-white p-2" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+  <!-- KPI Cards -->
+  <section class="max-w-7xl mx-auto px-4 pb-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="p-4 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <div class="text-sm text-gray-500 dark:text-gray-400">Days to Exam</div>
+      <div id="countdown" class="text-2xl font-bold mt-1">—</div>
+      <div class="text-xs text-gray-500 mt-1">Configured in JS</div>
     </div>
-  </div>
+    <div class="p-4 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <div class="text-sm text-gray-500 dark:text-gray-400">Quizzes Progress</div>
+      <div class="mt-2 h-2 bg-gray-200 dark:bg-gray-700 rounded">
+        <div id="quizProgressBar" class="h-2 bg-blue-600 rounded" style="width:0%"></div>
+      </div>
+      <div id="quizProgressText" class="text-xs text-gray-500 mt-1">0/0 completed</div>
+    </div>
+    <div class="p-4 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <div class="text-sm text-gray-500 dark:text-gray-400">Mocks Progress</div>
+      <div class="mt-2 h-2 bg-gray-200 dark:bg-gray-700 rounded">
+        <div id="mockProgressBar" class="h-2 bg-emerald-600 rounded" style="width:0%"></div>
+      </div>
+      <div id="mockProgressText" class="text-xs text-gray-500 mt-1">0/0 completed</div>
+    </div>
+    <div class="p-4 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <div class="text-sm text-gray-500 dark:text-gray-400">Bookmarks</div>
+      <div id="bookmarkCount" class="text-2xl font-bold mt-1">0</div>
+      <div class="text-xs text-gray-500 mt-1">Saved for later</div>
+    </div>
+  </section>
 
-  <!-- Mobile Menu (stacks all links) -->
-  <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-gray-800 text-white p-4 shadow-lg z-40">
-    <!-- Center items first (as requested) -->
-    <a href="math.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Math</a>
-    <a href="physics.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Physics</a>
-    <a href="exam.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Exam</a>
-    <a href="blogs.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Blogs</a>
-
-    <hr class="my-3 border-gray-700" />
-
-    <!-- Right items after divider -->
-    <a href="index.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Home</a>
-    <a href="about.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">About</a>
-    <a href="contact.html" class="block py-2 px-2 rounded hover:text-yellow-300 transition">Contact</a>
-  </div>
-</header>
-
- <div class="bg-yellow-400 text-center py-2 font-semibold text-black shadow-md">
-        🚧 Website under development   contact us for any query 🚧
+  <!-- Daily Challenge + Streaks + Achievements -->
+  <section class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Daily Challenge -->
+    <div class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700" id="daily">
+      <h2 class="text-xl font-bold mb-2">🔥 Daily Challenge</h2>
+      <div id="dailyQuestion" class="text-sm">[Placeholder] Question of the day will appear here.</div>
+      <input id="dailyAnswer" class="mt-3 w-full px-3 py-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-sm" placeholder="Type your answer…" />
+      <div class="flex gap-2 mt-3">
+        <button id="submitDaily" class="px-3 py-2 rounded bg-blue-600 text-white text-sm">Submit</button>
+        <button id="revealDaily" class="px-3 py-2 rounded bg-gray-200 dark:bg-gray-700 text-sm">Reveal</button>
+        <span id="dailyTimer" class="ml-auto text-sm text-gray-500">60s</span>
+      </div>
+      <div id="dailyResult" class="mt-2 text-sm"></div>
     </div>
 
-<div class="flex min-h-screen">
-    
-    <!-- Left Vertical Hot Questions -->
-    <aside class="w-80 bg-white shadow-lg p-4 border-r border-gray-200">
-      <h2 class="text-lg font-bold mb-4">🔥 Hot Questions</h2>
-      <ul id="hot-questions" class="space-y-2 text-blue-600">
-        <!-- Filled by JS -->
+    <!-- Streak Tracker -->
+    <div class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700" id="streaks">
+      <h2 class="text-xl font-bold mb-2">🔥 Streaks</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Days studied in a row:</p>
+      <div id="streakCount" class="text-3xl font-bold mt-1">0</div>
+      <button id="markStudy" class="mt-3 px-3 py-2 rounded bg-emerald-600 text-white text-sm">Mark Today Studied</button>
+      <p id="lastStudy" class="mt-2 text-xs text-gray-500">—</p>
+    </div>
+
+    <!-- Achievements -->
+    <div class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700" id="achievements">
+      <h2 class="text-xl font-bold mb-2">🏆 Achievements</h2>
+      <ul class="space-y-2 text-sm">
+        <li><span id="ach-1" class="badge bg-gray-200 dark:bg-gray-700">First Bookmark</span></li>
+        <li><span id="ach-2" class="badge bg-gray-200 dark:bg-gray-700">First Quiz Completed</span></li>
+        <li><span id="ach-3" class="badge bg-gray-200 dark:bg-gray-700">3-Day Streak</span></li>
       </ul>
-    </aside>
-   <main class="p-4">
-  <div class="flex border-b border-gray-300 overflow-x-auto">
-    <button class="tab-button px-4 py-2 text-blue-600 font-semibold border-b-2 border-blue-600" data-tab="all">All</button>
-    <button class="tab-button px-4 py-2" data-tab="algebra">Algebra</button>
-    <button class="tab-button px-4 py-2" data-tab="trigonometry">Trigonometry</button>
-    <button class="tab-button px-4 py-2" data-tab="calculus">Calculus</button>
-    <button class="tab-button px-4 py-2" data-tab="geometry">Geometry</button>
-    <button class="tab-button px-4 py-2" data-tab="vectors">Vectors & 3D</button>
-    <button class="tab-button px-4 py-2" data-tab="probability">Probability</button>
-    <button class="tab-button px-4 py-2" data-tab="matrices">Matrices & Determinants</button>
-  </div>
-
-  <!-- All -->
- 
-    
-<div id="all" class="tab-content mt-6">
-  <h2 class="text-2xl font-bold mb-4">Our Math Classes & Offers</h2>
-
-  <section class="mb-6">
-    <h3 class="text-xl font-semibold mb-2">Courses Offered</h3>
-    <ul class="list-disc list-inside space-y-1 text-gray-800">
-      <li>JEE Main & Advanced Maths</li>
-      <li>NEET Physics Preparation</li>
-      <li>Class 11 & 12 CBSE Maths</li>
-      <li>Crash Course for Competitive Exams</li>
-    </ul>
+    </div>
   </section>
 
-  
+  <!-- Main grid: Tips, Q-Bank, Quizzes, Mocks -->
+  <main class="max-w-7xl mx-auto px-4 pb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
 
-  <section class="mb-6">
-    <P class="text-gray-700">
-        We provide online classes with interactive live sessions, create custom assignments, quizzes,
-         and offer personalized feedback to help you excel in Physics.
-    </P>
-  </section>
+    <!-- Tips -->
+    <section id="tips" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">📌 Exam Tips</h2>
+      <ul class="space-y-3">
+        <li class="p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Plan schedule" data-type="tip">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h3 class="font-semibold">[Placeholder] Plan a realistic study schedule</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the tip goes here.</p>
+            </div>
+            <button class="bookmark px-2 py-1 text-sm rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-id="tip-1" data-title="Plan a realistic study schedule">⭐</button>
+          </div>
+        </li>
+        <li class="p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Revise notes" data-type="tip">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h3 class="font-semibold">[Placeholder] Revise regularly & keep concise notes</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Short description of the tip goes here.</p>
+            </div>
+            <button class="bookmark px-2 py-1 text-sm rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-id="tip-2" data-title="Revise regularly & concise notes">⭐</button>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  <section class="mb-6">
-    <h3 class="text-xl font-semibold mb-2 text-red-600">New Batch Announcement</h3>
-    <p class="text-red-600 font-semibold">New batch starting soon! Enroll now to reserve your seat.</p>
-  </section>
+    <!-- Question Bank -->
+    <section id="qbank" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">📚 Question Bank</h2>
+      <div class="space-y-3">
+        <a href="#" class="block p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800" data-search="Mathematics" data-type="qbank">[Placeholder] Mathematics – Chapterwise Bank</a>
+        <a href="#" class="block p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800" data-search="Physics" data-type="qbank">[Placeholder] Physics – Topicwise Bank</a>
+        <a href="#" class="block p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800" data-search="Chemistry" data-type="qbank">[Placeholder] Chemistry – PYQ Compilation</a>
+      </div>
+    </section>
 
-  <section>
-        <h3 class="text-xl font-semibold mb-2">How to Join</h3>
-        <p class="text-gray-700">To enquire, find demo classes, enroll or get more info, <a href="contact.html" class="text-blue-600 underline">contact us</a> .</p>
-      </section>
-</div>
+    <!-- Quizzes -->
+    <section id="quizzes" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-2xl font-bold">🎯 Quizzes</h2>
+        <label class="text-sm">
+          Difficulty:
+          <select id="difficulty" class="ml-2 px-2 py-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-sm">
+            <option value="all" selected>All</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+      </div>
+      <div id="quizList" class="mt-4 grid gap-3">
+        <div class="quiz-card p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Algebra" data-type="quiz" data-difficulty="easy" data-id="quiz-1">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="badge bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">Easy</span>
+                <h3 class="font-semibold">[Placeholder] Algebra – Quadratic Basics</h3>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-300">10 Qs · 10 mins</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="bookmark px-2 py-1 text-sm rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-id="quiz-1" data-title="Algebra – Quadratic Basics">⭐</button>
+              <label class="text-xs flex items-center gap-1">
+                <input type="checkbox" class="completeQuiz accent-blue-600" data-id="quiz-1"> Done
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-card p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Thermodynamics" data-type="quiz" data-difficulty="medium" data-id="quiz-2">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="badge bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>
+                <h3 class="font-semibold">[Placeholder] Thermodynamics – Concepts</h3>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-300">15 Qs · 15 mins</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="bookmark px-2 py-1 text-sm rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-id="quiz-2" data-title="Thermodynamics – Concepts">⭐</button>
+              <label class="text-xs flex items-center gap-1">
+                <input type="checkbox" class="completeQuiz accent-blue-600" data-id="quiz-2"> Done
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-card p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Organic Chemistry" data-type="quiz" data-difficulty="hard" data-id="quiz-3">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="badge bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Hard</span>
+                <h3 class="font-semibold">[Placeholder] Organic – Reaction Mechanisms</h3>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-300">20 Qs · 20 mins</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="bookmark px-2 py-1 text-sm rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-id="quiz-3" data-title="Organic – Reaction Mechanisms">⭐</button>
+              <label class="text-xs flex items-center gap-1">
+                <input type="checkbox" class="completeQuiz accent-blue-600" data-id="quiz-3"> Done
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Mock Tests -->
+    <section id="mocks" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">📝 Mock Tests</h2>
+      <div class="space-y-3">
+        <div class="p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Full syllabus" data-type="mock" data-id="mock-1">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-semibold">[Placeholder] Full Syllabus Mock 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">180 Qs · 3 hours · Mixed</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="bookmark px-2 py-1 text-sm rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-id="mock-1" data-title="Full Syllabus Mock 1">⭐</button>
+              <label class="text-xs flex items-center gap-1">
+                <input type="checkbox" class="completeMock accent-emerald-600" data-id="mock-1"> Done
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Sectional physics" data-type="mock" data-id="mock-2">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-semibold">[Placeholder] Physics Sectional Test</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">60 Qs · 1 hour · Mechanics</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="bookmark px-2 py-1 text-sm rounded bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200" data-id="mock-2" data-title="Physics Sectional Test">⭐</button>
+              <label class="text-xs flex items-center gap-1">
+                <input type="checkbox" class="completeMock accent-emerald-600" data-id="mock-2"> Done
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Algebra -->
-  <div id="algebra" class="tab-content mt-4 hidden">
-    <h2 class="text-xl font-bold mb-2">Algebra</h2>
-    
-  </div>
+    <!-- Syllabus Tracker -->
+    <section id="syllabus" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">📄 Syllabus & Weightage (Tracker)</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">[Placeholder] Mark topics done to track coverage.</p>
+      <div id="syllabusList" class="space-y-2 text-sm">
+        <label class="flex items-center gap-2 p-2 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700">
+          <input type="checkbox" class="syllabusItem accent-blue-600" data-id="sy-1"> [Placeholder] Mathematics – Algebra (20%)
+        </label>
+        <label class="flex items-center gap-2 p-2 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700">
+          <input type="checkbox" class="syllabusItem accent-blue-600" data-id="sy-2"> [Placeholder] Physics – Mechanics (25%)
+        </label>
+        <label class="flex items-center gap-2 p-2 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700">
+          <input type="checkbox" class="syllabusItem accent-blue-600" data-id="sy-3"> [Placeholder] Chemistry – Organic (18%)
+        </label>
+      </div>
+      <div class="mt-3">
+        <div class="text-xs text-gray-500">Coverage</div>
+        <div class="mt-1 h-2 bg-gray-200 dark:bg-gray-700 rounded">
+          <div id="syllabusBar" class="h-2 bg-indigo-600 rounded" style="width:0%"></div>
+        </div>
+        <div id="syllabusText" class="text-xs text-gray-500 mt-1">0/3 topics done</div>
+      </div>
+    </section>
 
-  <!-- Trigonometry -->
-  <div id="trigonometry" class="tab-content mt-4 hidden">
-    <h2 class="text-xl font-bold mb-2">Trigonometry</h2>
-    <ul class="list-disc ml-6">
-      <li>Trigonometric Ratios & Identities</li>
-      <li>Trigonometric Equations</li>
-      <li>Properties of Triangles</li>
-      <li>Inverse Trigonometric Functions</li>
-    </ul>
-  </div>
+    <!-- Past Year Papers -->
+    <section id="papers" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">📂 Past Year Papers</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <a href="#" class="flex items-center justify-between p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="2024 pdf" data-type="paper">
+          <span>[Placeholder] 2024 – Paper 1 (PDF)</span>
+          <span class="text-xs text-gray-500">2.5 MB</span>
+        </a>
+        <a href="#" class="flex items-center justify-between p-4 rounded-md bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="2023 pdf" data-type="paper">
+          <span>[Placeholder] 2023 – Paper 1 (PDF)</span>
+          <span class="text-xs text-gray-500">2.2 MB</span>
+        </a>
+      </div>
+    </section>
 
-  <!-- Calculus -->
-  <div id="calculus" class="tab-content mt-4 hidden">
-    <h2 class="text-xl font-bold mb-2">Calculus</h2>
-    <ul class="list-disc ml-6">
-      <li>Limits & Continuity</li>
-      <li>Differentiation</li>
-      <li>Applications of Derivatives</li>
-      <li>Definite & Indefinite Integrals</li>
-      <li>Differential Equations</li>
-    </ul>
-  </div>
+    <!-- Flashcards Mode -->
+    <section id="flashcards" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 md:col-span-2">
+      <h2 class="text-2xl font-bold mb-3">📖 Flashcards</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Card 1 -->
+        <div class="flip bg-transparent" data-search="Bohr radius" data-type="flashcard">
+          <div class="flip-inner">
+            <div class="flip-front ring-1 ring-gray-200 dark:ring-gray-700 bg-blue-100 dark:bg-blue-900">[Placeholder] Bohr’s Radius Formula</div>
+            <div class="flip-back ring-1 ring-gray-200 dark:ring-gray-700 bg-green-100 dark:bg-green-900">a₀ = 0.529 Å</div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flip bg-transparent" data-search="Newton second law" data-type="flashcard">
+          <div class="flip-inner">
+            <div class="flip-front ring-1 ring-gray-200 dark:ring-gray-700 bg-blue-100 dark:bg-blue-900">[Placeholder] Newton’s Second Law</div>
+            <div class="flip-back ring-1 ring-gray-200 dark:ring-gray-700 bg-green-100 dark:bg-green-900">F = m × a</div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="flip bg-transparent" data-search="Ideal gas" data-type="flashcard">
+          <div class="flip-inner">
+            <div class="flip-front ring-1 ring-gray-200 dark:ring-gray-700 bg-blue-100 dark:bg-blue-900">[Placeholder] Ideal Gas Law</div>
+            <div class="flip-back ring-1 ring-gray-200 dark:ring-gray-700 bg-green-100 dark:bg-green-900">PV = nRT</div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="flip bg-transparent" data-search="Integration by parts" data-type="flashcard">
+          <div class="flip-inner">
+            <div class="flip-front ring-1 ring-gray-200 dark:ring-gray-700 bg-blue-100 dark:bg-blue-900">[Placeholder] Integration by Parts</div>
+            <div class="flip-back ring-1 ring-gray-200 dark:ring-gray-700 bg-green-100 dark:bg-green-900">∫u dv = uv − ∫v du</div>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Click a card to flip. Add more by duplicating a card block.</p>
+    </section>
 
-  <!-- Geometry -->
-  <div id="geometry" class="tab-content mt-4 hidden">
-    <h2 class="text-xl font-bold mb-2">Geometry</h2>
-    <ul class="list-disc ml-6">
-      <li>Straight Lines</li>
-      <li>Circles</li>
-      <li>Parabola, Ellipse, Hyperbola</li>
-      <li>Conic Sections</li>
-    </ul>
-  </div>
+    <!-- Formula Sheet -->
+    <section id="formulas" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">🧠 Formula Sheet</h2>
+      <ul class="list-disc list-inside text-sm space-y-1">
+        <li>[Placeholder] Kinematics: v² = u² + 2as</li>
+        <li>[Placeholder] Permutations: nPr = n!/(n−r)!</li>
+        <li>[Placeholder] Compound Interest: A = P(1 + r/n)^{nt}</li>
+      </ul>
+    </section>
 
-  <!-- Vectors -->
-  <div id="vectors" class="tab-content mt-4 hidden">
-    <h2 class="text-xl font-bold mb-2">Vectors & 3D</h2>
-    <ul class="list-disc ml-6">
-      <li>Vector Algebra</li>
-      <li>Scalar & Vector Products</li>
-      <li>3D Geometry</li>
-    </ul>
-  </div>
+    <!-- Mind Map (placeholder) -->
+    <section id="mindmap" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">🗺️ Mind Map (Placeholder)</h2>
+      <img loading="lazy" src="https://via.placeholder.com/800x400?text=Mind+Map+Placeholder" alt="Mind map placeholder" class="rounded-lg ring-1 ring-gray-200 dark:ring-gray-700">
+      <p class="text-xs text-gray-500 mt-2">Replace with an SVG or image of your topic map.</p>
+    </section>
 
-  <!-- Probability -->
-  <div id="probability" class="tab-content mt-4 hidden">
-    <h2 class="text-xl font-bold mb-2">Probability & Statistics</h2>
-    <ul class="list-disc ml-6">
-      <li>Probability Rules & Theorems</li>
-      <li>Permutation & Combination</li>
-      <li>Binomial & Normal Distribution</li>
-      <li>Measures of Central Tendency</li>
-    </ul>
-  </div>
+    <!-- Pomodoro Timer -->
+    <section id="pomodoro" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 md:col-span-2">
+      <h2 class="text-2xl font-bold mb-3">⏳ Pomodoro Timer</h2>
+      <div class="flex flex-wrap items-center gap-3">
+        <div class="text-4xl font-bold" id="pomoClock">25:00</div>
+        <button id="pomoStart" class="px-3 py-2 rounded bg-emerald-600 text-white text-sm">Start</button>
+        <button id="pomoPause" class="px-3 py-2 rounded bg-gray-200 dark:bg-gray-700 text-sm">Pause</button>
+        <button id="pomoReset" class="px-3 py-2 rounded bg-red-600 text-white text-sm">Reset</button>
+        <label class="text-sm ml-auto">Work <input id="pomoWork" type="number" value="25" min="1" class="w-16 ml-1 px-2 py-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700"> min</label>
+        <label class="text-sm">Break <input id="pomoBreak" type="number" value="5" min="1" class="w-16 ml-1 px-2 py-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700"> min</label>
+        <span id="pomoStatus" class="text-sm text-gray-500">Idle</span>
+      </div>
+    </section>
 
-  <!-- Matrices -->
-  <div id="matrices" class="tab-content mt-4 hidden">
-    <h2 class="text-xl font-bold mb-2">Matrices & Determinants</h2>
-    <ul class="list-disc ml-6">
-      <li>Types of Matrices</li>
-      <li>Matrix Operations</li>
-      <li>Determinants & Properties</li>
-      <li>Inverse of a Matrix</li>
-      <li>Applications in Solving Equations</li>
-    </ul>
-  </div>
-</main>
+    <!-- Leaderboard (placeholder local) -->
+    <section id="leaderboard" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">🏅 Leaderboard (Local Demo)</h2>
+      <ol id="lbList" class="list-decimal list-inside space-y-1 text-sm">
+        <li>Alice — 92</li>
+        <li>Bob — 88</li>
+        <li>Charlie — 84</li>
+      </ol>
+      <div class="mt-3 flex items-center gap-2">
+        <input id="lbName" placeholder="Name" class="px-2 py-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-sm">
+        <input id="lbScore" type="number" placeholder="Score" class="px-2 py-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-sm">
+        <button id="lbAdd" class="px-3 py-2 rounded bg-blue-600 text-white text-sm">Add</button>
+      </div>
+    </section>
 
-</div>
+    <!-- News & Announcements (placeholders) -->
+    <section id="news" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">📰 News & Announcements</h2>
+      <ul class="space-y-2 text-sm">
+        <li class="p-3 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Registration deadline">[Placeholder] Registration deadline approaching (add details)</li>
+        <li class="p-3 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Syllabus update">[Placeholder] Syllabus update released</li>
+      </ul>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 mt-10">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2025 ScienceGeek. All rights reserved.</p>
+    <!-- Testimonials -->
+    <section id="testimonials" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">🌟 Testimonials</h2>
+      <div class="space-y-3 text-sm">
+        <blockquote class="p-3 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700">“[Placeholder] This hub kept me organized and focused.” — Student A</blockquote>
+        <blockquote class="p-3 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700">“[Placeholder] The quizzes and mocks improved my speed.” — Student B</blockquote>
+      </div>
+    </section>
+
+    <!-- Calendar View -->
+    <section id="calendar" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 md:col-span-2">
+      <h2 class="text-2xl font-bold mb-3">📅 Exam Calendar</h2>
+      <div class="flex items-center gap-2 mb-2">
+        <button id="calPrev" class="px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm">Prev</button>
+        <div id="calTitle" class="font-semibold"></div>
+        <button id="calNext" class="px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm">Next</button>
+      </div>
+      <div id="calendarGrid" class="grid grid-cols-7 gap-1 text-center text-sm"></div>
+      <p class="text-xs text-gray-500 mt-2">[Placeholder] Mark important dates by editing JS events.</p>
+    </section>
+
+    <!-- Resource Download Center -->
+    <section id="resources" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">⬇️ Resource Downloads</h2>
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-center justify-between p-3 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Notes PDF">
+          <span>[Placeholder] Summary Notes (PDF)</span>
+          <a href="#" class="text-blue-600 hover:underline">Download</a>
+        </li>
+        <li class="flex items-center justify-between p-3 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Formula sheet">
+          <span>[Placeholder] Formula Sheet (PDF)</span>
+          <a href="#" class="text-blue-600 hover:underline">Download</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Bookmarks -->
+    <section id="bookmarks" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">⭐ My Bookmarks</h2>
+      <div id="bookmarkList" class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+        <p class="text-gray-500">No bookmarks yet.</p>
+      </div>
+    </section>
+
+    <!-- Quick Notes -->
+    <section id="notes" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700">
+      <h2 class="text-2xl font-bold mb-3">🗒️ Quick Notes</h2>
+      <textarea id="notesArea" rows="6" class="w-full px-3 py-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700" placeholder="[Placeholder] Write your key reminders…"></textarea>
+      <div class="flex items-center justify-between mt-2 text-xs text-gray-500">
+        <span id="notesSaved">Not saved</span>
+        <button id="clearNotes" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">Clear</button>
+      </div>
+    </section>
+
+    <!-- Revision Reminders (placeholder UI) -->
+    <section id="reminders" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 md:col-span-2">
+      <h2 class="text-2xl font-bold mb-3">⏰ Revision Reminders (Placeholder)</h2>
+      <div class="flex flex-wrap items-center gap-2">
+        <input id="remTopic" placeholder="Topic" class="px-2 py-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-sm">
+        <input id="remDate" type="date" class="px-2 py-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-sm">
+        <button id="remAdd" class="px-3 py-2 rounded bg-blue-600 text-white text-sm">Add</button>
+      </div>
+      <ul id="remList" class="mt-3 space-y-2 text-sm"></ul>
+      <p class="text-xs text-gray-500 mt-2">Note: This is a UI placeholder. Browser notifications require additional setup.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="p-5 rounded-lg bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 md:col-span-2">
+      <h2 class="text-2xl font-bold mb-3">❓ Frequently Asked Questions</h2>
+      <div class="space-y-3">
+        <details class="p-4 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="How to use">
+          <summary class="font-semibold cursor-pointer">[Placeholder] How should I plan my prep with this hub?</summary>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Use syllabus → weekly mock → daily quizzes → flashcards → notes.</p>
+        </details>
+        <details class="p-4 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700" data-search="Mock tests useful">
+          <summary class="font-semibold cursor-pointer">[Placeholder] Are mock tests actually useful?</summary>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Yes. They simulate real conditions and reveal gaps.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-sm text-gray-500">
+      © <span id="year"></span> Exam Hub. All rights reserved.
     </div>
   </footer>
 
-  <!-- Script for Mobile Menu -->
   <script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
+    // ====== CONFIG ======
+    const EXAM_DATE = "April 30, 2026 09:00:00"; // change to your exam date
 
-  menuBtn.addEventListener('click', () => {
-    const isHidden = mobileMenu.classList.toggle('hidden');
-    // update aria-expanded for accessibility
-    menuBtn.setAttribute('aria-expanded', (!isHidden).toString());
-  });
+    // ====== Theme Toggle ======
+    const themeBtn = document.getElementById('themeToggle');
+    function setThemeButton() {
+      const isDark = document.documentElement.classList.contains('dark');
+      themeBtn.textContent = isDark ? '☀ Light' : '🌙 Dark';
+    }
+    setThemeButton();
+    themeBtn.addEventListener('click', () => {
+      const root = document.documentElement;
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      setThemeButton();
+    });
 
-  // Optional: close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    const target = e.target;
-    if (!mobileMenu.contains(target) && !menuBtn.contains(target)) {
-      if (!mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.add('hidden');
-        menuBtn.setAttribute('aria-expanded', 'false');
+    // ====== Footer year ======
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ====== Countdown ======
+    const countdownEl = document.getElementById('countdown');
+    function renderCountdown() {
+      const target = new Date(EXAM_DATE).getTime();
+      const now = Date.now();
+      const diff = Math.max(0, target - now);
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      countdownEl.textContent = `${d} days ${h} hours`;
+    }
+    renderCountdown(); setInterval(renderCountdown, 1000 * 60);
+
+    // ====== Global Search ======
+    const searchInput = document.getElementById('globalSearch');
+    function applySearch(q) {
+      const query = (q || '').trim().toLowerCase();
+      document.querySelectorAll('[data-search]').forEach(el => {
+        const match = !query || el.getAttribute('data-search').toLowerCase().includes(query);
+        el.classList.toggle('hidden', !match);
+      });
+    }
+    searchInput.addEventListener('input', e => applySearch(e.target.value));
+
+    // ====== Bookmarks ======
+    const BOOK_KEY = 'examhub_bookmarks';
+    const getBookmarks = () => { try { return JSON.parse(localStorage.getItem(BOOK_KEY)) || []; } catch { return []; } };
+    const setBookmarks = list => { localStorage.setItem(BOOK_KEY, JSON.stringify(list)); renderBookmarks(); updateBookmarkCount(); };
+    const toggleBookmark = (id, title) => {
+      const list = getBookmarks();
+      const i = list.findIndex(x => x.id === id);
+      if (i >= 0) list.splice(i, 1); else list.push({ id, title });
+      setBookmarks(list);
+      // Achievement: first bookmark
+      unlock('ach-1');
+    };
+    document.querySelectorAll('.bookmark').forEach(btn => {
+      btn.addEventListener('click', () => toggleBookmark(btn.dataset.id, btn.dataset.title));
+    });
+    const bookmarkListEl = document.getElementById('bookmarkList');
+    function renderBookmarks() {
+      const list = getBookmarks();
+      if (!list.length) { bookmarkListEl.innerHTML = '<p class="text-gray-500">No bookmarks yet.</p>'; return; }
+      bookmarkListEl.innerHTML = list.map(b => `
+        <div class="flex items-center justify-between p-2 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700">
+          <span>${b.title}</span>
+          <button class="px-2 py-1 text-xs rounded bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200" data-remove="${b.id}">Remove</button>
+        </div>`).join('');
+      bookmarkListEl.querySelectorAll('[data-remove]').forEach(btn => {
+        btn.addEventListener('click', () => setBookmarks(getBookmarks().filter(x => x.id !== btn.dataset.remove)));
+      });
+    }
+    function updateBookmarkCount() { document.getElementById('bookmarkCount').textContent = getBookmarks().length; }
+    renderBookmarks(); updateBookmarkCount();
+
+    // ====== Quizzes / Mocks Progress ======
+    const QUIZ_DONE_KEY = 'examhub_quiz_done';
+    const MOCK_DONE_KEY = 'examhub_mock_done';
+    const getSet = key => { try { return new Set(JSON.parse(localStorage.getItem(key) || '[]')); } catch { return new Set(); } };
+    const saveSet = (key, set) => localStorage.setItem(key, JSON.stringify([...set]));
+    function updateProgress() {
+      const quizzes = [...document.querySelectorAll('.completeQuiz')];
+      const mocks = [...document.querySelectorAll('.completeMock')];
+      const qDone = quizzes.filter(c => c.checked).length, qTotal = quizzes.length;
+      const mDone = mocks.filter(c => c.checked).length, mTotal = mocks.length;
+      document.getElementById('quizProgressText').textContent = `${qDone}/${qTotal} completed`;
+      document.getElementById('mockProgressText').textContent = `${mDone}/${mTotal} completed`;
+      document.getElementById('quizProgressBar').style.width = (qTotal ? (100*qDone/qTotal) : 0) + '%';
+      document.getElementById('mockProgressBar').style.width = (mTotal ? (100*mDone/mTotal) : 0) + '%';
+      if (qDone >= 1) unlock('ach-2'); // first quiz completed
+    }
+    const quizDone = getSet(QUIZ_DONE_KEY);
+    document.querySelectorAll('.completeQuiz').forEach(c => {
+      c.checked = quizDone.has(c.dataset.id);
+      c.addEventListener('change', () => {
+        c.checked ? quizDone.add(c.dataset.id) : quizDone.delete(c.dataset.id);
+        saveSet(QUIZ_DONE_KEY, quizDone); updateProgress();
+      });
+    });
+    const mockDone = getSet(MOCK_DONE_KEY);
+    document.querySelectorAll('.completeMock').forEach(c => {
+      c.checked = mockDone.has(c.dataset.id);
+      c.addEventListener('change', () => {
+        c.checked ? mockDone.add(c.dataset.id) : mockDone.delete(c.dataset.id);
+        saveSet(MOCK_DONE_KEY, mockDone); updateProgress();
+      });
+    });
+    updateProgress();
+
+    // ====== Quiz difficulty filter ======
+    const difficultySelect = document.getElementById('difficulty');
+    function filterQuizzes() {
+      const level = difficultySelect.value;
+      document.querySelectorAll('.quiz-card').forEach(card => {
+        const ok = (level === 'all') || (card.dataset.difficulty === level);
+        card.classList.toggle('hidden', !ok);
+      });
+    }
+    difficultySelect.addEventListener('change', filterQuizzes);
+    filterQuizzes();
+
+    // ====== Syllabus tracker ======
+    const SYL_KEY = 'examhub_syllabus';
+    const getSyl = () => { try { return new Set(JSON.parse(localStorage.getItem(SYL_KEY) || '[]')); } catch { return new Set(); } };
+    const saveSyl = s => localStorage.setItem(SYL_KEY, JSON.stringify([...s]));
+    const sylSet = getSyl();
+    const sylChecks = [...document.querySelectorAll('.syllabusItem')];
+    sylChecks.forEach(c => { c.checked = sylSet.has(c.dataset.id); });
+    function updateSyllabus() {
+      const done = sylChecks.filter(c => c.checked).length, total = sylChecks.length;
+      document.getElementById('syllabusText').textContent = `${done}/${total} topics done`;
+      document.getElementById('syllabusBar').style.width = (total ? (100*done/total) : 0) + '%';
+    }
+    sylChecks.forEach(c => c.addEventListener('change', () => {
+      c.checked ? sylSet.add(c.dataset.id) : sylSet.delete(c.dataset.id);
+      saveSyl(sylSet); updateSyllabus();
+    }));
+    updateSyllabus();
+
+    // ====== Flashcards flipping ======
+    document.querySelectorAll('.flip').forEach(card => {
+      card.addEventListener('click', () => card.classList.toggle('flipped'));
+    });
+
+    // ====== Notes ======
+    const NOTES_KEY = 'examhub_notes';
+    const notesArea = document.getElementById('notesArea');
+    const notesSaved = document.getElementById('notesSaved');
+    notesArea.value = localStorage.getItem(NOTES_KEY) || '';
+    function saveNotes() {
+      localStorage.setItem(NOTES_KEY, notesArea.value || '');
+      notesSaved.textContent = `Saved ${new Date().toLocaleTimeString()}`;
+    }
+    notesArea.addEventListener('input', () => {
+      notesSaved.textContent = 'Saving…';
+      clearTimeout(window.__notesDebounce);
+      window.__notesDebounce = setTimeout(saveNotes, 500);
+    });
+    document.getElementById('clearNotes').addEventListener('click', () => { notesArea.value=''; saveNotes(); });
+
+    // ====== Daily Challenge (placeholder data) ======
+    const dailyData = [
+      { q: "[Placeholder] What is derivative of x²?", a: "2x" },
+      { q: "[Placeholder] State Newton’s 3rd law.", a: "Every action has an equal and opposite reaction." },
+      { q: "[Placeholder] Ideal gas law?", a: "PV=nRT" }
+    ];
+    function dailyKeyForToday() { const d = new Date(); return `examhub_daily_${d.getFullYear()}_${d.getMonth()+1}_${d.getDate()}`; }
+    const dq = dailyData[new Date().getDate() % dailyData.length];
+    const dailyQEl = document.getElementById('dailyQuestion');
+    const dailyAnsEl = document.getElementById('dailyAnswer');
+    const dailyResEl = document.getElementById('dailyResult');
+    const dailyTimerEl = document.getElementById('dailyTimer');
+    dailyQEl.textContent = dq.q;
+    let dailyTime = 60, dailyInterval = null;
+    function tickDaily() {
+      dailyTime = Math.max(0, dailyTime - 1);
+      dailyTimerEl.textContent = `${dailyTime}s`;
+      if (dailyTime === 0) { clearInterval(dailyInterval); dailyResEl.textContent = `Time's up. Answer: ${dq.a}`; }
+    }
+    function startDailyTimer() { clearInterval(dailyInterval); dailyTime = 60; dailyInterval = setInterval(tickDaily, 1000); }
+    startDailyTimer();
+    document.getElementById('submitDaily').addEventListener('click', () => {
+      const correct = dailyAnsEl.value.trim().toLowerCase() === dq.a.toLowerCase();
+      dailyResEl.textContent = correct ? "✅ Correct!" : "❌ Not quite. Try again!";
+      if (correct) localStorage.setItem(dailyKeyForToday(), "done");
+    });
+    document.getElementById('revealDaily').addEventListener('click', () => dailyResEl.textContent = `Answer: ${dq.a}`);
+
+    // ====== Streak Tracker ======
+    const STREAK_KEY = 'examhub_streak';
+    const LAST_KEY = 'examhub_last';
+    function getStreak() { return parseInt(localStorage.getItem(STREAK_KEY) || '0', 10); }
+    function getLastDate() { return localStorage.getItem(LAST_KEY); }
+    function setStreak(n) { localStorage.setItem(STREAK_KEY, n); }
+    function setLastDate(d) { localStorage.setItem(LAST_KEY, d); }
+    function sameDay(a,b) { const da=new Date(a), db=new Date(b); return da.toDateString()===db.toDateString(); }
+    function yesterdayStr() { const d = new Date(); d.setDate(d.getDate()-1); return d.toDateString(); }
+    function updateStreakUI() {
+      document.getElementById('streakCount').textContent = getStreak();
+      const last = getLastDate(); document.getElementById('lastStudy').textContent = last ? `Last marked: ${new Date(last).toDateString()}` : '—';
+      if (getStreak() >= 3) unlock('ach-3');
+    }
+    document.getElementById('markStudy').addEventListener('click', () => {
+      const today = new Date().toDateString();
+      const last = getLastDate();
+      if (last && sameDay(last, today)) { updateStreakUI(); return; }
+      const streak = !last ? 1 : (last === yesterdayStr() ? getStreak() + 1 : 1);
+      setStreak(streak); setLastDate(today); updateStreakUI();
+    });
+    updateStreakUI();
+
+    // ====== Achievements ======
+    function unlock(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('bg-gray-200','dark:bg-gray-700');
+      el.classList.add('bg-amber-200','text-amber-900','dark:bg-amber-800','dark:text-amber-100');
+    }
+
+    // ====== Calendar (simple monthly) ======
+    let calDate = new Date();
+    const calTitle = document.getElementById('calTitle');
+    const calGrid = document.getElementById('calendarGrid');
+    const events = {
+      // placeholder events: "YYYY-M-D": "Event name"
+      // e.g., "2026-4-30": "EXAM DAY"
+    };
+    function renderCalendar() {
+      calGrid.innerHTML = '';
+      const y = calDate.getFullYear(), m = calDate.getMonth();
+      const first = new Date(y, m, 1);
+      const startDay = first.getDay(); // 0-6
+      const daysInMonth = new Date(y, m+1, 0).getDate();
+      calTitle.textContent = first.toLocaleString(undefined, { month: 'long', year: 'numeric' });
+      // Weekday headers
+      ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].forEach(d => {
+        const h = document.createElement('div');
+        h.className = "font-semibold py-1";
+        h.textContent = d; calGrid.appendChild(h);
+      });
+      // Blanks
+      for (let i=0; i<startDay; i++) calGrid.appendChild(document.createElement('div'));
+      for (let d=1; d<=daysInMonth; d++) {
+        const cell = document.createElement('div');
+        cell.className = "p-2 rounded ring-1 ring-gray-200 dark:ring-gray-700 bg-gray-50 dark:bg-gray-900";
+        const key = `${y}-${m+1}-${d}`;
+        cell.innerHTML = `<div class="text-sm font-semibold">${d}</div><div class="text-xs text-gray-500">${events[key] || ''}</div>`;
+        calGrid.appendChild(cell);
       }
     }
-  });
-</script>
-<script src="js/math.js"></script>
+    document.getElementById('calPrev').addEventListener('click', () => { calDate.setMonth(calDate.getMonth()-1); renderCalendar(); });
+    document.getElementById('calNext').addEventListener('click', () => { calDate.setMonth(calDate.getMonth()+1); renderCalendar(); });
+    renderCalendar();
+
+    // ====== Leaderboard (local demo) ======
+    const LB_KEY = 'examhub_lb';
+    const lbList = document.getElementById('lbList');
+    function getLB() { try { return JSON.parse(localStorage.getItem(LB_KEY)) || []; } catch { return []; } }
+    function setLB(data) { localStorage.setItem(LB_KEY, JSON.stringify(data)); renderLB(); }
+    function renderLB() {
+      const data = getLB();
+      if (!data.length) return;
+      const sorted = data.sort((a,b)=>b.score-a.score).slice(0,10);
+      lbList.innerHTML = sorted.map(e=>`<li>${e.name} — ${e.score}</li>`).join('');
+    }
+    renderLB();
+    document.getElementById('lbAdd').addEventListener('click', () => {
+      const name = (document.getElementById('lbName').value || 'Anon').slice(0,20);
+      const score = parseInt(document.getElementById('lbScore').value || '0', 10);
+      if (isNaN(score)) return;
+      const data = getLB(); data.push({ name, score }); setLB(data);
+    });
+
+    // ====== Pomodoro ======
+    let pomoTimer=null, pomoIsWork=true, pomoRemaining=25*60;
+    const pomoClock = document.getElementById('pomoClock');
+    const pomoStatus = document.getElementById('pomoStatus');
+    const workInput = document.getElementById('pomoWork');
+    const breakInput = document.getElementById('pomoBreak');
+    function fmt(t){ const m=Math.floor(t/60).toString().padStart(2,'0'); const s=(t%60).toString().padStart(2,'0'); return `${m}:${s}`; }
+    function updatePomoUI(){ pomoClock.textContent = fmt(pomoRemaining); pomoStatus.textContent = pomoIsWork ? 'Work' : 'Break'; }
+    function startPomo() {
+      clearInterval(pomoTimer);
+      pomoTimer = setInterval(()=>{
+        if (pomoRemaining>0){ pomoRemaining--; updatePomoUI(); }
+        else {
+          // switch
+          pomoIsWork = !pomoIsWork;
+          const mins = (pomoIsWork ? parseInt(workInput.value||'25',10) : parseInt(breakInput.value||'5',10));
+          pomoRemaining = mins*60; updatePomoUI();
+        }
+      }, 1000);
+    }
+    function pausePomo(){ clearInterval(pomoTimer); }
+    function resetPomo(){
+      pausePomo(); pomoIsWork = true; pomoRemaining = parseInt(workInput.value||'25',10)*60; updatePomoUI();
+    }
+    document.getElementById('pomoStart').addEventListener('click', startPomo);
+    document.getElementById('pomoPause').addEventListener('click', pausePomo);
+    document.getElementById('pomoReset').addEventListener('click', resetPomo);
+    resetPomo();
+
+    // ====== Revision Reminders (UI only) ======
+    const REM_KEY = 'examhub_reminders';
+    const getRem=()=>{ try { return JSON.parse(localStorage.getItem(REM_KEY)) || []; } catch { return []; } };
+    const setRem=list=>{ localStorage.setItem(REM_KEY, JSON.stringify(list)); renderRem(); };
+    function renderRem(){
+      const list=getRem();
+      const el=document.getElementById('remList');
+      if(!list.length){ el.innerHTML='<li class="text-gray-500">No reminders yet.</li>'; return; }
+      el.innerHTML=list.map((r,i)=>`<li class="flex items-center justify-between p-2 rounded bg-gray-50 dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-700"><span>${r.topic} — ${r.date}</span><button data-rm="${i}" class="px-2 py-1 text-xs rounded bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Remove</button></li>`).join('');
+      el.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{ const arr=getRem(); arr.splice(parseInt(b.dataset.rm,10),1); setRem(arr); }));
+    }
+    renderRem();
+    document.getElementById('remAdd').addEventListener('click', ()=>{
+      const topic=document.getElementById('remTopic').value.trim();
+      const date=document.getElementById('remDate').value;
+      if(!topic||!date) return;
+      const arr=getRem(); arr.push({topic,date}); setRem(arr);
+      document.getElementById('remTopic').value=''; document.getElementById('remDate').value='';
+    });
+
+    // ====== Simple engagement increment on click (demo) ======
+    document.querySelectorAll('[data-id]').forEach(el=>{
+      el.addEventListener('click', ()=>{/* no-op placeholder */}, {capture:true});
+    });
+  </script>
 </body>
 </html>
